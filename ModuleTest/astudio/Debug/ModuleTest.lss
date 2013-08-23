@@ -1,0 +1,5018 @@
+
+ModuleTest.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000002  00800200  00001992  00001a46  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         00001992  00000000  00000000  000000b4  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          000008b8  00800202  00800202  00001a48  2**0
+                  ALLOC
+  3 .eeprom       00000002  00810000  00810000  00001a48  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  4 .stab         000009fc  00000000  00000000  00001a4c  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  5 .stabstr      00000274  00000000  00000000  00002448  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_aranges 000004f8  00000000  00000000  000026c0  2**3
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_info   0000498c  00000000  00000000  00002bb8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_abbrev 000017df  00000000  00000000  00007544  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_line   0000441e  00000000  00000000  00008d23  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_frame  00000978  00000000  00000000  0000d144  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_str    00001a15  00000000  00000000  0000dabc  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_loc    00001995  00000000  00000000  0000f4d1  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 13 .debug_macinfo 0012012b  00000000  00000000  00010e66  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 14 .debug_ranges 00000470  00000000  00000000  00130f91  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+       0:	0c 94 90 00 	jmp	0x120	; 0x120 <__ctors_end>
+       4:	0c 94 b0 00 	jmp	0x160	; 0x160 <__bad_interrupt>
+       8:	0c 94 b0 00 	jmp	0x160	; 0x160 <__bad_interrupt>
+       c:	0c 94 b0 00 	jmp	0x160	; 0x160 <__bad_interrupt>
+      10:	0c 94 b0 00 	jmp	0x160	; 0x160 <__bad_interrupt>
+      14:	0c 94 b0 00 	jmp	0x160	; 0x160 <__bad_interrupt>
+      18:	0c 94 b0 00 	jmp	0x160	; 0x160 <__bad_interrupt>
+      1c:	0c 94 b0 00 	jmp	0x160	; 0x160 <__bad_interrupt>
+      20:	0c 94 b0 00 	jmp	0x160	; 0x160 <__bad_interrupt>
+      24:	0c 94 b0 00 	jmp	0x160	; 0x160 <__bad_interrupt>
+      28:	0c 94 b0 00 	jmp	0x160	; 0x160 <__bad_interrupt>
+      2c:	0c 94 b0 00 	jmp	0x160	; 0x160 <__bad_interrupt>
+      30:	0c 94 b0 00 	jmp	0x160	; 0x160 <__bad_interrupt>
+      34:	0c 94 e6 02 	jmp	0x5cc	; 0x5cc <__vector_13>
+      38:	0c 94 b0 00 	jmp	0x160	; 0x160 <__bad_interrupt>
+      3c:	0c 94 b0 00 	jmp	0x160	; 0x160 <__bad_interrupt>
+      40:	0c 94 b0 00 	jmp	0x160	; 0x160 <__bad_interrupt>
+      44:	0c 94 b0 00 	jmp	0x160	; 0x160 <__bad_interrupt>
+      48:	0c 94 b0 00 	jmp	0x160	; 0x160 <__bad_interrupt>
+      4c:	0c 94 b0 00 	jmp	0x160	; 0x160 <__bad_interrupt>
+      50:	0c 94 b0 00 	jmp	0x160	; 0x160 <__bad_interrupt>
+      54:	0c 94 b0 00 	jmp	0x160	; 0x160 <__bad_interrupt>
+      58:	0c 94 b0 00 	jmp	0x160	; 0x160 <__bad_interrupt>
+      5c:	0c 94 b0 00 	jmp	0x160	; 0x160 <__bad_interrupt>
+      60:	0c 94 b0 00 	jmp	0x160	; 0x160 <__bad_interrupt>
+      64:	0c 94 b0 00 	jmp	0x160	; 0x160 <__bad_interrupt>
+      68:	0c 94 b0 00 	jmp	0x160	; 0x160 <__bad_interrupt>
+      6c:	0c 94 b0 00 	jmp	0x160	; 0x160 <__bad_interrupt>
+      70:	0c 94 b0 00 	jmp	0x160	; 0x160 <__bad_interrupt>
+      74:	0c 94 b0 00 	jmp	0x160	; 0x160 <__bad_interrupt>
+      78:	0c 94 b0 00 	jmp	0x160	; 0x160 <__bad_interrupt>
+      7c:	0c 94 b0 00 	jmp	0x160	; 0x160 <__bad_interrupt>
+      80:	0c 94 b0 00 	jmp	0x160	; 0x160 <__bad_interrupt>
+      84:	0c 94 b0 00 	jmp	0x160	; 0x160 <__bad_interrupt>
+      88:	0c 94 b0 00 	jmp	0x160	; 0x160 <__bad_interrupt>
+      8c:	0c 94 b0 00 	jmp	0x160	; 0x160 <__bad_interrupt>
+      90:	0c 94 11 03 	jmp	0x622	; 0x622 <__vector_36>
+      94:	0c 94 f5 02 	jmp	0x5ea	; 0x5ea <__vector_37>
+      98:	0c 94 b0 00 	jmp	0x160	; 0x160 <__bad_interrupt>
+      9c:	0c 94 b0 00 	jmp	0x160	; 0x160 <__bad_interrupt>
+      a0:	0c 94 b0 00 	jmp	0x160	; 0x160 <__bad_interrupt>
+      a4:	0c 94 b0 00 	jmp	0x160	; 0x160 <__bad_interrupt>
+      a8:	0c 94 f6 00 	jmp	0x1ec	; 0x1ec <__vector_42>
+      ac:	0c 94 07 01 	jmp	0x20e	; 0x20e <__vector_43>
+      b0:	0c 94 b0 00 	jmp	0x160	; 0x160 <__bad_interrupt>
+      b4:	0c 94 b0 00 	jmp	0x160	; 0x160 <__bad_interrupt>
+      b8:	0c 94 b0 00 	jmp	0x160	; 0x160 <__bad_interrupt>
+      bc:	0c 94 b0 00 	jmp	0x160	; 0x160 <__bad_interrupt>
+      c0:	0c 94 b0 00 	jmp	0x160	; 0x160 <__bad_interrupt>
+      c4:	0c 94 b0 00 	jmp	0x160	; 0x160 <__bad_interrupt>
+      c8:	0c 94 b0 00 	jmp	0x160	; 0x160 <__bad_interrupt>
+      cc:	0c 94 b0 00 	jmp	0x160	; 0x160 <__bad_interrupt>
+      d0:	0c 94 b0 00 	jmp	0x160	; 0x160 <__bad_interrupt>
+      d4:	0c 94 b0 00 	jmp	0x160	; 0x160 <__bad_interrupt>
+      d8:	0c 94 b0 00 	jmp	0x160	; 0x160 <__bad_interrupt>
+      dc:	0c 94 b0 00 	jmp	0x160	; 0x160 <__bad_interrupt>
+      e0:	0c 94 b0 00 	jmp	0x160	; 0x160 <__bad_interrupt>
+      e4:	0c 94 b0 00 	jmp	0x160	; 0x160 <__bad_interrupt>
+      e8:	0c 94 b0 00 	jmp	0x160	; 0x160 <__bad_interrupt>
+      ec:	0c 94 b0 00 	jmp	0x160	; 0x160 <__bad_interrupt>
+      f0:	0c 94 04 02 	jmp	0x408	; 0x408 <__vector_60>
+      f4:	0c 94 f1 01 	jmp	0x3e2	; 0x3e2 <__vector_61>
+      f8:	0c 94 b0 00 	jmp	0x160	; 0x160 <__bad_interrupt>
+      fc:	0c 94 b9 01 	jmp	0x372	; 0x372 <__vector_63>
+     100:	0c 94 b0 00 	jmp	0x160	; 0x160 <__bad_interrupt>
+     104:	0c 94 b0 00 	jmp	0x160	; 0x160 <__bad_interrupt>
+     108:	0c 94 b0 00 	jmp	0x160	; 0x160 <__bad_interrupt>
+     10c:	0c 94 b0 00 	jmp	0x160	; 0x160 <__bad_interrupt>
+     110:	0c 94 b0 00 	jmp	0x160	; 0x160 <__bad_interrupt>
+     114:	0c 94 b0 00 	jmp	0x160	; 0x160 <__bad_interrupt>
+     118:	0c 94 b0 00 	jmp	0x160	; 0x160 <__bad_interrupt>
+     11c:	0c 94 b0 00 	jmp	0x160	; 0x160 <__bad_interrupt>
+
+00000120 <__ctors_end>:
+     120:	11 24       	eor	r1, r1
+     122:	1f be       	out	0x3f, r1	; 63
+     124:	cf ef       	ldi	r28, 0xFF	; 255
+     126:	d1 e4       	ldi	r29, 0x41	; 65
+     128:	de bf       	out	0x3e, r29	; 62
+     12a:	cd bf       	out	0x3d, r28	; 61
+
+0000012c <__do_copy_data>:
+     12c:	12 e0       	ldi	r17, 0x02	; 2
+     12e:	a0 e0       	ldi	r26, 0x00	; 0
+     130:	b2 e0       	ldi	r27, 0x02	; 2
+     132:	e2 e9       	ldi	r30, 0x92	; 146
+     134:	f9 e1       	ldi	r31, 0x19	; 25
+     136:	00 e0       	ldi	r16, 0x00	; 0
+     138:	0b bf       	out	0x3b, r16	; 59
+     13a:	02 c0       	rjmp	.+4      	; 0x140 <__do_copy_data+0x14>
+     13c:	07 90       	elpm	r0, Z+
+     13e:	0d 92       	st	X+, r0
+     140:	a2 30       	cpi	r26, 0x02	; 2
+     142:	b1 07       	cpc	r27, r17
+     144:	d9 f7       	brne	.-10     	; 0x13c <__do_copy_data+0x10>
+     146:	1b be       	out	0x3b, r1	; 59
+
+00000148 <__do_clear_bss>:
+     148:	1a e0       	ldi	r17, 0x0A	; 10
+     14a:	a2 e0       	ldi	r26, 0x02	; 2
+     14c:	b2 e0       	ldi	r27, 0x02	; 2
+     14e:	01 c0       	rjmp	.+2      	; 0x152 <.do_clear_bss_start>
+
+00000150 <.do_clear_bss_loop>:
+     150:	1d 92       	st	X+, r1
+
+00000152 <.do_clear_bss_start>:
+     152:	aa 3b       	cpi	r26, 0xBA	; 186
+     154:	b1 07       	cpc	r27, r17
+     156:	e1 f7       	brne	.-8      	; 0x150 <.do_clear_bss_loop>
+     158:	0e 94 26 0b 	call	0x164c	; 0x164c <main>
+     15c:	0c 94 c7 0c 	jmp	0x198e	; 0x198e <_exit>
+
+00000160 <__bad_interrupt>:
+     160:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+00000164 <updateLEDs>:
+// r18-r27, r30, r31
+
+updateLEDs:
+#define PORTD 0x0B
+#define PD4 4
+			mov		r30, r24				//1 Get the pointer to the array of bytes
+     164:	e8 2f       	mov	r30, r24
+			mov		r31, r25				// Put it into the Z register (R30/R31)
+     166:	f9 2f       	mov	r31, r25
+			mov		r28, r22				// Load the outer loop counter
+     168:	c6 2f       	mov	r28, r22
+			mov		r29, r23				// Load the outer loop counter
+     16a:	d7 2f       	mov	r29, r23
+			ld		r26, Z+					// Get the first byte and increment the array pointer
+     16c:	a1 91       	ld	r26, Z+
+			in 		r27, 0x3F				// Save status register
+     16e:	bf b7       	in	r27, 0x3f	; 63
+
+			cli								// Turn off interrupts
+     170:	f8 94       	cli
+
+00000172 <ByteLoop>:
+/**************************************************************************************/
+ByteLoop:
+			ldi 	r20, 8					//1 Load/reload bit count
+     172:	48 e0       	ldi	r20, 0x08	; 8
+
+00000174 <BitLoop>:
+/* Loop over 8 bits */
+BitLoop:
+			sbi  	PORTD,PD4				//2 Output high
+     174:	5c 9a       	sbi	0x0b, 4	; 11
+			sbrc 	r26, 7					//1/2 Check if upper bit is 0 or 1
+     176:	a7 fd       	sbrc	r26, 7
+			rjmp 	Bit1					//2 For 0, skip jump and do first bit clear
+     178:	01 c0       	rjmp	.+2      	; 0x17c <Bit1>
+			cbi  	PORTD,PD4				//2 
+     17a:	5c 98       	cbi	0x0b, 4	; 11
+
+0000017c <Bit1>:
+Bit1:										//For 1, clear output to low later
+			sbrc 	r26, 7					//1/2 Check if upper bit is 0 or 1
+     17c:	a7 fd       	sbrc	r26, 7
+			rjmp 	Here					//2 For 0, skip jump and do first bit clear
+     17e:	00 c0       	rjmp	.+0      	; 0x180 <Here>
+
+00000180 <Here>:
+Here:
+			sbiw 	r28, 1					//2 Decrement outer loop counter
+     180:	21 97       	sbiw	r28, 0x01	; 1
+			breq 	Exit					//1/2 exit outer loop if zero
+     182:	49 f0       	breq	.+18     	; 0x196 <Exit>
+			adiw 	r28, 1					//2 Bump back up outer loop counter
+     184:	21 96       	adiw	r28, 0x01	; 1
+			nop								//1 62.5 nS delay
+     186:	00 00       	nop
+			lsl 	r26						//1 Move next bit in
+     188:	aa 0f       	add	r26, r26
+			dec 	r20						//1 Decrement inner loop counter
+     18a:	4a 95       	dec	r20
+			cbi 	PORTD,PD4				//2 Clear output to low
+     18c:	5c 98       	cbi	0x0b, 4	; 11
+			brne 	BitLoop					//1/2 Send next bit
+     18e:	91 f7       	brne	.-28     	; 0x174 <BitLoop>
+			ld 		r26, Z+					//2 load in next byte
+     190:	a1 91       	ld	r26, Z+
+			sbiw 	r28, 1					//2 Decrement outer loop counter
+     192:	21 97       	sbiw	r28, 0x01	; 1
+			rjmp 	ByteLoop				//2 Restart loop with new byte
+     194:	ee cf       	rjmp	.-36     	; 0x172 <ByteLoop>
+
+00000196 <Exit>:
+/**************************************************************************************/
+Exit:
+			nop								//1 62.5 nS delay
+     196:	00 00       	nop
+			cbi 	PORTD,PD4				// Make sure output is low
+     198:	5c 98       	cbi	0x0b, 4	; 11
+			sei								// Turn interrupts back on
+     19a:	78 94       	sei
+			out 	0x3F, r27				// Restore the status register
+     19c:	bf bf       	out	0x3f, r27	; 63
+			ret
+     19e:	08 95       	ret
+
+000001a0 <outPortE>:
+
+//Use r18-r27, r30, r31
+//Don't use r2-r17, r28, r29
+
+outPortE:
+			ldi		r18,0xFF
+     1a0:	2f ef       	ldi	r18, 0xFF	; 255
+			out		0x0D,r18
+     1a2:	2d b9       	out	0x0d, r18	; 13
+			out		0x0E,r24
+     1a4:	8e b9       	out	0x0e, r24	; 14
+     1a6:	08 95       	ret
+
+000001a8 <HAL_Init>:
+
+/*****************************************************************************
+*****************************************************************************/
+void HAL_Init(void)
+{
+  MCUSR = 0;
+     1a8:	14 be       	out	0x34, r1	; 52
+  wdt_disable();
+     1aa:	88 e1       	ldi	r24, 0x18	; 24
+     1ac:	0f b6       	in	r0, 0x3f	; 63
+     1ae:	f8 94       	cli
+     1b0:	80 93 60 00 	sts	0x0060, r24
+     1b4:	10 92 60 00 	sts	0x0060, r1
+     1b8:	0f be       	out	0x3f, r0	; 63
+  SYS_EnableInterrupts();
+     1ba:	78 94       	sei
+
+  HAL_TimerInit();
+     1bc:	0e 94 e1 00 	call	0x1c2	; 0x1c2 <HAL_TimerInit>
+
+}
+     1c0:	08 95       	ret
+
+000001c2 <HAL_TimerInit>:
+
+/*****************************************************************************
+*****************************************************************************/
+void HAL_TimerInit(void)
+{
+  halTimerIrqCount = 0;
+     1c2:	10 92 ab 0a 	sts	0x0AAB, r1
+
+  OCR4A = ((F_CPU / 1000ul) / TIMER_PRESCALER) * HAL_TIMER_INTERVAL;
+     1c6:	80 e2       	ldi	r24, 0x20	; 32
+     1c8:	9e e4       	ldi	r25, 0x4E	; 78
+     1ca:	90 93 a9 00 	sts	0x00A9, r25
+     1ce:	80 93 a8 00 	sts	0x00A8, r24
+  TCCR4B = (1 << WGM12);              // CTC mode
+     1d2:	e1 ea       	ldi	r30, 0xA1	; 161
+     1d4:	f0 e0       	ldi	r31, 0x00	; 0
+     1d6:	88 e0       	ldi	r24, 0x08	; 8
+     1d8:	80 83       	st	Z, r24
+  TCCR4B |= (1 << CS11);              // Prescaler 8
+     1da:	80 81       	ld	r24, Z
+     1dc:	82 60       	ori	r24, 0x02	; 2
+     1de:	80 83       	st	Z, r24
+  TIMSK4 |= (1 << OCIE4A);            // Enable TC4 interrupt
+     1e0:	e2 e7       	ldi	r30, 0x72	; 114
+     1e2:	f0 e0       	ldi	r31, 0x00	; 0
+     1e4:	80 81       	ld	r24, Z
+     1e6:	82 60       	ori	r24, 0x02	; 2
+     1e8:	80 83       	st	Z, r24
+}
+     1ea:	08 95       	ret
+
+000001ec <__vector_42>:
+}
+
+/*****************************************************************************
+*****************************************************************************/
+ISR(TIMER4_COMPA_vect)
+{
+     1ec:	1f 92       	push	r1
+     1ee:	0f 92       	push	r0
+     1f0:	0f b6       	in	r0, 0x3f	; 63
+     1f2:	0f 92       	push	r0
+     1f4:	11 24       	eor	r1, r1
+     1f6:	8f 93       	push	r24
+  halTimerIrqCount++;
+     1f8:	80 91 ab 0a 	lds	r24, 0x0AAB
+     1fc:	8f 5f       	subi	r24, 0xFF	; 255
+     1fe:	80 93 ab 0a 	sts	0x0AAB, r24
+}
+     202:	8f 91       	pop	r24
+     204:	0f 90       	pop	r0
+     206:	0f be       	out	0x3f, r0	; 63
+     208:	0f 90       	pop	r0
+     20a:	1f 90       	pop	r1
+     20c:	18 95       	reti
+
+0000020e <__vector_43>:
+
+/*****************************************************************************
+*****************************************************************************/
+ISR(TIMER4_COMPB_vect)
+{
+     20e:	1f 92       	push	r1
+     210:	0f 92       	push	r0
+     212:	0f b6       	in	r0, 0x3f	; 63
+     214:	0f 92       	push	r0
+     216:	11 24       	eor	r1, r1
+     218:	8f 93       	push	r24
+  halTimerDelayInt = 1;
+     21a:	81 e0       	ldi	r24, 0x01	; 1
+     21c:	80 93 02 02 	sts	0x0202, r24
+}
+     220:	8f 91       	pop	r24
+     222:	0f 90       	pop	r0
+     224:	0f be       	out	0x3f, r0	; 63
+     226:	0f 90       	pop	r0
+     228:	1f 90       	pop	r1
+     22a:	18 95       	reti
+
+0000022c <phyTrxSetState>:
+/*****************************************************************************
+	Sets the radio to the state provided, then waits for the state to take effect
+*****************************************************************************/
+static inline void phyTrxSetState(uint8_t state)
+{
+  TRX_STATE_REG = TRX_CMD_FORCE_TRX_OFF;
+     22c:	93 e0       	ldi	r25, 0x03	; 3
+     22e:	90 93 42 01 	sts	0x0142, r25
+  TRX_STATE_REG = state;
+     232:	80 93 42 01 	sts	0x0142, r24
+  while (state != TRX_STATUS_REG_s.trxStatus);
+     236:	90 91 41 01 	lds	r25, 0x0141
+     23a:	9f 71       	andi	r25, 0x1F	; 31
+     23c:	89 17       	cp	r24, r25
+     23e:	d9 f7       	brne	.-10     	; 0x236 <phyTrxSetState+0xa>
+}
+     240:	08 95       	ret
+
+00000242 <phySetRxState>:
+	Put the radio into the waiting or receive state, depending upon the rx
+	flag in the phyIb variable.
+*****************************************************************************/
+static void phySetRxState(void)
+{
+  if (phyIb.rx)
+     242:	80 91 0d 02 	lds	r24, 0x020D
+     246:	88 23       	and	r24, r24
+     248:	11 f0       	breq	.+4      	; 0x24e <phySetRxState+0xc>
+    phyTrxSetState(TRX_CMD_RX_AACK_ON);
+     24a:	86 e1       	ldi	r24, 0x16	; 22
+     24c:	01 c0       	rjmp	.+2      	; 0x250 <phySetRxState+0xe>
+  else
+    phyTrxSetState(TRX_CMD_TRX_OFF);
+     24e:	88 e0       	ldi	r24, 0x08	; 8
+     250:	0e 94 16 01 	call	0x22c	; 0x22c <phyTrxSetState>
+     254:	08 95       	ret
+
+00000256 <PHY_Init>:
+
+/*****************************************************************************
+*****************************************************************************/
+void PHY_Init(void)
+{
+  TRXPR_REG_s.trxrst = 1;
+     256:	e9 e3       	ldi	r30, 0x39	; 57
+     258:	f1 e0       	ldi	r31, 0x01	; 1
+     25a:	80 81       	ld	r24, Z
+     25c:	81 60       	ori	r24, 0x01	; 1
+     25e:	80 83       	st	Z, r24
+
+  phyTrxSetState(TRX_CMD_TRX_OFF);
+     260:	88 e0       	ldi	r24, 0x08	; 8
+     262:	0e 94 16 01 	call	0x22c	; 0x22c <phyTrxSetState>
+
+  CSMA_SEED_1_REG_s.aackSetPd = 1;
+     266:	ee e6       	ldi	r30, 0x6E	; 110
+     268:	f1 e0       	ldi	r31, 0x01	; 1
+     26a:	80 81       	ld	r24, Z
+     26c:	80 62       	ori	r24, 0x20	; 32
+     26e:	80 83       	st	Z, r24
+  CSMA_SEED_1_REG_s.aackDisAck = 0;
+     270:	80 81       	ld	r24, Z
+     272:	8f 7e       	andi	r24, 0xEF	; 239
+     274:	80 83       	st	Z, r24
+
+  IRQ_STATUS_REG = IRQ_STATUS_CLEAR_VALUE;
+     276:	8f ef       	ldi	r24, 0xFF	; 255
+     278:	80 93 4f 01 	sts	0x014F, r24
+  IRQ_MASK_REG_s.rxEndEn = 1;
+     27c:	ee e4       	ldi	r30, 0x4E	; 78
+     27e:	f1 e0       	ldi	r31, 0x01	; 1
+     280:	80 81       	ld	r24, Z
+     282:	88 60       	ori	r24, 0x08	; 8
+     284:	80 83       	st	Z, r24
+  IRQ_MASK_REG_s.txEndEn = 1;
+     286:	80 81       	ld	r24, Z
+     288:	80 64       	ori	r24, 0x40	; 64
+     28a:	80 83       	st	Z, r24
+
+  TRX_CTRL_2_REG_s.rxSafeMode = 1;
+     28c:	ec e4       	ldi	r30, 0x4C	; 76
+     28e:	f1 e0       	ldi	r31, 0x01	; 1
+     290:	80 81       	ld	r24, Z
+     292:	80 68       	ori	r24, 0x80	; 128
+     294:	80 83       	st	Z, r24
+
+#ifdef PHY_ENABLE_RANDOM_NUMBER_GENERATOR
+  CSMA_SEED_0_REG = (uint8_t)phyGetRandomNumber();
+#else
+  CSMA_SEED_0_REG = 0x11;
+     296:	81 e1       	ldi	r24, 0x11	; 17
+     298:	80 93 6d 01 	sts	0x016D, r24
+#endif
+
+  phyIb.request = PHY_REQ_NONE;
+     29c:	10 92 07 02 	sts	0x0207, r1
+  phyIb.rx = false;
+     2a0:	10 92 0d 02 	sts	0x020D, r1
+  phyState = PHY_STATE_IDLE;
+     2a4:	81 e0       	ldi	r24, 0x01	; 1
+     2a6:	80 93 06 02 	sts	0x0206, r24
+}
+     2aa:	08 95       	ret
+
+000002ac <PHY_SetRxState>:
+
+/*****************************************************************************
+*****************************************************************************/
+void PHY_SetRxState(bool rx)
+{
+  phyIb.request |= PHY_REQ_RX;
+     2ac:	90 91 07 02 	lds	r25, 0x0207
+     2b0:	98 60       	ori	r25, 0x08	; 8
+     2b2:	90 93 07 02 	sts	0x0207, r25
+  phyIb.rx = rx;
+     2b6:	80 93 0d 02 	sts	0x020D, r24
+}
+     2ba:	08 95       	ret
+
+000002bc <PHY_SetChannel>:
+
+/*****************************************************************************
+*****************************************************************************/
+void PHY_SetChannel(uint8_t channel)
+{
+  phyIb.request |= PHY_REQ_CHANNEL;
+     2bc:	90 91 07 02 	lds	r25, 0x0207
+     2c0:	91 60       	ori	r25, 0x01	; 1
+     2c2:	90 93 07 02 	sts	0x0207, r25
+  phyIb.channel = channel;
+     2c6:	80 93 08 02 	sts	0x0208, r24
+}
+     2ca:	08 95       	ret
+
+000002cc <PHY_SetPanId>:
+
+/*****************************************************************************
+*****************************************************************************/
+void PHY_SetPanId(uint16_t panId)
+{
+  phyIb.request |= PHY_REQ_PANID;
+     2cc:	20 91 07 02 	lds	r18, 0x0207
+     2d0:	22 60       	ori	r18, 0x02	; 2
+     2d2:	20 93 07 02 	sts	0x0207, r18
+  phyIb.panId = panId;
+     2d6:	90 93 0a 02 	sts	0x020A, r25
+     2da:	80 93 09 02 	sts	0x0209, r24
+}
+     2de:	08 95       	ret
+
+000002e0 <PHY_SetShortAddr>:
+
+/*****************************************************************************
+*****************************************************************************/
+void PHY_SetShortAddr(uint16_t addr)
+{
+  phyIb.request |= PHY_REQ_ADDR;
+     2e0:	20 91 07 02 	lds	r18, 0x0207
+     2e4:	24 60       	ori	r18, 0x04	; 4
+     2e6:	20 93 07 02 	sts	0x0207, r18
+  phyIb.addr = addr;
+     2ea:	90 93 0c 02 	sts	0x020C, r25
+     2ee:	80 93 0b 02 	sts	0x020B, r24
+}
+     2f2:	08 95       	ret
+
+000002f4 <PHY_Busy>:
+
+/*****************************************************************************
+*****************************************************************************/
+bool PHY_Busy(void)
+{
+  return PHY_STATE_IDLE != phyState || PHY_REQ_NONE != phyIb.request;
+     2f4:	80 91 06 02 	lds	r24, 0x0206
+     2f8:	81 30       	cpi	r24, 0x01	; 1
+     2fa:	49 f4       	brne	.+18     	; 0x30e <PHY_Busy+0x1a>
+     2fc:	81 e0       	ldi	r24, 0x01	; 1
+     2fe:	90 e0       	ldi	r25, 0x00	; 0
+     300:	20 91 07 02 	lds	r18, 0x0207
+     304:	22 23       	and	r18, r18
+     306:	29 f4       	brne	.+10     	; 0x312 <PHY_Busy+0x1e>
+     308:	80 e0       	ldi	r24, 0x00	; 0
+     30a:	90 e0       	ldi	r25, 0x00	; 0
+     30c:	08 95       	ret
+     30e:	81 e0       	ldi	r24, 0x01	; 1
+     310:	90 e0       	ldi	r25, 0x00	; 0
+}
+     312:	08 95       	ret
+
+00000314 <PHY_DataReq>:
+
+/*****************************************************************************
+	Starts the transmission of a frame
+*****************************************************************************/
+void PHY_DataReq(uint8_t *data, uint8_t size)
+{
+     314:	1f 93       	push	r17
+     316:	cf 93       	push	r28
+     318:	df 93       	push	r29
+     31a:	00 d0       	rcall	.+0      	; 0x31c <PHY_DataReq+0x8>
+     31c:	cd b7       	in	r28, 0x3d	; 61
+     31e:	de b7       	in	r29, 0x3e	; 62
+     320:	18 2f       	mov	r17, r24
+  phyTrxSetState(TRX_CMD_TX_ARET_ON);
+     322:	89 e1       	ldi	r24, 0x19	; 25
+     324:	69 83       	std	Y+1, r22	; 0x01
+     326:	9a 83       	std	Y+2, r25	; 0x02
+     328:	0e 94 16 01 	call	0x22c	; 0x22c <phyTrxSetState>
+
+  TRX_FRAME_BUFFER(0) = size + 2/*crc*/;
+     32c:	69 81       	ldd	r22, Y+1	; 0x01
+     32e:	86 2f       	mov	r24, r22
+     330:	8e 5f       	subi	r24, 0xFE	; 254
+     332:	80 93 80 01 	sts	0x0180, r24
+  for (uint8_t i = 0; i < size; i++)
+     336:	e1 2f       	mov	r30, r17
+     338:	9a 81       	ldd	r25, Y+2	; 0x02
+     33a:	f9 2f       	mov	r31, r25
+     33c:	a1 e8       	ldi	r26, 0x81	; 129
+     33e:	b1 e0       	ldi	r27, 0x01	; 1
+     340:	02 c0       	rjmp	.+4      	; 0x346 <PHY_DataReq+0x32>
+    TRX_FRAME_BUFFER(i+1) = data[i];
+     342:	81 91       	ld	r24, Z+
+     344:	8d 93       	st	X+, r24
+void PHY_DataReq(uint8_t *data, uint8_t size)
+{
+  phyTrxSetState(TRX_CMD_TX_ARET_ON);
+
+  TRX_FRAME_BUFFER(0) = size + 2/*crc*/;
+  for (uint8_t i = 0; i < size; i++)
+     346:	8e 2f       	mov	r24, r30
+     348:	81 1b       	sub	r24, r17
+     34a:	86 17       	cp	r24, r22
+     34c:	d0 f3       	brcs	.-12     	; 0x342 <PHY_DataReq+0x2e>
+    TRX_FRAME_BUFFER(i+1) = data[i];
+
+  TRX_STATE_REG = TRX_CMD_TX_START;			// Start the TX_ARET transaction
+     34e:	82 e0       	ldi	r24, 0x02	; 2
+     350:	80 93 42 01 	sts	0x0142, r24
+
+  phyState = PHY_STATE_TX_WAIT_END;
+     354:	83 e0       	ldi	r24, 0x03	; 3
+     356:	80 93 06 02 	sts	0x0206, r24
+}
+     35a:	0f 90       	pop	r0
+     35c:	0f 90       	pop	r0
+     35e:	df 91       	pop	r29
+     360:	cf 91       	pop	r28
+     362:	1f 91       	pop	r17
+     364:	08 95       	ret
+
+00000366 <PHY_EdReq>:
+#ifdef PHY_ENABLE_ENERGY_DETECTION
+/*****************************************************************************
+*****************************************************************************/
+void PHY_EdReq(void)
+{
+  phyIb.request |= PHY_REQ_ED;
+     366:	80 91 07 02 	lds	r24, 0x0207
+     36a:	80 64       	ori	r24, 0x40	; 64
+     36c:	80 93 07 02 	sts	0x0207, r24
+}
+     370:	08 95       	ret
+
+00000372 <__vector_63>:
+#endif
+
+/*****************************************************************************
+*****************************************************************************/
+ISR(TRX24_TX_END_vect)
+{
+     372:	1f 92       	push	r1
+     374:	0f 92       	push	r0
+     376:	0f b6       	in	r0, 0x3f	; 63
+     378:	0f 92       	push	r0
+     37a:	0b b6       	in	r0, 0x3b	; 59
+     37c:	0f 92       	push	r0
+     37e:	11 24       	eor	r1, r1
+     380:	2f 93       	push	r18
+     382:	3f 93       	push	r19
+     384:	4f 93       	push	r20
+     386:	5f 93       	push	r21
+     388:	6f 93       	push	r22
+     38a:	7f 93       	push	r23
+     38c:	8f 93       	push	r24
+     38e:	9f 93       	push	r25
+     390:	af 93       	push	r26
+     392:	bf 93       	push	r27
+     394:	ef 93       	push	r30
+     396:	ff 93       	push	r31
+  if (TRX_STATUS_TX_ARET_ON == TRX_STATUS_REG_s.trxStatus)
+     398:	80 91 41 01 	lds	r24, 0x0141
+     39c:	8f 71       	andi	r24, 0x1F	; 31
+     39e:	89 31       	cpi	r24, 0x19	; 25
+     3a0:	69 f4       	brne	.+26     	; 0x3bc <__vector_63+0x4a>
+  {
+    //TRX_STATE_REG = TRX_CMD_PLL_ON; // Don't wait for this to complete
+    phyTrxSetState(TRX_CMD_PLL_ON);
+     3a2:	89 e0       	ldi	r24, 0x09	; 9
+     3a4:	0e 94 16 01 	call	0x22c	; 0x22c <phyTrxSetState>
+
+    phyState = PHY_STATE_TX_CONFIRM;
+     3a8:	84 e0       	ldi	r24, 0x04	; 4
+     3aa:	80 93 06 02 	sts	0x0206, r24
+    phyTxStatus = TRX_STATE_REG_s.tracStatus;
+     3ae:	80 91 42 01 	lds	r24, 0x0142
+     3b2:	82 95       	swap	r24
+     3b4:	86 95       	lsr	r24
+     3b6:	87 70       	andi	r24, 0x07	; 7
+     3b8:	80 93 05 02 	sts	0x0205, r24
+  }
+  else
+  {
+    // Auto ACK transmission completed
+  }
+}
+     3bc:	ff 91       	pop	r31
+     3be:	ef 91       	pop	r30
+     3c0:	bf 91       	pop	r27
+     3c2:	af 91       	pop	r26
+     3c4:	9f 91       	pop	r25
+     3c6:	8f 91       	pop	r24
+     3c8:	7f 91       	pop	r23
+     3ca:	6f 91       	pop	r22
+     3cc:	5f 91       	pop	r21
+     3ce:	4f 91       	pop	r20
+     3d0:	3f 91       	pop	r19
+     3d2:	2f 91       	pop	r18
+     3d4:	0f 90       	pop	r0
+     3d6:	0b be       	out	0x3b, r0	; 59
+     3d8:	0f 90       	pop	r0
+     3da:	0f be       	out	0x3f, r0	; 63
+     3dc:	0f 90       	pop	r0
+     3de:	1f 90       	pop	r1
+     3e0:	18 95       	reti
+
+000003e2 <__vector_61>:
+#ifdef PHY_ENABLE_ENERGY_DETECTION		// Add this feature if it is needed
+/*****************************************************************************
+	Interrupt service routine for energy detection requests
+*****************************************************************************/
+ISR(TRX24_CCA_ED_DONE_vect)
+{
+     3e2:	1f 92       	push	r1
+     3e4:	0f 92       	push	r0
+     3e6:	0f b6       	in	r0, 0x3f	; 63
+     3e8:	0f 92       	push	r0
+     3ea:	11 24       	eor	r1, r1
+     3ec:	8f 93       	push	r24
+  phyRxRssi = (int8_t)PHY_ED_LEVEL_REG;
+     3ee:	80 91 47 01 	lds	r24, 0x0147
+     3f2:	80 93 04 02 	sts	0x0204, r24
+  phyState = PHY_STATE_ED_DONE;
+     3f6:	87 e0       	ldi	r24, 0x07	; 7
+     3f8:	80 93 06 02 	sts	0x0206, r24
+}
+     3fc:	8f 91       	pop	r24
+     3fe:	0f 90       	pop	r0
+     400:	0f be       	out	0x3f, r0	; 63
+     402:	0f 90       	pop	r0
+     404:	1f 90       	pop	r1
+     406:	18 95       	reti
+
+00000408 <__vector_60>:
+
+/*****************************************************************************
+	Interrupt service routine for receipt of a frame at the radio
+*****************************************************************************/
+ISR(TRX24_RX_END_vect)
+{
+     408:	1f 92       	push	r1
+     40a:	0f 92       	push	r0
+     40c:	0f b6       	in	r0, 0x3f	; 63
+     40e:	0f 92       	push	r0
+     410:	11 24       	eor	r1, r1
+     412:	8f 93       	push	r24
+  TRX_STATE_REG = TRX_CMD_PLL_ON;			// Don't wait for this to complete
+     414:	89 e0       	ldi	r24, 0x09	; 9
+     416:	80 93 42 01 	sts	0x0142, r24
+  phyRxRssi = (int8_t)PHY_ED_LEVEL_REG;		// 0-83dB, 0xFF means no measurement started
+     41a:	80 91 47 01 	lds	r24, 0x0147
+     41e:	80 93 04 02 	sts	0x0204, r24
+  phyRxSize = TST_RX_LENGTH_REG;
+     422:	80 91 7b 01 	lds	r24, 0x017B
+     426:	80 93 03 02 	sts	0x0203, r24
+  phyState = PHY_STATE_RX_IND;
+     42a:	85 e0       	ldi	r24, 0x05	; 5
+     42c:	80 93 06 02 	sts	0x0206, r24
+}
+     430:	8f 91       	pop	r24
+     432:	0f 90       	pop	r0
+     434:	0f be       	out	0x3f, r0	; 63
+     436:	0f 90       	pop	r0
+     438:	1f 90       	pop	r1
+     43a:	18 95       	reti
+
+0000043c <PHY_TaskHandler>:
+}
+
+/*****************************************************************************
+*****************************************************************************/
+void PHY_TaskHandler(void)
+{
+     43c:	1f 93       	push	r17
+     43e:	cf 93       	push	r28
+     440:	df 93       	push	r29
+     442:	00 d0       	rcall	.+0      	; 0x444 <PHY_TaskHandler+0x8>
+     444:	00 d0       	rcall	.+0      	; 0x446 <PHY_TaskHandler+0xa>
+     446:	0f 92       	push	r0
+     448:	cd b7       	in	r28, 0x3d	; 61
+     44a:	de b7       	in	r29, 0x3e	; 62
+  switch (phyState)
+     44c:	80 91 06 02 	lds	r24, 0x0206
+     450:	84 30       	cpi	r24, 0x04	; 4
+     452:	09 f4       	brne	.+2      	; 0x456 <PHY_TaskHandler+0x1a>
+     454:	5c c0       	rjmp	.+184    	; 0x50e <PHY_TaskHandler+0xd2>
+     456:	85 30       	cpi	r24, 0x05	; 5
+     458:	20 f4       	brcc	.+8      	; 0x462 <PHY_TaskHandler+0x26>
+     45a:	81 30       	cpi	r24, 0x01	; 1
+     45c:	09 f0       	breq	.+2      	; 0x460 <PHY_TaskHandler+0x24>
+     45e:	ad c0       	rjmp	.+346    	; 0x5ba <PHY_TaskHandler+0x17e>
+     460:	07 c0       	rjmp	.+14     	; 0x470 <PHY_TaskHandler+0x34>
+     462:	85 30       	cpi	r24, 0x05	; 5
+     464:	09 f4       	brne	.+2      	; 0x468 <PHY_TaskHandler+0x2c>
+     466:	67 c0       	rjmp	.+206    	; 0x536 <PHY_TaskHandler+0xfa>
+     468:	87 30       	cpi	r24, 0x07	; 7
+     46a:	09 f0       	breq	.+2      	; 0x46e <PHY_TaskHandler+0x32>
+     46c:	a6 c0       	rjmp	.+332    	; 0x5ba <PHY_TaskHandler+0x17e>
+     46e:	89 c0       	rjmp	.+274    	; 0x582 <PHY_TaskHandler+0x146>
+  {
+//	If in the idle state, can process the accumulated requests
+    case PHY_STATE_IDLE:
+    {
+      if (phyIb.request)
+     470:	10 91 07 02 	lds	r17, 0x0207
+     474:	11 23       	and	r17, r17
+     476:	09 f4       	brne	.+2      	; 0x47a <PHY_TaskHandler+0x3e>
+     478:	a0 c0       	rjmp	.+320    	; 0x5ba <PHY_TaskHandler+0x17e>
+	Each request corresponds to a bit in the request variable.
+*****************************************************************************/
+static void phyHandleSetRequests(void)
+{
+// Put the radio in idle mode
+  phyTrxSetState(TRX_CMD_TRX_OFF);
+     47a:	88 e0       	ldi	r24, 0x08	; 8
+     47c:	0e 94 16 01 	call	0x22c	; 0x22c <phyTrxSetState>
+
+  if (phyIb.request & PHY_REQ_CHANNEL)
+     480:	10 ff       	sbrs	r17, 0
+     482:	09 c0       	rjmp	.+18     	; 0x496 <PHY_TaskHandler+0x5a>
+  {
+    PHY_CC_CCA_REG_s.channel = phyIb.channel;
+     484:	90 91 08 02 	lds	r25, 0x0208
+     488:	9f 71       	andi	r25, 0x1F	; 31
+     48a:	80 91 48 01 	lds	r24, 0x0148
+     48e:	80 7e       	andi	r24, 0xE0	; 224
+     490:	89 2b       	or	r24, r25
+     492:	80 93 48 01 	sts	0x0148, r24
+  }
+
+  if (phyIb.request & PHY_REQ_PANID)
+     496:	80 91 07 02 	lds	r24, 0x0207
+     49a:	81 ff       	sbrs	r24, 1
+     49c:	08 c0       	rjmp	.+16     	; 0x4ae <PHY_TaskHandler+0x72>
+  {
+    uint8_t *d = (uint8_t *)&phyIb.panId;
+    PAN_ID_0_REG = d[0];
+     49e:	80 91 09 02 	lds	r24, 0x0209
+     4a2:	80 93 62 01 	sts	0x0162, r24
+    PAN_ID_1_REG = d[1];
+     4a6:	80 91 0a 02 	lds	r24, 0x020A
+     4aa:	80 93 63 01 	sts	0x0163, r24
+  }
+
+  if (phyIb.request & PHY_REQ_ADDR)
+     4ae:	80 91 07 02 	lds	r24, 0x0207
+     4b2:	82 ff       	sbrs	r24, 2
+     4b4:	08 c0       	rjmp	.+16     	; 0x4c6 <PHY_TaskHandler+0x8a>
+  {
+    uint8_t *d = (uint8_t *)&phyIb.addr;
+    SHORT_ADDR_0_REG = d[0];
+     4b6:	80 91 0b 02 	lds	r24, 0x020B
+     4ba:	80 93 60 01 	sts	0x0160, r24
+    SHORT_ADDR_1_REG = d[1];
+     4be:	80 91 0c 02 	lds	r24, 0x020C
+     4c2:	80 93 61 01 	sts	0x0161, r24
+    PHY_EncryptConf();
+  }
+#endif
+
+#ifdef PHY_ENABLE_ENERGY_DETECTION	// Add in this feature if energy detection is desired
+  if (phyIb.request & PHY_REQ_ED)
+     4c6:	80 91 07 02 	lds	r24, 0x0207
+     4ca:	86 ff       	sbrs	r24, 6
+     4cc:	17 c0       	rjmp	.+46     	; 0x4fc <PHY_TaskHandler+0xc0>
+  {
+    IRQ_MASK_REG_s.rxEndEn = 0;
+     4ce:	80 91 4e 01 	lds	r24, 0x014E
+     4d2:	87 7f       	andi	r24, 0xF7	; 247
+     4d4:	80 93 4e 01 	sts	0x014E, r24
+    IRQ_MASK_REG_s.txEndEn = 0;
+     4d8:	80 91 4e 01 	lds	r24, 0x014E
+     4dc:	8f 7b       	andi	r24, 0xBF	; 191
+     4de:	80 93 4e 01 	sts	0x014E, r24
+    IRQ_MASK_REG_s.ccaEdReadyEn = 1;
+     4e2:	80 91 4e 01 	lds	r24, 0x014E
+     4e6:	80 61       	ori	r24, 0x10	; 16
+     4e8:	80 93 4e 01 	sts	0x014E, r24
+
+    phyTrxSetState(TRX_CMD_RX_ON);
+     4ec:	86 e0       	ldi	r24, 0x06	; 6
+     4ee:	0e 94 16 01 	call	0x22c	; 0x22c <phyTrxSetState>
+    PHY_ED_LEVEL_REG = 0;
+     4f2:	10 92 47 01 	sts	0x0147, r1
+    phyState = PHY_STATE_ED_WAIT;
+     4f6:	86 e0       	ldi	r24, 0x06	; 6
+     4f8:	80 93 06 02 	sts	0x0206, r24
+#endif
+
+// When all requests have been processed, put the radio into idle or receive state
+// unless there is an energy detection request in progress.
+#ifdef PHY_ENABLE_ENERGY_DETECTION	// Add in this feature if energy detection is desired
+  if (!(phyIb.request & PHY_REQ_ED))
+     4fc:	80 91 07 02 	lds	r24, 0x0207
+     500:	86 fd       	sbrc	r24, 6
+     502:	02 c0       	rjmp	.+4      	; 0x508 <PHY_TaskHandler+0xcc>
+    phySetRxState();
+     504:	0e 94 21 01 	call	0x242	; 0x242 <phySetRxState>
+#else	// No energy detection request in progress
+  phySetRxState();
+#endif
+// Clear the request flags
+  phyIb.request = PHY_REQ_NONE;
+     508:	10 92 07 02 	sts	0x0207, r1
+     50c:	56 c0       	rjmp	.+172    	; 0x5ba <PHY_TaskHandler+0x17e>
+        phyHandleSetRequests();
+    } break;
+//	Invoke the callback to notify the application
+    case PHY_STATE_TX_CONFIRM:
+    {
+      PHY_DataConf(phyTxStatus);
+     50e:	80 91 05 02 	lds	r24, 0x0205
+     512:	0e 94 73 09 	call	0x12e6	; 0x12e6 <PHY_DataConf>
+
+      while (TRX_CMD_PLL_ON != TRX_STATUS_REG_s.trxStatus);
+     516:	80 91 41 01 	lds	r24, 0x0141
+     51a:	8f 71       	andi	r24, 0x1F	; 31
+     51c:	89 30       	cpi	r24, 0x09	; 9
+     51e:	d9 f7       	brne	.-10     	; 0x516 <PHY_TaskHandler+0xda>
+     520:	47 c0       	rjmp	.+142    	; 0x5b0 <PHY_TaskHandler+0x174>
+    case PHY_STATE_RX_IND:
+    {
+      PHY_DataInd_t ind;
+
+      for (uint8_t i = 0; i < phyRxSize + 1/*lqi*/; i++)
+        phyRxBuffer[i] = TRX_FRAME_BUFFER(i);
+     522:	fc 01       	movw	r30, r24
+     524:	e0 58       	subi	r30, 0x80	; 128
+     526:	fe 4f       	sbci	r31, 0xFE	; 254
+     528:	20 81       	ld	r18, Z
+     52a:	82 5f       	subi	r24, 0xF2	; 242
+     52c:	9d 4f       	sbci	r25, 0xFD	; 253
+     52e:	fc 01       	movw	r30, r24
+     530:	20 83       	st	Z, r18
+//	Message was received, so transfer the radio buffer data and process it
+    case PHY_STATE_RX_IND:
+    {
+      PHY_DataInd_t ind;
+
+      for (uint8_t i = 0; i < phyRxSize + 1/*lqi*/; i++)
+     532:	4f 5f       	subi	r20, 0xFF	; 255
+     534:	01 c0       	rjmp	.+2      	; 0x538 <PHY_TaskHandler+0xfc>
+
+/*****************************************************************************
+*****************************************************************************/
+void PHY_TaskHandler(void)
+{
+  switch (phyState)
+     536:	40 e0       	ldi	r20, 0x00	; 0
+//	Message was received, so transfer the radio buffer data and process it
+    case PHY_STATE_RX_IND:
+    {
+      PHY_DataInd_t ind;
+
+      for (uint8_t i = 0; i < phyRxSize + 1/*lqi*/; i++)
+     538:	20 91 03 02 	lds	r18, 0x0203
+     53c:	84 2f       	mov	r24, r20
+     53e:	90 e0       	ldi	r25, 0x00	; 0
+     540:	30 e0       	ldi	r19, 0x00	; 0
+     542:	28 17       	cp	r18, r24
+     544:	39 07       	cpc	r19, r25
+     546:	6c f7       	brge	.-38     	; 0x522 <PHY_TaskHandler+0xe6>
+        phyRxBuffer[i] = TRX_FRAME_BUFFER(i);
+
+      ind.data = phyRxBuffer;
+     548:	8e e0       	ldi	r24, 0x0E	; 14
+     54a:	92 e0       	ldi	r25, 0x02	; 2
+     54c:	9a 83       	std	Y+2, r25	; 0x02
+     54e:	89 83       	std	Y+1, r24	; 0x01
+      ind.size = phyRxSize - 2/*crc*/;
+     550:	80 91 03 02 	lds	r24, 0x0203
+     554:	82 50       	subi	r24, 0x02	; 2
+     556:	8b 83       	std	Y+3, r24	; 0x03
+      ind.lqi  = phyRxBuffer[phyRxSize];
+     558:	e0 91 03 02 	lds	r30, 0x0203
+     55c:	f0 e0       	ldi	r31, 0x00	; 0
+     55e:	e2 5f       	subi	r30, 0xF2	; 242
+     560:	fd 4f       	sbci	r31, 0xFD	; 253
+     562:	80 81       	ld	r24, Z
+     564:	8c 83       	std	Y+4, r24	; 0x04
+      ind.rssi = phyRxRssi + PHY_RSSI_BASE_VAL;
+     566:	80 91 04 02 	lds	r24, 0x0204
+     56a:	8a 55       	subi	r24, 0x5A	; 90
+     56c:	8d 83       	std	Y+5, r24	; 0x05
+      PHY_DataInd(&ind);
+     56e:	ce 01       	movw	r24, r28
+     570:	01 96       	adiw	r24, 0x01	; 1
+     572:	0e 94 73 06 	call	0xce6	; 0xce6 <PHY_DataInd>
+
+      while (TRX_CMD_PLL_ON != TRX_STATUS_REG_s.trxStatus);
+     576:	80 91 41 01 	lds	r24, 0x0141
+     57a:	8f 71       	andi	r24, 0x1F	; 31
+     57c:	89 30       	cpi	r24, 0x09	; 9
+     57e:	d9 f7       	brne	.-10     	; 0x576 <PHY_TaskHandler+0x13a>
+     580:	17 c0       	rjmp	.+46     	; 0x5b0 <PHY_TaskHandler+0x174>
+    } break;
+
+#ifdef PHY_ENABLE_ENERGY_DETECTION		// Add in the energy detection feature if needed
+    case PHY_STATE_ED_DONE:
+    {
+      PHY_EdConf(phyRxRssi + PHY_RSSI_BASE_VAL);		// Note that this is a signed value
+     582:	80 91 04 02 	lds	r24, 0x0204
+     586:	8a 55       	subi	r24, 0x5A	; 90
+     588:	0e 94 25 0b 	call	0x164a	; 0x164a <PHY_EdConf>
+
+      IRQ_STATUS_REG = IRQ_STATUS_CLEAR_VALUE;
+     58c:	8f ef       	ldi	r24, 0xFF	; 255
+     58e:	80 93 4f 01 	sts	0x014F, r24
+      IRQ_MASK_REG_s.rxEndEn = 1;
+     592:	80 91 4e 01 	lds	r24, 0x014E
+     596:	88 60       	ori	r24, 0x08	; 8
+     598:	80 93 4e 01 	sts	0x014E, r24
+      IRQ_MASK_REG_s.txEndEn = 1;
+     59c:	80 91 4e 01 	lds	r24, 0x014E
+     5a0:	80 64       	ori	r24, 0x40	; 64
+     5a2:	80 93 4e 01 	sts	0x014E, r24
+      IRQ_MASK_REG_s.ccaEdReadyEn = 0;
+     5a6:	80 91 4e 01 	lds	r24, 0x014E
+     5aa:	8f 7e       	andi	r24, 0xEF	; 239
+     5ac:	80 93 4e 01 	sts	0x014E, r24
+
+      phyState = PHY_STATE_IDLE;
+     5b0:	81 e0       	ldi	r24, 0x01	; 1
+     5b2:	80 93 06 02 	sts	0x0206, r24
+      phySetRxState();
+     5b6:	0e 94 21 01 	call	0x242	; 0x242 <phySetRxState>
+#endif
+
+    default:
+      break;
+  }
+}
+     5ba:	0f 90       	pop	r0
+     5bc:	0f 90       	pop	r0
+     5be:	0f 90       	pop	r0
+     5c0:	0f 90       	pop	r0
+     5c2:	0f 90       	pop	r0
+     5c4:	df 91       	pop	r29
+     5c6:	cf 91       	pop	r28
+     5c8:	1f 91       	pop	r17
+     5ca:	08 95       	ret
+
+000005cc <__vector_13>:
+}
+
+/*****************************************************************************
+*****************************************************************************/
+ISR(TIMER2_COMPA_vect)
+{
+     5cc:	1f 92       	push	r1
+     5ce:	0f 92       	push	r0
+     5d0:	0f b6       	in	r0, 0x3f	; 63
+     5d2:	0f 92       	push	r0
+     5d4:	11 24       	eor	r1, r1
+     5d6:	8f 93       	push	r24
+  halSleepTimerEvent = true;
+     5d8:	81 e0       	ldi	r24, 0x01	; 1
+     5da:	80 93 8e 02 	sts	0x028E, r24
+}
+     5de:	8f 91       	pop	r24
+     5e0:	0f 90       	pop	r0
+     5e2:	0f be       	out	0x3f, r0	; 63
+     5e4:	0f 90       	pop	r0
+     5e6:	1f 90       	pop	r1
+     5e8:	18 95       	reti
+
+000005ea <__vector_37>:
+}
+
+/*****************************************************************************
+*****************************************************************************/
+ISR(USARTx_UDRE_vect)
+{
+     5ea:	1f 92       	push	r1
+     5ec:	0f 92       	push	r0
+     5ee:	0f b6       	in	r0, 0x3f	; 63
+     5f0:	0f 92       	push	r0
+     5f2:	0b b6       	in	r0, 0x3b	; 59
+     5f4:	0f 92       	push	r0
+     5f6:	11 24       	eor	r1, r1
+     5f8:	8f 93       	push	r24
+     5fa:	ef 93       	push	r30
+     5fc:	ff 93       	push	r31
+  udrEmpty = true;
+     5fe:	81 e0       	ldi	r24, 0x01	; 1
+     600:	80 93 90 02 	sts	0x0290, r24
+  UCSRxB &= ~(1 << UDRIE1);
+     604:	e9 ec       	ldi	r30, 0xC9	; 201
+     606:	f0 e0       	ldi	r31, 0x00	; 0
+     608:	80 81       	ld	r24, Z
+     60a:	8f 7d       	andi	r24, 0xDF	; 223
+     60c:	80 83       	st	Z, r24
+}
+     60e:	ff 91       	pop	r31
+     610:	ef 91       	pop	r30
+     612:	8f 91       	pop	r24
+     614:	0f 90       	pop	r0
+     616:	0b be       	out	0x3b, r0	; 59
+     618:	0f 90       	pop	r0
+     61a:	0f be       	out	0x3f, r0	; 63
+     61c:	0f 90       	pop	r0
+     61e:	1f 90       	pop	r1
+     620:	18 95       	reti
+
+00000622 <__vector_36>:
+
+/*****************************************************************************
+*****************************************************************************/
+ISR(USARTx_RX_vect)
+{
+     622:	1f 92       	push	r1
+     624:	0f 92       	push	r0
+     626:	0f b6       	in	r0, 0x3f	; 63
+     628:	0f 92       	push	r0
+     62a:	0b b6       	in	r0, 0x3b	; 59
+     62c:	0f 92       	push	r0
+     62e:	11 24       	eor	r1, r1
+     630:	2f 93       	push	r18
+     632:	3f 93       	push	r19
+     634:	4f 93       	push	r20
+     636:	8f 93       	push	r24
+     638:	9f 93       	push	r25
+     63a:	ef 93       	push	r30
+     63c:	ff 93       	push	r31
+  PRAGMA(diag_suppress=Pa082);
+
+  uint8_t status = UCSRxA;
+     63e:	80 91 c8 00 	lds	r24, 0x00C8
+  uint8_t byte = UDRx;
+     642:	40 91 ce 00 	lds	r20, 0x00CE
+
+  if (0 == (status & ((1 << FE1) | (1 << DOR1) | (1 << UPE1))))
+     646:	8c 71       	andi	r24, 0x1C	; 28
+     648:	b1 f5       	brne	.+108    	; 0x6b6 <__vector_36+0x94>
+  {
+    if (rxFifo.bytes == rxFifo.size)
+     64a:	20 91 97 02 	lds	r18, 0x0297
+     64e:	30 91 98 02 	lds	r19, 0x0298
+     652:	80 91 95 02 	lds	r24, 0x0295
+     656:	90 91 96 02 	lds	r25, 0x0296
+     65a:	28 17       	cp	r18, r24
+     65c:	39 07       	cpc	r19, r25
+     65e:	59 f1       	breq	.+86     	; 0x6b6 <__vector_36+0x94>
+      return;
+
+    rxFifo.data[rxFifo.tail++] = byte;
+     660:	e0 91 99 02 	lds	r30, 0x0299
+     664:	f0 91 9a 02 	lds	r31, 0x029A
+     668:	80 91 93 02 	lds	r24, 0x0293
+     66c:	90 91 94 02 	lds	r25, 0x0294
+     670:	e8 0f       	add	r30, r24
+     672:	f9 1f       	adc	r31, r25
+     674:	40 83       	st	Z, r20
+     676:	01 96       	adiw	r24, 0x01	; 1
+     678:	90 93 94 02 	sts	0x0294, r25
+     67c:	80 93 93 02 	sts	0x0293, r24
+    if (rxFifo.tail == rxFifo.size)
+     680:	20 91 93 02 	lds	r18, 0x0293
+     684:	30 91 94 02 	lds	r19, 0x0294
+     688:	80 91 95 02 	lds	r24, 0x0295
+     68c:	90 91 96 02 	lds	r25, 0x0296
+     690:	28 17       	cp	r18, r24
+     692:	39 07       	cpc	r19, r25
+     694:	21 f4       	brne	.+8      	; 0x69e <__vector_36+0x7c>
+      rxFifo.tail = 0;
+     696:	10 92 94 02 	sts	0x0294, r1
+     69a:	10 92 93 02 	sts	0x0293, r1
+    rxFifo.bytes++;
+     69e:	80 91 97 02 	lds	r24, 0x0297
+     6a2:	90 91 98 02 	lds	r25, 0x0298
+     6a6:	01 96       	adiw	r24, 0x01	; 1
+     6a8:	90 93 98 02 	sts	0x0298, r25
+     6ac:	80 93 97 02 	sts	0x0297, r24
+
+    newData = true;
+     6b0:	81 e0       	ldi	r24, 0x01	; 1
+     6b2:	80 93 8f 02 	sts	0x028F, r24
+  }
+
+  PRAGMA(diag_default=Pa082);
+}
+     6b6:	ff 91       	pop	r31
+     6b8:	ef 91       	pop	r30
+     6ba:	9f 91       	pop	r25
+     6bc:	8f 91       	pop	r24
+     6be:	4f 91       	pop	r20
+     6c0:	3f 91       	pop	r19
+     6c2:	2f 91       	pop	r18
+     6c4:	0f 90       	pop	r0
+     6c6:	0b be       	out	0x3b, r0	; 59
+     6c8:	0f 90       	pop	r0
+     6ca:	0f be       	out	0x3f, r0	; 63
+     6cc:	0f 90       	pop	r0
+     6ce:	1f 90       	pop	r1
+     6d0:	18 95       	reti
+
+000006d2 <NWK_Init>:
+
+/*****************************************************************************
+*****************************************************************************/
+void NWK_Init(void)
+{
+  nwkIb.nwkSeqNum = 0;
+     6d2:	10 92 b0 0a 	sts	0x0AB0, r1
+  nwkIb.macSeqNum = 0;
+     6d6:	10 92 b1 0a 	sts	0x0AB1, r1
+  nwkIb.addr = 0;
+     6da:	ec ea       	ldi	r30, 0xAC	; 172
+     6dc:	fa e0       	ldi	r31, 0x0A	; 10
+     6de:	11 82       	std	Z+1, r1	; 0x01
+     6e0:	10 82       	st	Z, r1
+
+  for (uint8_t i = 0; i < NWK_MAX_ENDPOINTS_AMOUNT; i++)
+    nwkIb.endpoint[i] = NULL;
+     6e2:	17 82       	std	Z+7, r1	; 0x07
+     6e4:	16 82       	std	Z+6, r1	; 0x06
+     6e6:	11 86       	std	Z+9, r1	; 0x09
+     6e8:	10 86       	std	Z+8, r1	; 0x08
+     6ea:	13 86       	std	Z+11, r1	; 0x0b
+     6ec:	12 86       	std	Z+10, r1	; 0x0a
+     6ee:	15 86       	std	Z+13, r1	; 0x0d
+     6f0:	14 86       	std	Z+12, r1	; 0x0c
+
+  nwkTxInit();
+     6f2:	0e 94 af 08 	call	0x115e	; 0x115e <nwkTxInit>
+  nwkRxInit();
+     6f6:	0e 94 4e 06 	call	0xc9c	; 0xc9c <nwkRxInit>
+  nwkFrameInit();
+     6fa:	0e 94 68 04 	call	0x8d0	; 0x8d0 <nwkFrameInit>
+  nwkDataReqInit();
+     6fe:	0e 94 c1 03 	call	0x782	; 0x782 <nwkDataReqInit>
+
+#ifdef NWK_ENABLE_ROUTING
+  nwkRouteInit();
+     702:	0e 94 f6 04 	call	0x9ec	; 0x9ec <nwkRouteInit>
+#endif
+
+#ifdef NWK_ENABLE_SECURITY
+  nwkSecurityInit();
+#endif
+}
+     706:	08 95       	ret
+
+00000708 <NWK_SetAddr>:
+
+/*****************************************************************************
+*****************************************************************************/
+void NWK_SetAddr(uint16_t addr)
+{
+  nwkIb.addr = addr;
+     708:	90 93 ad 0a 	sts	0x0AAD, r25
+     70c:	80 93 ac 0a 	sts	0x0AAC, r24
+  PHY_SetShortAddr(addr);
+     710:	0e 94 70 01 	call	0x2e0	; 0x2e0 <PHY_SetShortAddr>
+}
+     714:	08 95       	ret
+
+00000716 <NWK_SetPanId>:
+
+/*****************************************************************************
+*****************************************************************************/
+void NWK_SetPanId(uint16_t panId)
+{
+  nwkIb.panId = panId;
+     716:	90 93 af 0a 	sts	0x0AAF, r25
+     71a:	80 93 ae 0a 	sts	0x0AAE, r24
+  PHY_SetPanId(panId);
+     71e:	0e 94 66 01 	call	0x2cc	; 0x2cc <PHY_SetPanId>
+}
+     722:	08 95       	ret
+
+00000724 <NWK_OpenEndpoint>:
+
+/*****************************************************************************
+*****************************************************************************/
+void NWK_OpenEndpoint(uint8_t id, bool (*handler)(NWK_DataInd_t *ind))
+{
+  nwkIb.endpoint[id] = handler;
+     724:	e8 2f       	mov	r30, r24
+     726:	f0 e0       	ldi	r31, 0x00	; 0
+     728:	ee 0f       	add	r30, r30
+     72a:	ff 1f       	adc	r31, r31
+     72c:	ee 54       	subi	r30, 0x4E	; 78
+     72e:	f5 4f       	sbci	r31, 0xF5	; 245
+     730:	71 83       	std	Z+1, r23	; 0x01
+     732:	60 83       	st	Z, r22
+}
+     734:	08 95       	ret
+
+00000736 <NWK_TaskHandler>:
+
+/*****************************************************************************
+*****************************************************************************/
+void NWK_TaskHandler(void)
+{
+  nwkRxTaskHandler();
+     736:	0e 94 a3 06 	call	0xd46	; 0xd46 <nwkRxTaskHandler>
+  nwkTxTaskHandler();
+     73a:	0e 94 8f 09 	call	0x131e	; 0x131e <nwkTxTaskHandler>
+  nwkDataReqTaskHandler();
+     73e:	0e 94 db 03 	call	0x7b6	; 0x7b6 <nwkDataReqTaskHandler>
+#ifdef NWK_ENABLE_SECURITY
+  nwkSecurityTaskHandler();
+#endif
+}
+     742:	08 95       	ret
+
+00000744 <nwkDataReqTxConf>:
+
+/*****************************************************************************
+*****************************************************************************/
+static void nwkDataReqTxConf(NwkFrame_t *frame)
+{
+  for (NWK_DataReq_t *req = nwkDataReqQueue; req; req = req->next)
+     744:	e0 91 9b 02 	lds	r30, 0x029B
+     748:	f0 91 9c 02 	lds	r31, 0x029C
+     74c:	15 c0       	rjmp	.+42     	; 0x778 <nwkDataReqTxConf+0x34>
+  {
+    if (req->frame == frame)
+     74e:	22 81       	ldd	r18, Z+2	; 0x02
+     750:	33 81       	ldd	r19, Z+3	; 0x03
+     752:	28 17       	cp	r18, r24
+     754:	39 07       	cpc	r19, r25
+     756:	69 f4       	brne	.+26     	; 0x772 <nwkDataReqTxConf+0x2e>
+    {
+      req->status = frame->tx.status;
+     758:	dc 01       	movw	r26, r24
+     75a:	a1 58       	subi	r26, 0x81	; 129
+     75c:	bf 4f       	sbci	r27, 0xFF	; 255
+     75e:	2c 91       	ld	r18, X
+     760:	27 87       	std	Z+15, r18	; 0x0f
+      req->control = frame->tx.control;
+     762:	dc 01       	movw	r26, r24
+     764:	ae 57       	subi	r26, 0x7E	; 126
+     766:	bf 4f       	sbci	r27, 0xFF	; 255
+     768:	2c 91       	ld	r18, X
+     76a:	20 8b       	std	Z+16, r18	; 0x10
+      req->state = NWK_DATA_REQ_STATE_CONFIRM;
+     76c:	22 e0       	ldi	r18, 0x02	; 2
+     76e:	24 83       	std	Z+4, r18	; 0x04
+      break;
+     770:	05 c0       	rjmp	.+10     	; 0x77c <nwkDataReqTxConf+0x38>
+
+/*****************************************************************************
+*****************************************************************************/
+static void nwkDataReqTxConf(NwkFrame_t *frame)
+{
+  for (NWK_DataReq_t *req = nwkDataReqQueue; req; req = req->next)
+     772:	01 90       	ld	r0, Z+
+     774:	f0 81       	ld	r31, Z
+     776:	e0 2d       	mov	r30, r0
+     778:	30 97       	sbiw	r30, 0x00	; 0
+     77a:	49 f7       	brne	.-46     	; 0x74e <nwkDataReqTxConf+0xa>
+      req->state = NWK_DATA_REQ_STATE_CONFIRM;
+      break;
+    }
+  }
+
+  nwkFrameFree(frame);
+     77c:	0e 94 99 04 	call	0x932	; 0x932 <nwkFrameFree>
+}
+     780:	08 95       	ret
+
+00000782 <nwkDataReqInit>:
+
+/*****************************************************************************
+*****************************************************************************/
+void nwkDataReqInit(void)
+{
+  nwkDataReqQueue = NULL;
+     782:	10 92 9c 02 	sts	0x029C, r1
+     786:	10 92 9b 02 	sts	0x029B, r1
+}
+     78a:	08 95       	ret
+
+0000078c <NWK_DataReq>:
+
+/*****************************************************************************
+*****************************************************************************/
+void NWK_DataReq(NWK_DataReq_t *req)
+{
+     78c:	fc 01       	movw	r30, r24
+  req->state = NWK_DATA_REQ_STATE_INITIAL;
+     78e:	14 82       	std	Z+4, r1	; 0x04
+  req->status = NWK_SUCCESS_STATUS;
+     790:	17 86       	std	Z+15, r1	; 0x0f
+  req->frame = NULL;
+     792:	13 82       	std	Z+3, r1	; 0x03
+     794:	12 82       	std	Z+2, r1	; 0x02
+
+  if (NULL == nwkDataReqQueue)
+     796:	80 91 9b 02 	lds	r24, 0x029B
+     79a:	90 91 9c 02 	lds	r25, 0x029C
+     79e:	00 97       	sbiw	r24, 0x00	; 0
+     7a0:	19 f4       	brne	.+6      	; 0x7a8 <NWK_DataReq+0x1c>
+  {
+    req->next = NULL;
+     7a2:	11 82       	std	Z+1, r1	; 0x01
+     7a4:	10 82       	st	Z, r1
+     7a6:	02 c0       	rjmp	.+4      	; 0x7ac <NWK_DataReq+0x20>
+    nwkDataReqQueue = req;
+  }
+  else
+  {
+    req->next = nwkDataReqQueue;
+     7a8:	91 83       	std	Z+1, r25	; 0x01
+     7aa:	80 83       	st	Z, r24
+    nwkDataReqQueue = req;
+     7ac:	f0 93 9c 02 	sts	0x029C, r31
+     7b0:	e0 93 9b 02 	sts	0x029B, r30
+     7b4:	08 95       	ret
+
+000007b6 <nwkDataReqTaskHandler>:
+}
+
+/*****************************************************************************
+*****************************************************************************/
+void nwkDataReqTaskHandler(void)
+{
+     7b6:	0f 93       	push	r16
+     7b8:	1f 93       	push	r17
+     7ba:	cf 93       	push	r28
+     7bc:	df 93       	push	r29
+  for (NWK_DataReq_t *req = nwkDataReqQueue; req; req = req->next)
+     7be:	e0 91 9b 02 	lds	r30, 0x029B
+     7c2:	f0 91 9c 02 	lds	r31, 0x029C
+     7c6:	ef 01       	movw	r28, r30
+     7c8:	7b c0       	rjmp	.+246    	; 0x8c0 <nwkDataReqTaskHandler+0x10a>
+  {
+    switch (req->state)
+     7ca:	8c 81       	ldd	r24, Y+4	; 0x04
+     7cc:	88 23       	and	r24, r24
+     7ce:	21 f0       	breq	.+8      	; 0x7d8 <nwkDataReqTaskHandler+0x22>
+     7d0:	82 30       	cpi	r24, 0x02	; 2
+     7d2:	09 f0       	breq	.+2      	; 0x7d6 <nwkDataReqTaskHandler+0x20>
+     7d4:	72 c0       	rjmp	.+228    	; 0x8ba <nwkDataReqTaskHandler+0x104>
+     7d6:	58 c0       	rjmp	.+176    	; 0x888 <nwkDataReqTaskHandler+0xd2>
+#ifdef NWK_ENABLE_SECURITY
+  if (req->options & NWK_OPT_ENABLE_SECURITY)
+    size += NWK_SECURITY_MIC_SIZE;
+#endif
+
+  if (NULL == (frame = nwkFrameAlloc(size)))
+     7d8:	8c 85       	ldd	r24, Y+12	; 0x0c
+     7da:	0e 94 79 04 	call	0x8f2	; 0x8f2 <nwkFrameAlloc>
+     7de:	8c 01       	movw	r16, r24
+     7e0:	00 97       	sbiw	r24, 0x00	; 0
+     7e2:	21 f4       	brne	.+8      	; 0x7ec <nwkDataReqTaskHandler+0x36>
+  {
+    req->state = NWK_DATA_REQ_STATE_CONFIRM;
+     7e4:	82 e0       	ldi	r24, 0x02	; 2
+     7e6:	8c 83       	std	Y+4, r24	; 0x04
+    req->status = NWK_OUT_OF_MEMORY_STATUS;
+     7e8:	8f 87       	std	Y+15, r24	; 0x0f
+     7ea:	6d c0       	rjmp	.+218    	; 0x8c6 <nwkDataReqTaskHandler+0x110>
+    return;
+  }
+
+  req->frame = frame;
+     7ec:	9b 83       	std	Y+3, r25	; 0x03
+     7ee:	8a 83       	std	Y+2, r24	; 0x02
+  req->state = NWK_DATA_REQ_STATE_WAIT_CONF;
+     7f0:	81 e0       	ldi	r24, 0x01	; 1
+     7f2:	8c 83       	std	Y+4, r24	; 0x04
+
+  frame->tx.confirm = nwkDataReqTxConf;
+     7f4:	f8 01       	movw	r30, r16
+     7f6:	ed 57       	subi	r30, 0x7D	; 125
+     7f8:	ff 4f       	sbci	r31, 0xFF	; 255
+     7fa:	82 ea       	ldi	r24, 0xA2	; 162
+     7fc:	93 e0       	ldi	r25, 0x03	; 3
+     7fe:	91 83       	std	Z+1, r25	; 0x01
+     800:	80 83       	st	Z, r24
+  frame->tx.control = req->options & NWK_OPT_BROADCAST_PAN_ID ? NWK_TX_CONTROL_BROADCAST_PAN_ID : 0;
+     802:	f8 01       	movw	r30, r16
+     804:	ee 57       	subi	r30, 0x7E	; 126
+     806:	ff 4f       	sbci	r31, 0xFF	; 255
+     808:	99 85       	ldd	r25, Y+9	; 0x09
+     80a:	81 e0       	ldi	r24, 0x01	; 1
+     80c:	92 ff       	sbrs	r25, 2
+     80e:	80 e0       	ldi	r24, 0x00	; 0
+     810:	80 83       	st	Z, r24
+
+  frame->data.header.nwkFcf.ackRequest = req->options & NWK_OPT_ACK_REQUEST ? 1 : 0;
+     812:	99 85       	ldd	r25, Y+9	; 0x09
+     814:	91 70       	andi	r25, 0x01	; 1
+     816:	f8 01       	movw	r30, r16
+     818:	83 85       	ldd	r24, Z+11	; 0x0b
+     81a:	8e 7f       	andi	r24, 0xFE	; 254
+     81c:	89 2b       	or	r24, r25
+     81e:	83 87       	std	Z+11, r24	; 0x0b
+#ifdef NWK_ENABLE_SECURITY
+  frame->data.header.nwkFcf.securityEnabled = req->options & NWK_OPT_ENABLE_SECURITY ? 1 : 0;
+#endif
+  frame->data.header.nwkFcf.linkLocal = req->options & NWK_OPT_LINK_LOCAL ? 1 : 0;
+     820:	99 85       	ldd	r25, Y+9	; 0x09
+     822:	81 e0       	ldi	r24, 0x01	; 1
+     824:	93 ff       	sbrs	r25, 3
+     826:	80 e0       	ldi	r24, 0x00	; 0
+     828:	98 2f       	mov	r25, r24
+     82a:	99 0f       	add	r25, r25
+     82c:	99 0f       	add	r25, r25
+     82e:	f8 01       	movw	r30, r16
+     830:	83 85       	ldd	r24, Z+11	; 0x0b
+     832:	83 70       	andi	r24, 0x03	; 3
+  frame->data.header.nwkFcf.reserved = 0;
+     834:	89 2b       	or	r24, r25
+     836:	83 87       	std	Z+11, r24	; 0x0b
+  frame->data.header.nwkSeq = ++nwkIb.nwkSeqNum;
+     838:	80 91 b0 0a 	lds	r24, 0x0AB0
+     83c:	8f 5f       	subi	r24, 0xFF	; 255
+     83e:	80 93 b0 0a 	sts	0x0AB0, r24
+     842:	84 87       	std	Z+12, r24	; 0x0c
+  frame->data.header.nwkSrcAddr = nwkIb.addr;
+     844:	80 91 ac 0a 	lds	r24, 0x0AAC
+     848:	90 91 ad 0a 	lds	r25, 0x0AAD
+     84c:	96 87       	std	Z+14, r25	; 0x0e
+     84e:	85 87       	std	Z+13, r24	; 0x0d
+  frame->data.header.nwkDstAddr = req->dstAddr;
+     850:	8d 81       	ldd	r24, Y+5	; 0x05
+     852:	9e 81       	ldd	r25, Y+6	; 0x06
+     854:	90 8b       	std	Z+16, r25	; 0x10
+     856:	87 87       	std	Z+15, r24	; 0x0f
+  frame->data.header.nwkSrcEndpoint = req->srcEndpoint;
+     858:	98 85       	ldd	r25, Y+8	; 0x08
+     85a:	9f 70       	andi	r25, 0x0F	; 15
+     85c:	81 89       	ldd	r24, Z+17	; 0x11
+     85e:	80 7f       	andi	r24, 0xF0	; 240
+     860:	89 2b       	or	r24, r25
+     862:	81 8b       	std	Z+17, r24	; 0x11
+  frame->data.header.nwkDstEndpoint = req->dstEndpoint;
+     864:	9f 81       	ldd	r25, Y+7	; 0x07
+     866:	92 95       	swap	r25
+     868:	90 7f       	andi	r25, 0xF0	; 240
+     86a:	8f 70       	andi	r24, 0x0F	; 15
+     86c:	89 2b       	or	r24, r25
+     86e:	81 8b       	std	Z+17, r24	; 0x11
+
+  memcpy(frame->data.payload, req->data, req->size);
+     870:	c8 01       	movw	r24, r16
+     872:	42 96       	adiw	r24, 0x12	; 18
+     874:	4c 85       	ldd	r20, Y+12	; 0x0c
+     876:	6a 85       	ldd	r22, Y+10	; 0x0a
+     878:	7b 85       	ldd	r23, Y+11	; 0x0b
+     87a:	50 e0       	ldi	r21, 0x00	; 0
+     87c:	0e 94 95 0c 	call	0x192a	; 0x192a <memcpy>
+
+  nwkTxFrame(frame);
+     880:	c8 01       	movw	r24, r16
+     882:	0e 94 ca 08 	call	0x1194	; 0x1194 <nwkTxFrame>
+     886:	1f c0       	rjmp	.+62     	; 0x8c6 <nwkDataReqTaskHandler+0x110>
+
+/*****************************************************************************
+*****************************************************************************/
+static void nwkDataReqConfirm(NWK_DataReq_t *req)
+{
+  if (nwkDataReqQueue == req)
+     888:	ec 17       	cp	r30, r28
+     88a:	fd 07       	cpc	r31, r29
+     88c:	41 f4       	brne	.+16     	; 0x89e <nwkDataReqTaskHandler+0xe8>
+  {
+    nwkDataReqQueue = nwkDataReqQueue->next;
+     88e:	88 81       	ld	r24, Y
+     890:	99 81       	ldd	r25, Y+1	; 0x01
+     892:	90 93 9c 02 	sts	0x029C, r25
+     896:	80 93 9b 02 	sts	0x029B, r24
+     89a:	0a c0       	rjmp	.+20     	; 0x8b0 <nwkDataReqTaskHandler+0xfa>
+  }
+  else
+  {
+    NWK_DataReq_t *prev = nwkDataReqQueue;
+    while (prev->next != req)
+     89c:	fc 01       	movw	r30, r24
+     89e:	80 81       	ld	r24, Z
+     8a0:	91 81       	ldd	r25, Z+1	; 0x01
+     8a2:	8c 17       	cp	r24, r28
+     8a4:	9d 07       	cpc	r25, r29
+     8a6:	d1 f7       	brne	.-12     	; 0x89c <nwkDataReqTaskHandler+0xe6>
+      prev = prev->next;
+    prev->next = ((NWK_DataReq_t *)prev->next)->next;
+     8a8:	88 81       	ld	r24, Y
+     8aa:	99 81       	ldd	r25, Y+1	; 0x01
+     8ac:	91 83       	std	Z+1, r25	; 0x01
+     8ae:	80 83       	st	Z, r24
+  }
+
+  req->confirm(req);
+     8b0:	ed 85       	ldd	r30, Y+13	; 0x0d
+     8b2:	fe 85       	ldd	r31, Y+14	; 0x0e
+     8b4:	ce 01       	movw	r24, r28
+     8b6:	09 95       	icall
+     8b8:	06 c0       	rjmp	.+12     	; 0x8c6 <nwkDataReqTaskHandler+0x110>
+
+/*****************************************************************************
+*****************************************************************************/
+void nwkDataReqTaskHandler(void)
+{
+  for (NWK_DataReq_t *req = nwkDataReqQueue; req; req = req->next)
+     8ba:	09 90       	ld	r0, Y+
+     8bc:	d8 81       	ld	r29, Y
+     8be:	c0 2d       	mov	r28, r0
+     8c0:	20 97       	sbiw	r28, 0x00	; 0
+     8c2:	09 f0       	breq	.+2      	; 0x8c6 <nwkDataReqTaskHandler+0x110>
+     8c4:	82 cf       	rjmp	.-252    	; 0x7ca <nwkDataReqTaskHandler+0x14>
+
+      default:
+        break;
+    };
+  }
+}
+     8c6:	df 91       	pop	r29
+     8c8:	cf 91       	pop	r28
+     8ca:	1f 91       	pop	r17
+     8cc:	0f 91       	pop	r16
+     8ce:	08 95       	ret
+
+000008d0 <nwkFrameInit>:
+/*****************************************************************************
+*****************************************************************************/
+void nwkFrameInit(void)
+{
+  for (int i = 0; i < NWK_BUFFERS_AMOUNT; i++)
+    nwkFrameFrames[i].state = NWK_FRAME_STATE_FREE;
+     8d0:	10 92 9d 02 	sts	0x029D, r1
+     8d4:	10 92 22 03 	sts	0x0322, r1
+     8d8:	10 92 a7 03 	sts	0x03A7, r1
+     8dc:	10 92 2c 04 	sts	0x042C, r1
+     8e0:	10 92 b1 04 	sts	0x04B1, r1
+     8e4:	10 92 36 05 	sts	0x0536, r1
+     8e8:	10 92 bb 05 	sts	0x05BB, r1
+     8ec:	10 92 40 06 	sts	0x0640, r1
+}
+     8f0:	08 95       	ret
+
+000008f2 <nwkFrameAlloc>:
+    {
+      nwkFrameFrames[i].size = sizeof(NwkFrameHeader_t) + size;
+      return &nwkFrameFrames[i];
+    }
+  }
+  return NULL;
+     8f2:	ed e9       	ldi	r30, 0x9D	; 157
+     8f4:	f2 e0       	ldi	r31, 0x02	; 2
+	Allocate a buffer, if one is available.  Returns a pointer to the frame, if
+	one is available, or NULL otherwise.
+*****************************************************************************/
+NwkFrame_t *nwkFrameAlloc(uint8_t size)
+{
+  for (int i = 0; i < NWK_BUFFERS_AMOUNT; i++)
+     8f6:	20 e0       	ldi	r18, 0x00	; 0
+     8f8:	30 e0       	ldi	r19, 0x00	; 0
+  {
+    if (NWK_FRAME_STATE_FREE == nwkFrameFrames[i].state)
+     8fa:	90 81       	ld	r25, Z
+     8fc:	99 23       	and	r25, r25
+     8fe:	79 f4       	brne	.+30     	; 0x91e <nwkFrameAlloc+0x2c>
+    {
+      nwkFrameFrames[i].size = sizeof(NwkFrameHeader_t) + size;
+     900:	45 e8       	ldi	r20, 0x85	; 133
+     902:	50 e0       	ldi	r21, 0x00	; 0
+     904:	24 9f       	mul	r18, r20
+     906:	f0 01       	movw	r30, r0
+     908:	25 9f       	mul	r18, r21
+     90a:	f0 0d       	add	r31, r0
+     90c:	34 9f       	mul	r19, r20
+     90e:	f0 0d       	add	r31, r0
+     910:	11 24       	eor	r1, r1
+     912:	e3 56       	subi	r30, 0x63	; 99
+     914:	fd 4f       	sbci	r31, 0xFD	; 253
+     916:	80 5f       	subi	r24, 0xF0	; 240
+     918:	81 83       	std	Z+1, r24	; 0x01
+      return &nwkFrameFrames[i];
+     91a:	cf 01       	movw	r24, r30
+     91c:	08 95       	ret
+	Allocate a buffer, if one is available.  Returns a pointer to the frame, if
+	one is available, or NULL otherwise.
+*****************************************************************************/
+NwkFrame_t *nwkFrameAlloc(uint8_t size)
+{
+  for (int i = 0; i < NWK_BUFFERS_AMOUNT; i++)
+     91e:	2f 5f       	subi	r18, 0xFF	; 255
+     920:	3f 4f       	sbci	r19, 0xFF	; 255
+     922:	eb 57       	subi	r30, 0x7B	; 123
+     924:	ff 4f       	sbci	r31, 0xFF	; 255
+     926:	28 30       	cpi	r18, 0x08	; 8
+     928:	31 05       	cpc	r19, r1
+     92a:	39 f7       	brne	.-50     	; 0x8fa <nwkFrameAlloc+0x8>
+    {
+      nwkFrameFrames[i].size = sizeof(NwkFrameHeader_t) + size;
+      return &nwkFrameFrames[i];
+    }
+  }
+  return NULL;
+     92c:	80 e0       	ldi	r24, 0x00	; 0
+     92e:	90 e0       	ldi	r25, 0x00	; 0
+}
+     930:	08 95       	ret
+
+00000932 <nwkFrameFree>:
+
+/*****************************************************************************
+*****************************************************************************/
+void nwkFrameFree(NwkFrame_t *frame)
+{
+  frame->state = NWK_FRAME_STATE_FREE;
+     932:	fc 01       	movw	r30, r24
+     934:	10 82       	st	Z, r1
+}
+     936:	08 95       	ret
+
+00000938 <nwkFrameByIndex>:
+
+/*****************************************************************************
+*****************************************************************************/
+NwkFrame_t *nwkFrameByIndex(uint8_t i)
+{
+  return &nwkFrameFrames[i];
+     938:	48 2f       	mov	r20, r24
+     93a:	50 e0       	ldi	r21, 0x00	; 0
+     93c:	25 e8       	ldi	r18, 0x85	; 133
+     93e:	30 e0       	ldi	r19, 0x00	; 0
+     940:	42 9f       	mul	r20, r18
+     942:	c0 01       	movw	r24, r0
+     944:	43 9f       	mul	r20, r19
+     946:	90 0d       	add	r25, r0
+     948:	52 9f       	mul	r21, r18
+     94a:	90 0d       	add	r25, r0
+     94c:	11 24       	eor	r1, r1
+     94e:	83 56       	subi	r24, 0x63	; 99
+     950:	9d 4f       	sbci	r25, 0xFD	; 253
+}
+     952:	08 95       	ret
+
+00000954 <nwkFrameCommandInit>:
+
+/*****************************************************************************
+*****************************************************************************/
+void nwkFrameCommandInit(NwkFrame_t *frame)
+{
+     954:	fc 01       	movw	r30, r24
+  frame->tx.status = NWK_SUCCESS_STATUS;
+     956:	dc 01       	movw	r26, r24
+     958:	a1 58       	subi	r26, 0x81	; 129
+     95a:	bf 4f       	sbci	r27, 0xFF	; 255
+     95c:	1c 92       	st	X, r1
+  frame->tx.timeout = 0;
+     95e:	dc 01       	movw	r26, r24
+     960:	a0 58       	subi	r26, 0x80	; 128
+     962:	bf 4f       	sbci	r27, 0xFF	; 255
+     964:	1d 92       	st	X+, r1
+     966:	1c 92       	st	X, r1
+  frame->tx.control = 0;
+     968:	dc 01       	movw	r26, r24
+     96a:	ae 57       	subi	r26, 0x7E	; 126
+     96c:	bf 4f       	sbci	r27, 0xFF	; 255
+     96e:	1c 92       	st	X, r1
+  frame->tx.confirm = NULL;
+     970:	dc 01       	movw	r26, r24
+     972:	ad 57       	subi	r26, 0x7D	; 125
+     974:	bf 4f       	sbci	r27, 0xFF	; 255
+     976:	11 96       	adiw	r26, 0x01	; 1
+     978:	1c 92       	st	X, r1
+     97a:	1e 92       	st	-X, r1
+
+  frame->data.header.nwkFcf.ackRequest = 0;
+  frame->data.header.nwkFcf.securityEnabled = 0;
+  frame->data.header.nwkFcf.linkLocal = 0;
+  frame->data.header.nwkFcf.reserved = 0;
+     97c:	13 86       	std	Z+11, r1	; 0x0b
+  frame->data.header.nwkSeq = ++nwkIb.nwkSeqNum;
+     97e:	80 91 b0 0a 	lds	r24, 0x0AB0
+     982:	8f 5f       	subi	r24, 0xFF	; 255
+     984:	80 93 b0 0a 	sts	0x0AB0, r24
+     988:	84 87       	std	Z+12, r24	; 0x0c
+  frame->data.header.nwkSrcAddr = nwkIb.addr;
+     98a:	80 91 ac 0a 	lds	r24, 0x0AAC
+     98e:	90 91 ad 0a 	lds	r25, 0x0AAD
+     992:	96 87       	std	Z+14, r25	; 0x0e
+     994:	85 87       	std	Z+13, r24	; 0x0d
+  frame->data.header.nwkDstAddr = 0;
+     996:	10 8a       	std	Z+16, r1	; 0x10
+     998:	17 86       	std	Z+15, r1	; 0x0f
+  frame->data.header.nwkSrcEndpoint = 0;
+  frame->data.header.nwkDstEndpoint = 0;
+     99a:	11 8a       	std	Z+17, r1	; 0x11
+}
+     99c:	08 95       	ret
+
+0000099e <nwkRouteFindRecord>:
+      return &nwkRouteTable[i];
+
+  if (NWK_ROUTE_UNKNOWN == dst)
+    return &nwkRouteTable[NWK_ROUTE_TABLE_SIZE - 1];
+
+  return NULL;
+     99e:	e5 ec       	ldi	r30, 0xC5	; 197
+     9a0:	f6 e0       	ldi	r31, 0x06	; 6
+
+/*****************************************************************************
+*****************************************************************************/
+static NwkRouteTableRecord_t *nwkRouteFindRecord(uint16_t dst)
+{
+  for (uint8_t i = 0; i < NWK_ROUTE_TABLE_SIZE; i++)
+     9a2:	20 e0       	ldi	r18, 0x00	; 0
+    if (nwkRouteTable[i].dst == dst)
+     9a4:	40 81       	ld	r20, Z
+     9a6:	51 81       	ldd	r21, Z+1	; 0x01
+     9a8:	48 17       	cp	r20, r24
+     9aa:	59 07       	cpc	r21, r25
+     9ac:	59 f4       	brne	.+22     	; 0x9c4 <nwkRouteFindRecord+0x26>
+      return &nwkRouteTable[i];
+     9ae:	30 e0       	ldi	r19, 0x00	; 0
+     9b0:	c9 01       	movw	r24, r18
+     9b2:	88 0f       	add	r24, r24
+     9b4:	99 1f       	adc	r25, r25
+     9b6:	82 0f       	add	r24, r18
+     9b8:	93 1f       	adc	r25, r19
+     9ba:	88 0f       	add	r24, r24
+     9bc:	99 1f       	adc	r25, r25
+     9be:	8b 53       	subi	r24, 0x3B	; 59
+     9c0:	99 4f       	sbci	r25, 0xF9	; 249
+     9c2:	08 95       	ret
+
+/*****************************************************************************
+*****************************************************************************/
+static NwkRouteTableRecord_t *nwkRouteFindRecord(uint16_t dst)
+{
+  for (uint8_t i = 0; i < NWK_ROUTE_TABLE_SIZE; i++)
+     9c4:	2f 5f       	subi	r18, 0xFF	; 255
+     9c6:	36 96       	adiw	r30, 0x06	; 6
+     9c8:	24 36       	cpi	r18, 0x64	; 100
+     9ca:	61 f7       	brne	.-40     	; 0x9a4 <nwkRouteFindRecord+0x6>
+    if (nwkRouteTable[i].dst == dst)
+      return &nwkRouteTable[i];
+
+  if (NWK_ROUTE_UNKNOWN == dst)
+     9cc:	2f ef       	ldi	r18, 0xFF	; 255
+     9ce:	8f 3f       	cpi	r24, 0xFF	; 255
+     9d0:	92 07       	cpc	r25, r18
+     9d2:	19 f4       	brne	.+6      	; 0x9da <nwkRouteFindRecord+0x3c>
+    return &nwkRouteTable[NWK_ROUTE_TABLE_SIZE - 1];
+     9d4:	87 e1       	ldi	r24, 0x17	; 23
+     9d6:	99 e0       	ldi	r25, 0x09	; 9
+     9d8:	08 95       	ret
+
+  return NULL;
+     9da:	80 e0       	ldi	r24, 0x00	; 0
+     9dc:	90 e0       	ldi	r25, 0x00	; 0
+}
+     9de:	08 95       	ret
+
+000009e0 <nwkRouteErrorConf>:
+
+/*****************************************************************************
+*****************************************************************************/
+static void nwkRouteErrorConf(NwkFrame_t *frame)
+{
+  nwkFrameFree(frame);
+     9e0:	0e 94 99 04 	call	0x932	; 0x932 <nwkFrameFree>
+}
+     9e4:	08 95       	ret
+
+000009e6 <nwkRouteTxFrameConf>:
+
+/*****************************************************************************
+*****************************************************************************/
+static void nwkRouteTxFrameConf(NwkFrame_t *frame)
+{
+  nwkFrameFree(frame);
+     9e6:	0e 94 99 04 	call	0x932	; 0x932 <nwkFrameFree>
+}
+     9ea:	08 95       	ret
+
+000009ec <nwkRouteInit>:
+static NwkRouteTableRecord_t nwkRouteTable[NWK_ROUTE_TABLE_SIZE];
+
+/*****************************************************************************
+*****************************************************************************/
+void nwkRouteInit(void)
+{
+     9ec:	e5 ec       	ldi	r30, 0xC5	; 197
+     9ee:	f6 e0       	ldi	r31, 0x06	; 6
+     9f0:	24 e6       	ldi	r18, 0x64	; 100
+  for (uint8_t i = 0; i < NWK_ROUTE_TABLE_SIZE; i++)
+    nwkRouteTable[i].dst = NWK_ROUTE_UNKNOWN;
+     9f2:	8f ef       	ldi	r24, 0xFF	; 255
+     9f4:	9f ef       	ldi	r25, 0xFF	; 255
+     9f6:	91 83       	std	Z+1, r25	; 0x01
+     9f8:	80 83       	st	Z, r24
+     9fa:	21 50       	subi	r18, 0x01	; 1
+     9fc:	36 96       	adiw	r30, 0x06	; 6
+
+/*****************************************************************************
+*****************************************************************************/
+void nwkRouteInit(void)
+{
+  for (uint8_t i = 0; i < NWK_ROUTE_TABLE_SIZE; i++)
+     9fe:	22 23       	and	r18, r18
+     a00:	d1 f7       	brne	.-12     	; 0x9f6 <nwkRouteInit+0xa>
+    nwkRouteTable[i].dst = NWK_ROUTE_UNKNOWN;
+}
+     a02:	08 95       	ret
+
+00000a04 <nwkRouteRemove>:
+*****************************************************************************/
+void nwkRouteRemove(uint16_t dst)
+{
+  NwkRouteTableRecord_t *rec;
+
+  rec = nwkRouteFindRecord(dst);
+     a04:	0e 94 cf 04 	call	0x99e	; 0x99e <nwkRouteFindRecord>
+  if (rec)
+     a08:	00 97       	sbiw	r24, 0x00	; 0
+     a0a:	29 f0       	breq	.+10     	; 0xa16 <nwkRouteRemove+0x12>
+    rec->dst = NWK_ROUTE_UNKNOWN;
+     a0c:	2f ef       	ldi	r18, 0xFF	; 255
+     a0e:	3f ef       	ldi	r19, 0xFF	; 255
+     a10:	fc 01       	movw	r30, r24
+     a12:	31 83       	std	Z+1, r19	; 0x01
+     a14:	20 83       	st	Z, r18
+     a16:	08 95       	ret
+
+00000a18 <nwkRouteFrameReceived>:
+}
+
+/*****************************************************************************
+*****************************************************************************/
+void nwkRouteFrameReceived(NwkFrame_t *frame)
+{
+     a18:	ef 92       	push	r14
+     a1a:	ff 92       	push	r15
+     a1c:	0f 93       	push	r16
+     a1e:	1f 93       	push	r17
+     a20:	cf 93       	push	r28
+     a22:	df 93       	push	r29
+     a24:	ec 01       	movw	r28, r24
+  NwkRouteTableRecord_t *rec;
+  NwkFrameHeader_t *header = &frame->data.header;
+
+  if ((header->macSrcAddr & NWK_ROUTE_TRANSIT_MASK) &&
+     a26:	09 85       	ldd	r16, Y+9	; 0x09
+     a28:	1a 85       	ldd	r17, Y+10	; 0x0a
+     a2a:	17 ff       	sbrs	r17, 7
+     a2c:	05 c0       	rjmp	.+10     	; 0xa38 <nwkRouteFrameReceived+0x20>
+     a2e:	8d 85       	ldd	r24, Y+13	; 0x0d
+     a30:	9e 85       	ldd	r25, Y+14	; 0x0e
+     a32:	08 17       	cp	r16, r24
+     a34:	19 07       	cpc	r17, r25
+     a36:	51 f5       	brne	.+84     	; 0xa8c <nwkRouteFrameReceived+0x74>
+      (header->macSrcAddr != header->nwkSrcAddr))
+    return;
+
+  if (0xffff == header->macDstPanId)
+     a38:	8d 81       	ldd	r24, Y+5	; 0x05
+     a3a:	9e 81       	ldd	r25, Y+6	; 0x06
+     a3c:	2f ef       	ldi	r18, 0xFF	; 255
+     a3e:	8f 3f       	cpi	r24, 0xFF	; 255
+     a40:	92 07       	cpc	r25, r18
+     a42:	21 f1       	breq	.+72     	; 0xa8c <nwkRouteFrameReceived+0x74>
+    return;
+
+  rec = nwkRouteFindRecord(header->nwkSrcAddr);
+     a44:	ed 84       	ldd	r14, Y+13	; 0x0d
+     a46:	fe 84       	ldd	r15, Y+14	; 0x0e
+     a48:	c7 01       	movw	r24, r14
+     a4a:	0e 94 cf 04 	call	0x99e	; 0x99e <nwkRouteFindRecord>
+     a4e:	fc 01       	movw	r30, r24
+  if (rec)
+     a50:	00 97       	sbiw	r24, 0x00	; 0
+     a52:	69 f0       	breq	.+26     	; 0xa6e <nwkRouteFrameReceived+0x56>
+  {
+    if (rec->nextHop != header->macSrcAddr && frame->rx.lqi > rec->lqi)
+     a54:	82 81       	ldd	r24, Z+2	; 0x02
+     a56:	93 81       	ldd	r25, Z+3	; 0x03
+     a58:	80 17       	cp	r24, r16
+     a5a:	91 07       	cpc	r25, r17
+     a5c:	99 f0       	breq	.+38     	; 0xa84 <nwkRouteFrameReceived+0x6c>
+     a5e:	de 01       	movw	r26, r28
+     a60:	a1 58       	subi	r26, 0x81	; 129
+     a62:	bf 4f       	sbci	r27, 0xFF	; 255
+     a64:	9c 91       	ld	r25, X
+     a66:	85 81       	ldd	r24, Z+5	; 0x05
+     a68:	89 17       	cp	r24, r25
+     a6a:	60 f4       	brcc	.+24     	; 0xa84 <nwkRouteFrameReceived+0x6c>
+     a6c:	07 c0       	rjmp	.+14     	; 0xa7c <nwkRouteFrameReceived+0x64>
+      rec->score = NWK_ROUTE_DEFAULT_SCORE;
+    }
+  }
+  else
+  {
+    rec = nwkRouteFindRecord(NWK_ROUTE_UNKNOWN);
+     a6e:	8f ef       	ldi	r24, 0xFF	; 255
+     a70:	9f ef       	ldi	r25, 0xFF	; 255
+     a72:	0e 94 cf 04 	call	0x99e	; 0x99e <nwkRouteFindRecord>
+     a76:	fc 01       	movw	r30, r24
+
+    rec->dst = header->nwkSrcAddr;
+     a78:	f1 82       	std	Z+1, r15	; 0x01
+     a7a:	e0 82       	st	Z, r14
+    rec->nextHop = header->macSrcAddr;
+     a7c:	13 83       	std	Z+3, r17	; 0x03
+     a7e:	02 83       	std	Z+2, r16	; 0x02
+    rec->score = NWK_ROUTE_DEFAULT_SCORE;
+     a80:	83 e0       	ldi	r24, 0x03	; 3
+     a82:	84 83       	std	Z+4, r24	; 0x04
+  }
+
+  rec->lqi = frame->rx.lqi;
+     a84:	c1 58       	subi	r28, 0x81	; 129
+     a86:	df 4f       	sbci	r29, 0xFF	; 255
+     a88:	88 81       	ld	r24, Y
+     a8a:	85 83       	std	Z+5, r24	; 0x05
+}
+     a8c:	df 91       	pop	r29
+     a8e:	cf 91       	pop	r28
+     a90:	1f 91       	pop	r17
+     a92:	0f 91       	pop	r16
+     a94:	ff 90       	pop	r15
+     a96:	ef 90       	pop	r14
+     a98:	08 95       	ret
+
+00000a9a <nwkRouteFrameSent>:
+
+/*****************************************************************************
+*****************************************************************************/
+void nwkRouteFrameSent(NwkFrame_t *frame)
+{
+     a9a:	0f 93       	push	r16
+     a9c:	1f 93       	push	r17
+     a9e:	cf 93       	push	r28
+     aa0:	df 93       	push	r29
+     aa2:	00 d0       	rcall	.+0      	; 0xaa4 <nwkRouteFrameSent+0xa>
+     aa4:	00 d0       	rcall	.+0      	; 0xaa6 <nwkRouteFrameSent+0xc>
+     aa6:	00 d0       	rcall	.+0      	; 0xaa8 <nwkRouteFrameSent+0xe>
+     aa8:	cd b7       	in	r28, 0x3d	; 61
+     aaa:	de b7       	in	r29, 0x3e	; 62
+     aac:	8c 01       	movw	r16, r24
+  NwkRouteTableRecord_t *rec;
+
+  rec = nwkRouteFindRecord(frame->data.header.nwkDstAddr);
+     aae:	dc 01       	movw	r26, r24
+     ab0:	1f 96       	adiw	r26, 0x0f	; 15
+     ab2:	8d 91       	ld	r24, X+
+     ab4:	9c 91       	ld	r25, X
+     ab6:	50 97       	sbiw	r26, 0x10	; 16
+     ab8:	0e 94 cf 04 	call	0x99e	; 0x99e <nwkRouteFindRecord>
+     abc:	fc 01       	movw	r30, r24
+  if (NULL == rec)
+     abe:	00 97       	sbiw	r24, 0x00	; 0
+     ac0:	d1 f1       	breq	.+116    	; 0xb36 <nwkRouteFrameSent+0x9c>
+    return;
+
+  if (NWK_SUCCESS_STATUS == frame->tx.status)
+     ac2:	d8 01       	movw	r26, r16
+     ac4:	a1 58       	subi	r26, 0x81	; 129
+     ac6:	bf 4f       	sbci	r27, 0xFF	; 255
+     ac8:	8c 91       	ld	r24, X
+     aca:	88 23       	and	r24, r24
+     acc:	19 f4       	brne	.+6      	; 0xad4 <nwkRouteFrameSent+0x3a>
+  {
+    rec->score = NWK_ROUTE_DEFAULT_SCORE;
+     ace:	83 e0       	ldi	r24, 0x03	; 3
+     ad0:	84 83       	std	Z+4, r24	; 0x04
+     ad2:	0a c0       	rjmp	.+20     	; 0xae8 <nwkRouteFrameSent+0x4e>
+  }
+  else
+  {
+    rec->score--;
+     ad4:	84 81       	ldd	r24, Z+4	; 0x04
+     ad6:	81 50       	subi	r24, 0x01	; 1
+     ad8:	84 83       	std	Z+4, r24	; 0x04
+    if (0 == rec->score)
+     ada:	88 23       	and	r24, r24
+     adc:	29 f4       	brne	.+10     	; 0xae8 <nwkRouteFrameSent+0x4e>
+    {
+      rec->dst = NWK_ROUTE_UNKNOWN;
+     ade:	8f ef       	ldi	r24, 0xFF	; 255
+     ae0:	9f ef       	ldi	r25, 0xFF	; 255
+     ae2:	91 83       	std	Z+1, r25	; 0x01
+     ae4:	80 83       	st	Z, r24
+      return;
+     ae6:	27 c0       	rjmp	.+78     	; 0xb36 <nwkRouteFrameSent+0x9c>
+    }
+  }
+
+  if ((rec - &nwkRouteTable[0]) > 0)
+     ae8:	cf 01       	movw	r24, r30
+     aea:	85 5c       	subi	r24, 0xC5	; 197
+     aec:	96 40       	sbci	r25, 0x06	; 6
+     aee:	86 30       	cpi	r24, 0x06	; 6
+     af0:	91 05       	cpc	r25, r1
+     af2:	0c f1       	brlt	.+66     	; 0xb36 <nwkRouteFrameSent+0x9c>
+  {
+    NwkRouteTableRecord_t *prev = rec - 1;
+    NwkRouteTableRecord_t tmp;
+
+    tmp = *prev;
+     af4:	ce 01       	movw	r24, r28
+     af6:	01 96       	adiw	r24, 0x01	; 1
+     af8:	af 01       	movw	r20, r30
+     afa:	46 50       	subi	r20, 0x06	; 6
+     afc:	50 40       	sbci	r21, 0x00	; 0
+     afe:	26 e0       	ldi	r18, 0x06	; 6
+     b00:	da 01       	movw	r26, r20
+     b02:	0d 90       	ld	r0, X+
+     b04:	ad 01       	movw	r20, r26
+     b06:	dc 01       	movw	r26, r24
+     b08:	0d 92       	st	X+, r0
+     b0a:	cd 01       	movw	r24, r26
+     b0c:	21 50       	subi	r18, 0x01	; 1
+     b0e:	c1 f7       	brne	.-16     	; 0xb00 <nwkRouteFrameSent+0x66>
+    *prev = *rec;
+     b10:	cf 01       	movw	r24, r30
+     b12:	06 97       	sbiw	r24, 0x06	; 6
+     b14:	af 01       	movw	r20, r30
+     b16:	26 e0       	ldi	r18, 0x06	; 6
+     b18:	da 01       	movw	r26, r20
+     b1a:	0d 90       	ld	r0, X+
+     b1c:	ad 01       	movw	r20, r26
+     b1e:	dc 01       	movw	r26, r24
+     b20:	0d 92       	st	X+, r0
+     b22:	cd 01       	movw	r24, r26
+     b24:	21 50       	subi	r18, 0x01	; 1
+     b26:	c1 f7       	brne	.-16     	; 0xb18 <nwkRouteFrameSent+0x7e>
+    *rec = tmp;
+     b28:	de 01       	movw	r26, r28
+     b2a:	11 96       	adiw	r26, 0x01	; 1
+     b2c:	86 e0       	ldi	r24, 0x06	; 6
+     b2e:	0d 90       	ld	r0, X+
+     b30:	01 92       	st	Z+, r0
+     b32:	81 50       	subi	r24, 0x01	; 1
+     b34:	e1 f7       	brne	.-8      	; 0xb2e <nwkRouteFrameSent+0x94>
+  }
+}
+     b36:	26 96       	adiw	r28, 0x06	; 6
+     b38:	0f b6       	in	r0, 0x3f	; 63
+     b3a:	f8 94       	cli
+     b3c:	de bf       	out	0x3e, r29	; 62
+     b3e:	0f be       	out	0x3f, r0	; 63
+     b40:	cd bf       	out	0x3d, r28	; 61
+     b42:	df 91       	pop	r29
+     b44:	cf 91       	pop	r28
+     b46:	1f 91       	pop	r17
+     b48:	0f 91       	pop	r16
+     b4a:	08 95       	ret
+
+00000b4c <nwkRouteNextHop>:
+
+/*****************************************************************************
+*****************************************************************************/
+uint16_t nwkRouteNextHop(uint16_t dst)
+{
+  if (0xffff == dst)
+     b4c:	2f ef       	ldi	r18, 0xFF	; 255
+     b4e:	8f 3f       	cpi	r24, 0xFF	; 255
+     b50:	92 07       	cpc	r25, r18
+     b52:	f1 f0       	breq	.+60     	; 0xb90 <nwkRouteNextHop+0x44>
+     b54:	e5 ec       	ldi	r30, 0xC5	; 197
+     b56:	f6 e0       	ldi	r31, 0x06	; 6
+     b58:	40 e0       	ldi	r20, 0x00	; 0
+     b5a:	50 e0       	ldi	r21, 0x00	; 0
+    return NWK_ROUTE_UNKNOWN;
+
+  for (uint8_t i = 0; i < NWK_ROUTE_TABLE_SIZE; i++)
+    if (nwkRouteTable[i].dst == dst)
+     b5c:	20 81       	ld	r18, Z
+     b5e:	31 81       	ldd	r19, Z+1	; 0x01
+     b60:	28 17       	cp	r18, r24
+     b62:	39 07       	cpc	r19, r25
+     b64:	61 f4       	brne	.+24     	; 0xb7e <nwkRouteNextHop+0x32>
+      return nwkRouteTable[i].nextHop;
+     b66:	fa 01       	movw	r30, r20
+     b68:	ee 0f       	add	r30, r30
+     b6a:	ff 1f       	adc	r31, r31
+     b6c:	e4 0f       	add	r30, r20
+     b6e:	f5 1f       	adc	r31, r21
+     b70:	ee 0f       	add	r30, r30
+     b72:	ff 1f       	adc	r31, r31
+     b74:	eb 53       	subi	r30, 0x3B	; 59
+     b76:	f9 4f       	sbci	r31, 0xF9	; 249
+     b78:	82 81       	ldd	r24, Z+2	; 0x02
+     b7a:	93 81       	ldd	r25, Z+3	; 0x03
+     b7c:	08 95       	ret
+     b7e:	4f 5f       	subi	r20, 0xFF	; 255
+     b80:	5f 4f       	sbci	r21, 0xFF	; 255
+     b82:	36 96       	adiw	r30, 0x06	; 6
+uint16_t nwkRouteNextHop(uint16_t dst)
+{
+  if (0xffff == dst)
+    return NWK_ROUTE_UNKNOWN;
+
+  for (uint8_t i = 0; i < NWK_ROUTE_TABLE_SIZE; i++)
+     b84:	44 36       	cpi	r20, 0x64	; 100
+     b86:	51 05       	cpc	r21, r1
+     b88:	49 f7       	brne	.-46     	; 0xb5c <nwkRouteNextHop+0x10>
+    if (nwkRouteTable[i].dst == dst)
+      return nwkRouteTable[i].nextHop;
+
+  return NWK_ROUTE_UNKNOWN;
+     b8a:	8f ef       	ldi	r24, 0xFF	; 255
+     b8c:	9f ef       	ldi	r25, 0xFF	; 255
+     b8e:	08 95       	ret
+/*****************************************************************************
+*****************************************************************************/
+uint16_t nwkRouteNextHop(uint16_t dst)
+{
+  if (0xffff == dst)
+    return NWK_ROUTE_UNKNOWN;
+     b90:	8f ef       	ldi	r24, 0xFF	; 255
+     b92:	9f ef       	ldi	r25, 0xFF	; 255
+  for (uint8_t i = 0; i < NWK_ROUTE_TABLE_SIZE; i++)
+    if (nwkRouteTable[i].dst == dst)
+      return nwkRouteTable[i].nextHop;
+
+  return NWK_ROUTE_UNKNOWN;
+}
+     b94:	08 95       	ret
+
+00000b96 <nwkRouteFrame>:
+
+/*****************************************************************************
+*****************************************************************************/
+void nwkRouteFrame(NwkFrame_t *frame)
+{
+     b96:	cf 92       	push	r12
+     b98:	df 92       	push	r13
+     b9a:	ef 92       	push	r14
+     b9c:	ff 92       	push	r15
+     b9e:	0f 93       	push	r16
+     ba0:	1f 93       	push	r17
+     ba2:	cf 93       	push	r28
+     ba4:	df 93       	push	r29
+     ba6:	8c 01       	movw	r16, r24
+  if (NWK_ROUTE_UNKNOWN != nwkRouteNextHop(frame->data.header.nwkDstAddr))
+     ba8:	fc 01       	movw	r30, r24
+     baa:	c7 84       	ldd	r12, Z+15	; 0x0f
+     bac:	d0 88       	ldd	r13, Z+16	; 0x10
+     bae:	c6 01       	movw	r24, r12
+     bb0:	0e 94 a6 05 	call	0xb4c	; 0xb4c <nwkRouteNextHop>
+     bb4:	ff ef       	ldi	r31, 0xFF	; 255
+     bb6:	8f 3f       	cpi	r24, 0xFF	; 255
+     bb8:	9f 07       	cpc	r25, r31
+     bba:	81 f0       	breq	.+32     	; 0xbdc <nwkRouteFrame+0x46>
+  {
+    frame->tx.confirm = nwkRouteTxFrameConf;
+     bbc:	f8 01       	movw	r30, r16
+     bbe:	ed 57       	subi	r30, 0x7D	; 125
+     bc0:	ff 4f       	sbci	r31, 0xFF	; 255
+     bc2:	83 ef       	ldi	r24, 0xF3	; 243
+     bc4:	94 e0       	ldi	r25, 0x04	; 4
+     bc6:	91 83       	std	Z+1, r25	; 0x01
+     bc8:	80 83       	st	Z, r24
+    frame->tx.control = NWK_TX_CONTROL_ROUTING;
+     bca:	f8 01       	movw	r30, r16
+     bcc:	ee 57       	subi	r30, 0x7E	; 126
+     bce:	ff 4f       	sbci	r31, 0xFF	; 255
+     bd0:	82 e0       	ldi	r24, 0x02	; 2
+     bd2:	80 83       	st	Z, r24
+    nwkTxFrame(frame);
+     bd4:	c8 01       	movw	r24, r16
+     bd6:	0e 94 ca 08 	call	0x1194	; 0x1194 <nwkTxFrame>
+     bda:	20 c0       	rjmp	.+64     	; 0xc1c <nwkRouteFrame+0x86>
+  }
+  else
+  {
+    nwkRouteSendRouteError(frame->data.header.nwkSrcAddr, frame->data.header.nwkDstAddr);
+     bdc:	f8 01       	movw	r30, r16
+     bde:	e5 84       	ldd	r14, Z+13	; 0x0d
+     be0:	f6 84       	ldd	r15, Z+14	; 0x0e
+static void nwkRouteSendRouteError(uint16_t src, uint16_t dst)
+{
+  NwkFrame_t *frame;
+  NwkRouteErrorCommand_t *command;
+
+  if (NULL == (frame = nwkFrameAlloc(sizeof(NwkRouteErrorCommand_t))))
+     be2:	85 e0       	ldi	r24, 0x05	; 5
+     be4:	0e 94 79 04 	call	0x8f2	; 0x8f2 <nwkFrameAlloc>
+     be8:	ec 01       	movw	r28, r24
+     bea:	00 97       	sbiw	r24, 0x00	; 0
+     bec:	a1 f0       	breq	.+40     	; 0xc16 <nwkRouteFrame+0x80>
+    return;
+
+  nwkFrameCommandInit(frame);
+     bee:	0e 94 aa 04 	call	0x954	; 0x954 <nwkFrameCommandInit>
+
+  frame->tx.confirm = nwkRouteErrorConf;
+     bf2:	fe 01       	movw	r30, r28
+     bf4:	ed 57       	subi	r30, 0x7D	; 125
+     bf6:	ff 4f       	sbci	r31, 0xFF	; 255
+     bf8:	80 ef       	ldi	r24, 0xF0	; 240
+     bfa:	94 e0       	ldi	r25, 0x04	; 4
+     bfc:	91 83       	std	Z+1, r25	; 0x01
+     bfe:	80 83       	st	Z, r24
+
+  frame->data.header.nwkDstAddr = src;
+     c00:	f8 8a       	std	Y+16, r15	; 0x10
+     c02:	ef 86       	std	Y+15, r14	; 0x0f
+
+  command = (NwkRouteErrorCommand_t *)frame->data.payload;
+
+  command->id = NWK_COMMAND_ROUTE_ERROR;
+     c04:	81 e0       	ldi	r24, 0x01	; 1
+     c06:	8a 8b       	std	Y+18, r24	; 0x12
+  command->srcAddr = src;
+     c08:	fc 8a       	std	Y+20, r15	; 0x14
+     c0a:	eb 8a       	std	Y+19, r14	; 0x13
+  command->dstAddr = dst;
+     c0c:	de 8a       	std	Y+22, r13	; 0x16
+     c0e:	cd 8a       	std	Y+21, r12	; 0x15
+
+  nwkTxFrame(frame);
+     c10:	ce 01       	movw	r24, r28
+     c12:	0e 94 ca 08 	call	0x1194	; 0x1194 <nwkTxFrame>
+    nwkTxFrame(frame);
+  }
+  else
+  {
+    nwkRouteSendRouteError(frame->data.header.nwkSrcAddr, frame->data.header.nwkDstAddr);
+    nwkFrameFree(frame);
+     c16:	c8 01       	movw	r24, r16
+     c18:	0e 94 99 04 	call	0x932	; 0x932 <nwkFrameFree>
+  }
+}
+     c1c:	df 91       	pop	r29
+     c1e:	cf 91       	pop	r28
+     c20:	1f 91       	pop	r17
+     c22:	0f 91       	pop	r16
+     c24:	ff 90       	pop	r15
+     c26:	ef 90       	pop	r14
+     c28:	df 90       	pop	r13
+     c2a:	cf 90       	pop	r12
+     c2c:	08 95       	ret
+
+00000c2e <nwkRouteErrorReceived>:
+*****************************************************************************/
+void nwkRouteErrorReceived(NWK_DataInd_t *ind)
+{
+  NwkRouteErrorCommand_t *command = (NwkRouteErrorCommand_t *)ind->data;
+
+  nwkRouteRemove(command->dstAddr);
+     c2e:	dc 01       	movw	r26, r24
+     c30:	15 96       	adiw	r26, 0x05	; 5
+     c32:	ed 91       	ld	r30, X+
+     c34:	fc 91       	ld	r31, X
+     c36:	16 97       	sbiw	r26, 0x06	; 6
+     c38:	83 81       	ldd	r24, Z+3	; 0x03
+     c3a:	94 81       	ldd	r25, Z+4	; 0x04
+     c3c:	0e 94 02 05 	call	0xa04	; 0xa04 <nwkRouteRemove>
+}
+     c40:	08 95       	ret
+
+00000c42 <nwkRxSendAckConf>:
+
+/*****************************************************************************
+*****************************************************************************/
+static void nwkRxSendAckConf(NwkFrame_t *frame)
+{
+  nwkFrameFree(frame);
+     c42:	0e 94 99 04 	call	0x932	; 0x932 <nwkFrameFree>
+}
+     c46:	08 95       	ret
+
+00000c48 <nwkRxDuplicateRejectionTimerHandler>:
+  for (uint8_t i = 0; i < NWK_DUPLICATE_REJECTION_TABLE_SIZE; i++)
+  {
+    if (nwkRxDuplicateRejectionTable[i].ttl)
+    {
+      nwkRxDuplicateRejectionTable[i].ttl--;
+      restart = true;
+     c48:	e1 e2       	ldi	r30, 0x21	; 33
+     c4a:	f9 e0       	ldi	r31, 0x09	; 9
+#endif
+
+/*****************************************************************************
+*****************************************************************************/
+static void nwkRxDuplicateRejectionTimerHandler(SYS_Timer_t *timer)
+{
+     c4c:	4a e0       	ldi	r20, 0x0A	; 10
+  bool restart = false;
+     c4e:	50 e0       	ldi	r21, 0x00	; 0
+
+  for (uint8_t i = 0; i < NWK_DUPLICATE_REJECTION_TABLE_SIZE; i++)
+  {
+    if (nwkRxDuplicateRejectionTable[i].ttl)
+     c50:	20 81       	ld	r18, Z
+     c52:	31 81       	ldd	r19, Z+1	; 0x01
+     c54:	21 15       	cp	r18, r1
+     c56:	31 05       	cpc	r19, r1
+     c58:	29 f0       	breq	.+10     	; 0xc64 <nwkRxDuplicateRejectionTimerHandler+0x1c>
+    {
+      nwkRxDuplicateRejectionTable[i].ttl--;
+     c5a:	21 50       	subi	r18, 0x01	; 1
+     c5c:	30 40       	sbci	r19, 0x00	; 0
+     c5e:	31 83       	std	Z+1, r19	; 0x01
+     c60:	20 83       	st	Z, r18
+      restart = true;
+     c62:	51 e0       	ldi	r21, 0x01	; 1
+
+  for (uint8_t i = 0; i < NWK_DUPLICATE_REJECTION_TABLE_SIZE; i++)
+  {
+    if (nwkRxDuplicateRejectionTable[i].ttl)
+    {
+      nwkRxDuplicateRejectionTable[i].ttl--;
+     c64:	41 50       	subi	r20, 0x01	; 1
+     c66:	35 96       	adiw	r30, 0x05	; 5
+*****************************************************************************/
+static void nwkRxDuplicateRejectionTimerHandler(SYS_Timer_t *timer)
+{
+  bool restart = false;
+
+  for (uint8_t i = 0; i < NWK_DUPLICATE_REJECTION_TABLE_SIZE; i++)
+     c68:	44 23       	and	r20, r20
+     c6a:	91 f7       	brne	.-28     	; 0xc50 <nwkRxDuplicateRejectionTimerHandler+0x8>
+      nwkRxDuplicateRejectionTable[i].ttl--;
+      restart = true;
+    }
+  }
+
+  if (restart)
+     c6c:	55 23       	and	r21, r21
+     c6e:	11 f0       	breq	.+4      	; 0xc74 <nwkRxDuplicateRejectionTimerHandler+0x2c>
+    SYS_TimerStart(timer);
+     c70:	0e 94 77 0a 	call	0x14ee	; 0x14ee <SYS_TimerStart>
+     c74:	08 95       	ret
+
+00000c76 <nwkRxSeriveDataInd>:
+
+/*****************************************************************************
+*****************************************************************************/
+static bool nwkRxSeriveDataInd(NWK_DataInd_t *ind)
+{
+  uint8_t cmd = ind->data[0];
+     c76:	dc 01       	movw	r26, r24
+     c78:	15 96       	adiw	r26, 0x05	; 5
+     c7a:	ed 91       	ld	r30, X+
+     c7c:	fc 91       	ld	r31, X
+     c7e:	16 97       	sbiw	r26, 0x06	; 6
+     c80:	20 81       	ld	r18, Z
+
+  if (NWK_COMMAND_ACK == cmd)
+     c82:	22 23       	and	r18, r18
+     c84:	19 f4       	brne	.+6      	; 0xc8c <nwkRxSeriveDataInd+0x16>
+    nwkTxAckReceived(ind);
+     c86:	0e 94 4f 09 	call	0x129e	; 0x129e <nwkTxAckReceived>
+     c8a:	04 c0       	rjmp	.+8      	; 0xc94 <nwkRxSeriveDataInd+0x1e>
+#ifdef NWK_ENABLE_ROUTING
+  else if (NWK_COMMAND_ROUTE_ERROR == cmd)
+     c8c:	21 30       	cpi	r18, 0x01	; 1
+     c8e:	21 f4       	brne	.+8      	; 0xc98 <nwkRxSeriveDataInd+0x22>
+    nwkRouteErrorReceived(ind);
+     c90:	0e 94 17 06 	call	0xc2e	; 0xc2e <nwkRouteErrorReceived>
+#endif
+  else
+    return false;
+
+  return true;
+     c94:	81 e0       	ldi	r24, 0x01	; 1
+     c96:	08 95       	ret
+#ifdef NWK_ENABLE_ROUTING
+  else if (NWK_COMMAND_ROUTE_ERROR == cmd)
+    nwkRouteErrorReceived(ind);
+#endif
+  else
+    return false;
+     c98:	80 e0       	ldi	r24, 0x00	; 0
+
+  return true;
+}
+     c9a:	08 95       	ret
+
+00000c9c <nwkRxInit>:
+}
+
+/*****************************************************************************
+*****************************************************************************/
+void nwkRxInit(void)
+{
+     c9c:	e1 e2       	ldi	r30, 0x21	; 33
+     c9e:	f9 e0       	ldi	r31, 0x09	; 9
+     ca0:	8a e0       	ldi	r24, 0x0A	; 10
+  for (uint8_t i = 0; i < NWK_DUPLICATE_REJECTION_TABLE_SIZE; i++)
+    nwkRxDuplicateRejectionTable[i].ttl = 0;
+     ca2:	11 82       	std	Z+1, r1	; 0x01
+     ca4:	10 82       	st	Z, r1
+     ca6:	81 50       	subi	r24, 0x01	; 1
+     ca8:	35 96       	adiw	r30, 0x05	; 5
+
+/*****************************************************************************
+*****************************************************************************/
+void nwkRxInit(void)
+{
+  for (uint8_t i = 0; i < NWK_DUPLICATE_REJECTION_TABLE_SIZE; i++)
+     caa:	88 23       	and	r24, r24
+     cac:	d1 f7       	brne	.-12     	; 0xca2 <nwkRxInit+0x6>
+    nwkRxDuplicateRejectionTable[i].ttl = 0;
+
+  nwkRxActiveFrames = 0;
+     cae:	10 92 50 09 	sts	0x0950, r1
+
+  nwkRxDuplicateRejectionTimer.interval = NWK_RX_DUPLICATE_REJECTION_TIMER_INTERVAL;
+     cb2:	84 e1       	ldi	r24, 0x14	; 20
+     cb4:	90 e0       	ldi	r25, 0x00	; 0
+     cb6:	a0 e0       	ldi	r26, 0x00	; 0
+     cb8:	b0 e0       	ldi	r27, 0x00	; 0
+     cba:	80 93 57 09 	sts	0x0957, r24
+     cbe:	90 93 58 09 	sts	0x0958, r25
+     cc2:	a0 93 59 09 	sts	0x0959, r26
+     cc6:	b0 93 5a 09 	sts	0x095A, r27
+  nwkRxDuplicateRejectionTimer.mode = SYS_TIMER_INTERVAL_MODE;
+     cca:	10 92 5b 09 	sts	0x095B, r1
+  nwkRxDuplicateRejectionTimer.handler = nwkRxDuplicateRejectionTimerHandler;
+     cce:	84 e2       	ldi	r24, 0x24	; 36
+     cd0:	96 e0       	ldi	r25, 0x06	; 6
+     cd2:	90 93 5d 09 	sts	0x095D, r25
+     cd6:	80 93 5c 09 	sts	0x095C, r24
+
+  NWK_OpenEndpoint(NWK_SERVICE_ENDPOINT_ID, nwkRxSeriveDataInd);
+     cda:	80 e0       	ldi	r24, 0x00	; 0
+     cdc:	6b e3       	ldi	r22, 0x3B	; 59
+     cde:	76 e0       	ldi	r23, 0x06	; 6
+     ce0:	0e 94 92 03 	call	0x724	; 0x724 <NWK_OpenEndpoint>
+}
+     ce4:	08 95       	ret
+
+00000ce6 <PHY_DataInd>:
+
+/*****************************************************************************
+	Process a received frame during system task processing
+*****************************************************************************/
+void PHY_DataInd(PHY_DataInd_t *ind)
+{
+     ce6:	cf 93       	push	r28
+     ce8:	df 93       	push	r29
+     cea:	ec 01       	movw	r28, r24
+  NwkFrame_t *frame;
+// Frame Control = 0x8841 (broadcast frame) or 0x8861 (unicast frame)
+// Means: short addresses; intra-PAN; no-ack/ack; data frame
+// low byte first
+  if (0x88 != ind->data[1] || (0x61 != ind->data[0] && 0x41 != ind->data[0]) ||
+     cec:	e8 81       	ld	r30, Y
+     cee:	f9 81       	ldd	r31, Y+1	; 0x01
+     cf0:	81 81       	ldd	r24, Z+1	; 0x01
+     cf2:	88 38       	cpi	r24, 0x88	; 136
+     cf4:	29 f5       	brne	.+74     	; 0xd40 <PHY_DataInd+0x5a>
+     cf6:	80 81       	ld	r24, Z
+     cf8:	81 36       	cpi	r24, 0x61	; 97
+     cfa:	11 f0       	breq	.+4      	; 0xd00 <PHY_DataInd+0x1a>
+     cfc:	81 34       	cpi	r24, 0x41	; 65
+     cfe:	01 f5       	brne	.+64     	; 0xd40 <PHY_DataInd+0x5a>
+      ind->size < sizeof(NwkFrameHeader_t))
+     d00:	8a 81       	ldd	r24, Y+2	; 0x02
+{
+  NwkFrame_t *frame;
+// Frame Control = 0x8841 (broadcast frame) or 0x8861 (unicast frame)
+// Means: short addresses; intra-PAN; no-ack/ack; data frame
+// low byte first
+  if (0x88 != ind->data[1] || (0x61 != ind->data[0] && 0x41 != ind->data[0]) ||
+     d02:	80 31       	cpi	r24, 0x10	; 16
+     d04:	e8 f0       	brcs	.+58     	; 0xd40 <PHY_DataInd+0x5a>
+      ind->size < sizeof(NwkFrameHeader_t))
+    return;
+
+  if (NULL == (frame = nwkFrameAlloc(ind->size - sizeof(NwkFrameHeader_t))))
+     d06:	80 51       	subi	r24, 0x10	; 16
+     d08:	0e 94 79 04 	call	0x8f2	; 0x8f2 <nwkFrameAlloc>
+     d0c:	00 97       	sbiw	r24, 0x00	; 0
+     d0e:	c1 f0       	breq	.+48     	; 0xd40 <PHY_DataInd+0x5a>
+    return;
+
+  frame->state = NWK_RX_STATE_RECEIVED;
+     d10:	20 e2       	ldi	r18, 0x20	; 32
+     d12:	fc 01       	movw	r30, r24
+     d14:	20 83       	st	Z, r18
+  frame->rx.lqi = ind->lqi;
+     d16:	2b 81       	ldd	r18, Y+3	; 0x03
+     d18:	e1 58       	subi	r30, 0x81	; 129
+     d1a:	ff 4f       	sbci	r31, 0xFF	; 255
+     d1c:	20 83       	st	Z, r18
+  frame->rx.rssi = ind->rssi;
+     d1e:	2c 81       	ldd	r18, Y+4	; 0x04
+     d20:	fc 01       	movw	r30, r24
+     d22:	e0 58       	subi	r30, 0x80	; 128
+     d24:	ff 4f       	sbci	r31, 0xFF	; 255
+     d26:	20 83       	st	Z, r18
+
+  memcpy((uint8_t *)&frame->data, ind->data, ind->size);
+     d28:	02 96       	adiw	r24, 0x02	; 2
+     d2a:	4a 81       	ldd	r20, Y+2	; 0x02
+     d2c:	68 81       	ld	r22, Y
+     d2e:	79 81       	ldd	r23, Y+1	; 0x01
+     d30:	50 e0       	ldi	r21, 0x00	; 0
+     d32:	0e 94 95 0c 	call	0x192a	; 0x192a <memcpy>
+
+  ++nwkRxActiveFrames;
+     d36:	80 91 50 09 	lds	r24, 0x0950
+     d3a:	8f 5f       	subi	r24, 0xFF	; 255
+     d3c:	80 93 50 09 	sts	0x0950, r24
+}
+     d40:	df 91       	pop	r29
+     d42:	cf 91       	pop	r28
+     d44:	08 95       	ret
+
+00000d46 <nwkRxTaskHandler>:
+}
+
+/*****************************************************************************
+*****************************************************************************/
+void nwkRxTaskHandler(void)
+{
+     d46:	8f 92       	push	r8
+     d48:	9f 92       	push	r9
+     d4a:	af 92       	push	r10
+     d4c:	bf 92       	push	r11
+     d4e:	cf 92       	push	r12
+     d50:	df 92       	push	r13
+     d52:	ef 92       	push	r14
+     d54:	ff 92       	push	r15
+     d56:	0f 93       	push	r16
+     d58:	1f 93       	push	r17
+     d5a:	cf 93       	push	r28
+     d5c:	df 93       	push	r29
+     d5e:	cd b7       	in	r28, 0x3d	; 61
+     d60:	de b7       	in	r29, 0x3e	; 62
+     d62:	2a 97       	sbiw	r28, 0x0a	; 10
+     d64:	0f b6       	in	r0, 0x3f	; 63
+     d66:	f8 94       	cli
+     d68:	de bf       	out	0x3e, r29	; 62
+     d6a:	0f be       	out	0x3f, r0	; 63
+     d6c:	cd bf       	out	0x3d, r28	; 61
+  if (0 == nwkRxActiveFrames)
+     d6e:	80 91 50 09 	lds	r24, 0x0950
+     d72:	88 23       	and	r24, r24
+     d74:	09 f4       	brne	.+2      	; 0xd78 <nwkRxTaskHandler+0x32>
+     d76:	ad c1       	rjmp	.+858    	; 0x10d2 <nwkRxTaskHandler+0x38c>
+     d78:	dd 24       	eor	r13, r13
+        forceAck = (0xffff == header->macDstAddr && nwkIb.addr == header->nwkDstAddr);
+
+        if ((header->nwkFcf.ackRequest && ack) || forceAck)
+          nwkRxSendAck(frame);
+
+        frame->state = NWK_RX_STATE_FINISH;
+     d7a:	44 e2       	ldi	r20, 0x24	; 36
+     d7c:	c4 2e       	mov	r12, r20
+  if (NULL == (ack = nwkFrameAlloc(sizeof(NwkAckCommand_t))))
+    return;
+
+  nwkFrameCommandInit(ack);
+
+  ack->tx.confirm = nwkRxSendAckConf;
+     d7e:	51 e2       	ldi	r21, 0x21	; 33
+     d80:	85 2e       	mov	r8, r21
+     d82:	56 e0       	ldi	r21, 0x06	; 6
+     d84:	95 2e       	mov	r9, r21
+#ifdef NWK_ENABLE_SECURITY
+    if (header->nwkFcf.securityEnabled)
+      frame->state = NWK_RX_STATE_DECRYPT;
+    else
+#endif
+      frame->state = NWK_RX_STATE_INDICATE;
+     d86:	62 e2       	ldi	r22, 0x22	; 34
+     d88:	b6 2e       	mov	r11, r22
+  }
+#ifdef NWK_ENABLE_ROUTING
+  else if (nwkIb.addr == header->macDstAddr && 0xffff != header->macDstPanId)
+  {
+    frame->state = NWK_RX_STATE_ROUTE;
+     d8a:	73 e2       	ldi	r23, 0x23	; 35
+     d8c:	a7 2e       	mov	r10, r23
+  if (0 == nwkRxActiveFrames)
+    return;
+
+  for (int i = 0; i < NWK_BUFFERS_AMOUNT; i++)
+  {
+    NwkFrame_t *frame = nwkFrameByIndex(i);
+     d8e:	8d 2d       	mov	r24, r13
+     d90:	0e 94 9c 04 	call	0x938	; 0x938 <nwkFrameByIndex>
+     d94:	7c 01       	movw	r14, r24
+
+    switch (frame->state)
+     d96:	dc 01       	movw	r26, r24
+     d98:	8c 91       	ld	r24, X
+     d9a:	82 32       	cpi	r24, 0x22	; 34
+     d9c:	09 f4       	brne	.+2      	; 0xda0 <nwkRxTaskHandler+0x5a>
+     d9e:	d9 c0       	rjmp	.+434    	; 0xf52 <nwkRxTaskHandler+0x20c>
+     da0:	83 32       	cpi	r24, 0x23	; 35
+     da2:	20 f4       	brcc	.+8      	; 0xdac <nwkRxTaskHandler+0x66>
+     da4:	80 32       	cpi	r24, 0x20	; 32
+     da6:	09 f0       	breq	.+2      	; 0xdaa <nwkRxTaskHandler+0x64>
+     da8:	8f c1       	rjmp	.+798    	; 0x10c8 <nwkRxTaskHandler+0x382>
+     daa:	07 c0       	rjmp	.+14     	; 0xdba <nwkRxTaskHandler+0x74>
+     dac:	83 32       	cpi	r24, 0x23	; 35
+     dae:	09 f4       	brne	.+2      	; 0xdb2 <nwkRxTaskHandler+0x6c>
+     db0:	7f c1       	rjmp	.+766    	; 0x10b0 <nwkRxTaskHandler+0x36a>
+     db2:	84 32       	cpi	r24, 0x24	; 36
+     db4:	09 f0       	breq	.+2      	; 0xdb8 <nwkRxTaskHandler+0x72>
+     db6:	88 c1       	rjmp	.+784    	; 0x10c8 <nwkRxTaskHandler+0x382>
+     db8:	7f c1       	rjmp	.+766    	; 0x10b8 <nwkRxTaskHandler+0x372>
+*****************************************************************************/
+static void nwkRxHandleReceivedFrame(NwkFrame_t *frame)
+{
+  NwkFrameHeader_t *header = &frame->data.header;
+
+  frame->state = NWK_RX_STATE_FINISH;
+     dba:	f7 01       	movw	r30, r14
+     dbc:	c0 82       	st	Z, r12
+// Skip if this is an ack to broadcast addr, or if this node is the one that sent it
+  if ((0xffff == header->nwkDstAddr && header->nwkFcf.ackRequest) ||
+     dbe:	87 85       	ldd	r24, Z+15	; 0x0f
+     dc0:	90 89       	ldd	r25, Z+16	; 0x10
+     dc2:	ff ef       	ldi	r31, 0xFF	; 255
+     dc4:	8f 3f       	cpi	r24, 0xFF	; 255
+     dc6:	9f 07       	cpc	r25, r31
+     dc8:	31 f4       	brne	.+12     	; 0xdd6 <nwkRxTaskHandler+0x90>
+     dca:	d7 01       	movw	r26, r14
+     dcc:	1b 96       	adiw	r26, 0x0b	; 11
+     dce:	8c 91       	ld	r24, X
+     dd0:	1b 97       	sbiw	r26, 0x0b	; 11
+     dd2:	80 fd       	sbrc	r24, 0
+     dd4:	79 c1       	rjmp	.+754    	; 0x10c8 <nwkRxTaskHandler+0x382>
+     dd6:	20 91 ac 0a 	lds	r18, 0x0AAC
+     dda:	30 91 ad 0a 	lds	r19, 0x0AAD
+     dde:	f7 01       	movw	r30, r14
+     de0:	85 85       	ldd	r24, Z+13	; 0x0d
+     de2:	96 85       	ldd	r25, Z+14	; 0x0e
+     de4:	28 17       	cp	r18, r24
+     de6:	39 07       	cpc	r19, r25
+     de8:	09 f4       	brne	.+2      	; 0xdec <nwkRxTaskHandler+0xa6>
+     dea:	6e c1       	rjmp	.+732    	; 0x10c8 <nwkRxTaskHandler+0x382>
+      (nwkIb.addr == header->nwkSrcAddr))
+    return;
+
+#ifndef NWK_ENABLE_SECURITY
+  if (header->nwkFcf.securityEnabled)
+     dec:	83 85       	ldd	r24, Z+11	; 0x0b
+     dee:	81 fd       	sbrc	r24, 1
+     df0:	6b c1       	rjmp	.+726    	; 0x10c8 <nwkRxTaskHandler+0x382>
+    return;
+#endif
+
+#ifdef NWK_ENABLE_ROUTING
+  nwkRouteFrameReceived(frame);
+     df2:	c7 01       	movw	r24, r14
+     df4:	0e 94 0c 05 	call	0xa18	; 0xa18 <nwkRouteFrameReceived>
+     df8:	ee e1       	ldi	r30, 0x1E	; 30
+     dfa:	f9 e0       	ldi	r31, 0x09	; 9
+     dfc:	40 e0       	ldi	r20, 0x00	; 0
+     dfe:	50 e0       	ldi	r21, 0x00	; 0
+
+/*****************************************************************************
+*****************************************************************************/
+static bool nwkRxRejectDuplicate(NwkFrameHeader_t *header)
+{
+  int8_t free = -1;
+     e00:	6f ef       	ldi	r22, 0xFF	; 255
+
+  for (uint8_t i = 0; i < NWK_DUPLICATE_REJECTION_TABLE_SIZE; i++)
+  {
+    if (nwkRxDuplicateRejectionTable[i].ttl)
+     e02:	23 81       	ldd	r18, Z+3	; 0x03
+     e04:	34 81       	ldd	r19, Z+4	; 0x04
+     e06:	21 15       	cp	r18, r1
+     e08:	31 05       	cpc	r19, r1
+     e0a:	81 f1       	breq	.+96     	; 0xe6c <nwkRxTaskHandler+0x126>
+    {
+      if (header->nwkSrcAddr == nwkRxDuplicateRejectionTable[i].src)
+     e0c:	d7 01       	movw	r26, r14
+     e0e:	1d 96       	adiw	r26, 0x0d	; 13
+     e10:	8d 91       	ld	r24, X+
+     e12:	9c 91       	ld	r25, X
+     e14:	1e 97       	sbiw	r26, 0x0e	; 14
+     e16:	20 81       	ld	r18, Z
+     e18:	31 81       	ldd	r19, Z+1	; 0x01
+     e1a:	82 17       	cp	r24, r18
+     e1c:	93 07       	cpc	r25, r19
+     e1e:	39 f5       	brne	.+78     	; 0xe6e <nwkRxTaskHandler+0x128>
+      {
+        int8_t diff = (int8_t)header->nwkSeq - nwkRxDuplicateRejectionTable[i].seq;
+     e20:	1c 96       	adiw	r26, 0x0c	; 12
+     e22:	8c 91       	ld	r24, X
+     e24:	fa 01       	movw	r30, r20
+     e26:	ee 0f       	add	r30, r30
+     e28:	ff 1f       	adc	r31, r31
+     e2a:	ee 0f       	add	r30, r30
+     e2c:	ff 1f       	adc	r31, r31
+     e2e:	e4 0f       	add	r30, r20
+     e30:	f5 1f       	adc	r31, r21
+     e32:	e2 5e       	subi	r30, 0xE2	; 226
+     e34:	f6 4f       	sbci	r31, 0xF6	; 246
+     e36:	92 81       	ldd	r25, Z+2	; 0x02
+     e38:	b8 2f       	mov	r27, r24
+     e3a:	b9 1b       	sub	r27, r25
+
+        if (diff > 0)
+     e3c:	1b 16       	cp	r1, r27
+     e3e:	34 f4       	brge	.+12     	; 0xe4c <nwkRxTaskHandler+0x106>
+        {
+          nwkRxDuplicateRejectionTable[i].seq = header->nwkSeq;
+     e40:	82 83       	std	Z+2, r24	; 0x02
+          nwkRxDuplicateRejectionTable[i].ttl = DUPLICATE_REJECTION_TTL;
+     e42:	85 e6       	ldi	r24, 0x65	; 101
+     e44:	90 e0       	ldi	r25, 0x00	; 0
+     e46:	94 83       	std	Z+4, r25	; 0x04
+     e48:	83 83       	std	Z+3, r24	; 0x03
+     e4a:	39 c0       	rjmp	.+114    	; 0xebe <nwkRxTaskHandler+0x178>
+          return false;
+        }
+        else
+        {
+#ifdef NWK_ENABLE_ROUTING
+          if (nwkIb.addr == header->macDstAddr)
+     e4c:	20 91 ac 0a 	lds	r18, 0x0AAC
+     e50:	30 91 ad 0a 	lds	r19, 0x0AAD
+     e54:	f7 01       	movw	r30, r14
+     e56:	87 81       	ldd	r24, Z+7	; 0x07
+     e58:	90 85       	ldd	r25, Z+8	; 0x08
+     e5a:	28 17       	cp	r18, r24
+     e5c:	39 07       	cpc	r19, r25
+     e5e:	09 f0       	breq	.+2      	; 0xe62 <nwkRxTaskHandler+0x11c>
+     e60:	33 c1       	rjmp	.+614    	; 0x10c8 <nwkRxTaskHandler+0x382>
+            nwkRouteRemove(header->nwkDstAddr);
+     e62:	87 85       	ldd	r24, Z+15	; 0x0f
+     e64:	90 89       	ldd	r25, Z+16	; 0x10
+     e66:	0e 94 02 05 	call	0xa04	; 0xa04 <nwkRouteRemove>
+     e6a:	2e c1       	rjmp	.+604    	; 0x10c8 <nwkRxTaskHandler+0x382>
+        }
+      }
+    }
+    else // ttl == 0
+    {
+      free = i;
+     e6c:	64 2f       	mov	r22, r20
+     e6e:	4f 5f       	subi	r20, 0xFF	; 255
+     e70:	5f 4f       	sbci	r21, 0xFF	; 255
+     e72:	35 96       	adiw	r30, 0x05	; 5
+*****************************************************************************/
+static bool nwkRxRejectDuplicate(NwkFrameHeader_t *header)
+{
+  int8_t free = -1;
+
+  for (uint8_t i = 0; i < NWK_DUPLICATE_REJECTION_TABLE_SIZE; i++)
+     e74:	4a 30       	cpi	r20, 0x0A	; 10
+     e76:	51 05       	cpc	r21, r1
+     e78:	21 f6       	brne	.-120    	; 0xe02 <nwkRxTaskHandler+0xbc>
+    {
+      free = i;
+    }
+  }
+
+  if (-1 == free)
+     e7a:	6f 3f       	cpi	r22, 0xFF	; 255
+     e7c:	09 f4       	brne	.+2      	; 0xe80 <nwkRxTaskHandler+0x13a>
+     e7e:	24 c1       	rjmp	.+584    	; 0x10c8 <nwkRxTaskHandler+0x382>
+    return true;
+
+  nwkRxDuplicateRejectionTable[free].src = header->nwkSrcAddr;
+     e80:	86 2f       	mov	r24, r22
+     e82:	99 27       	eor	r25, r25
+     e84:	87 fd       	sbrc	r24, 7
+     e86:	90 95       	com	r25
+     e88:	fc 01       	movw	r30, r24
+     e8a:	ee 0f       	add	r30, r30
+     e8c:	ff 1f       	adc	r31, r31
+     e8e:	ee 0f       	add	r30, r30
+     e90:	ff 1f       	adc	r31, r31
+     e92:	e8 0f       	add	r30, r24
+     e94:	f9 1f       	adc	r31, r25
+     e96:	e2 5e       	subi	r30, 0xE2	; 226
+     e98:	f6 4f       	sbci	r31, 0xF6	; 246
+     e9a:	d7 01       	movw	r26, r14
+     e9c:	1d 96       	adiw	r26, 0x0d	; 13
+     e9e:	8d 91       	ld	r24, X+
+     ea0:	9c 91       	ld	r25, X
+     ea2:	1e 97       	sbiw	r26, 0x0e	; 14
+     ea4:	91 83       	std	Z+1, r25	; 0x01
+     ea6:	80 83       	st	Z, r24
+  nwkRxDuplicateRejectionTable[free].seq = header->nwkSeq;
+     ea8:	1c 96       	adiw	r26, 0x0c	; 12
+     eaa:	8c 91       	ld	r24, X
+     eac:	82 83       	std	Z+2, r24	; 0x02
+  nwkRxDuplicateRejectionTable[free].ttl = DUPLICATE_REJECTION_TTL;
+     eae:	85 e6       	ldi	r24, 0x65	; 101
+     eb0:	90 e0       	ldi	r25, 0x00	; 0
+     eb2:	94 83       	std	Z+4, r25	; 0x04
+     eb4:	83 83       	std	Z+3, r24	; 0x03
+
+  SYS_TimerStart(&nwkRxDuplicateRejectionTimer);
+     eb6:	81 e5       	ldi	r24, 0x51	; 81
+     eb8:	99 e0       	ldi	r25, 0x09	; 9
+     eba:	0e 94 77 0a 	call	0x14ee	; 0x14ee <SYS_TimerStart>
+#endif
+
+  if (nwkRxRejectDuplicate(header))
+    return;
+
+  if (0xffff == header->macDstAddr && nwkIb.addr != header->nwkDstAddr &&
+     ebe:	f7 01       	movw	r30, r14
+     ec0:	87 81       	ldd	r24, Z+7	; 0x07
+     ec2:	90 85       	ldd	r25, Z+8	; 0x08
+     ec4:	ff ef       	ldi	r31, 0xFF	; 255
+     ec6:	8f 3f       	cpi	r24, 0xFF	; 255
+     ec8:	9f 07       	cpc	r25, r31
+     eca:	d9 f4       	brne	.+54     	; 0xf02 <nwkRxTaskHandler+0x1bc>
+     ecc:	20 91 ac 0a 	lds	r18, 0x0AAC
+     ed0:	30 91 ad 0a 	lds	r19, 0x0AAD
+     ed4:	d7 01       	movw	r26, r14
+     ed6:	1f 96       	adiw	r26, 0x0f	; 15
+     ed8:	8d 91       	ld	r24, X+
+     eda:	9c 91       	ld	r25, X
+     edc:	50 97       	sbiw	r26, 0x10	; 16
+     ede:	28 17       	cp	r18, r24
+     ee0:	39 07       	cpc	r19, r25
+     ee2:	79 f0       	breq	.+30     	; 0xf02 <nwkRxTaskHandler+0x1bc>
+     ee4:	15 96       	adiw	r26, 0x05	; 5
+     ee6:	8d 91       	ld	r24, X+
+     ee8:	9c 91       	ld	r25, X
+     eea:	16 97       	sbiw	r26, 0x06	; 6
+     eec:	bf ef       	ldi	r27, 0xFF	; 255
+     eee:	8f 3f       	cpi	r24, 0xFF	; 255
+     ef0:	9b 07       	cpc	r25, r27
+     ef2:	39 f0       	breq	.+14     	; 0xf02 <nwkRxTaskHandler+0x1bc>
+      0xffff != header->macDstPanId && 0 == header->nwkFcf.linkLocal)
+     ef4:	f7 01       	movw	r30, r14
+     ef6:	83 85       	ldd	r24, Z+11	; 0x0b
+     ef8:	82 fd       	sbrc	r24, 2
+     efa:	03 c0       	rjmp	.+6      	; 0xf02 <nwkRxTaskHandler+0x1bc>
+    nwkTxBroadcastFrame(frame);
+     efc:	c7 01       	movw	r24, r14
+     efe:	0e 94 07 09 	call	0x120e	; 0x120e <nwkTxBroadcastFrame>
+// If this is the destination, or it's a broadcast frame, then process it
+  if (nwkIb.addr == header->nwkDstAddr || 0xffff == header->nwkDstAddr)
+     f02:	80 91 ac 0a 	lds	r24, 0x0AAC
+     f06:	90 91 ad 0a 	lds	r25, 0x0AAD
+     f0a:	d7 01       	movw	r26, r14
+     f0c:	1f 96       	adiw	r26, 0x0f	; 15
+     f0e:	2d 91       	ld	r18, X+
+     f10:	3c 91       	ld	r19, X
+     f12:	50 97       	sbiw	r26, 0x10	; 16
+     f14:	82 17       	cp	r24, r18
+     f16:	93 07       	cpc	r25, r19
+     f18:	21 f0       	breq	.+8      	; 0xf22 <nwkRxTaskHandler+0x1dc>
+     f1a:	bf ef       	ldi	r27, 0xFF	; 255
+     f1c:	2f 3f       	cpi	r18, 0xFF	; 255
+     f1e:	3b 07       	cpc	r19, r27
+     f20:	19 f4       	brne	.+6      	; 0xf28 <nwkRxTaskHandler+0x1e2>
+#ifdef NWK_ENABLE_SECURITY
+    if (header->nwkFcf.securityEnabled)
+      frame->state = NWK_RX_STATE_DECRYPT;
+    else
+#endif
+      frame->state = NWK_RX_STATE_INDICATE;
+     f22:	f7 01       	movw	r30, r14
+     f24:	b0 82       	st	Z, r11
+     f26:	d0 c0       	rjmp	.+416    	; 0x10c8 <nwkRxTaskHandler+0x382>
+  }
+#ifdef NWK_ENABLE_ROUTING
+  else if (nwkIb.addr == header->macDstAddr && 0xffff != header->macDstPanId)
+     f28:	d7 01       	movw	r26, r14
+     f2a:	17 96       	adiw	r26, 0x07	; 7
+     f2c:	2d 91       	ld	r18, X+
+     f2e:	3c 91       	ld	r19, X
+     f30:	18 97       	sbiw	r26, 0x08	; 8
+     f32:	82 17       	cp	r24, r18
+     f34:	93 07       	cpc	r25, r19
+     f36:	09 f0       	breq	.+2      	; 0xf3a <nwkRxTaskHandler+0x1f4>
+     f38:	c7 c0       	rjmp	.+398    	; 0x10c8 <nwkRxTaskHandler+0x382>
+     f3a:	15 96       	adiw	r26, 0x05	; 5
+     f3c:	8d 91       	ld	r24, X+
+     f3e:	9c 91       	ld	r25, X
+     f40:	16 97       	sbiw	r26, 0x06	; 6
+     f42:	bf ef       	ldi	r27, 0xFF	; 255
+     f44:	8f 3f       	cpi	r24, 0xFF	; 255
+     f46:	9b 07       	cpc	r25, r27
+     f48:	09 f4       	brne	.+2      	; 0xf4c <nwkRxTaskHandler+0x206>
+     f4a:	be c0       	rjmp	.+380    	; 0x10c8 <nwkRxTaskHandler+0x382>
+  {
+    frame->state = NWK_RX_STATE_ROUTE;
+     f4c:	f7 01       	movw	r30, r14
+     f4e:	a0 82       	st	Z, r10
+     f50:	bb c0       	rjmp	.+374    	; 0x10c8 <nwkRxTaskHandler+0x382>
+      case NWK_RX_STATE_INDICATE:
+      {
+        NwkFrameHeader_t *header = &frame->data.header;
+        bool ack, forceAck;
+
+        nwkRxAckControl = NWK_ACK_CONTROL_NONE;
+     f52:	10 92 1d 09 	sts	0x091D, r1
+static bool nwkRxIndicateFrame(NwkFrame_t *frame)
+{
+  NwkFrameHeader_t *header = &frame->data.header;
+  NWK_DataInd_t ind;
+
+  if (header->nwkDstEndpoint > NWK_MAX_ENDPOINTS_AMOUNT || 
+     f56:	d7 01       	movw	r26, r14
+     f58:	51 96       	adiw	r26, 0x11	; 17
+     f5a:	8c 91       	ld	r24, X
+     f5c:	51 97       	sbiw	r26, 0x11	; 17
+     f5e:	82 95       	swap	r24
+     f60:	8f 70       	andi	r24, 0x0F	; 15
+     f62:	e8 2f       	mov	r30, r24
+     f64:	f0 e0       	ldi	r31, 0x00	; 0
+     f66:	e5 30       	cpi	r30, 0x05	; 5
+     f68:	f1 05       	cpc	r31, r1
+     f6a:	0c f0       	brlt	.+2      	; 0xf6e <nwkRxTaskHandler+0x228>
+     f6c:	5e c0       	rjmp	.+188    	; 0x102a <nwkRxTaskHandler+0x2e4>
+      NULL == nwkIb.endpoint[header->nwkDstEndpoint])
+     f6e:	ee 0f       	add	r30, r30
+     f70:	ff 1f       	adc	r31, r31
+     f72:	ee 54       	subi	r30, 0x4E	; 78
+     f74:	f5 4f       	sbci	r31, 0xF5	; 245
+     f76:	40 81       	ld	r20, Z
+     f78:	51 81       	ldd	r21, Z+1	; 0x01
+static bool nwkRxIndicateFrame(NwkFrame_t *frame)
+{
+  NwkFrameHeader_t *header = &frame->data.header;
+  NWK_DataInd_t ind;
+
+  if (header->nwkDstEndpoint > NWK_MAX_ENDPOINTS_AMOUNT || 
+     f7a:	41 15       	cp	r20, r1
+     f7c:	51 05       	cpc	r21, r1
+     f7e:	09 f4       	brne	.+2      	; 0xf82 <nwkRxTaskHandler+0x23c>
+     f80:	54 c0       	rjmp	.+168    	; 0x102a <nwkRxTaskHandler+0x2e4>
+      NULL == nwkIb.endpoint[header->nwkDstEndpoint])
+    return false;
+
+  ind.srcAddr = header->nwkSrcAddr;
+     f82:	1d 96       	adiw	r26, 0x0d	; 13
+     f84:	2d 91       	ld	r18, X+
+     f86:	3c 91       	ld	r19, X
+     f88:	1e 97       	sbiw	r26, 0x0e	; 14
+     f8a:	3a 83       	std	Y+2, r19	; 0x02
+     f8c:	29 83       	std	Y+1, r18	; 0x01
+  ind.srcEndpoint = header->nwkSrcEndpoint;
+     f8e:	51 96       	adiw	r26, 0x11	; 17
+     f90:	9c 91       	ld	r25, X
+     f92:	51 97       	sbiw	r26, 0x11	; 17
+     f94:	9f 70       	andi	r25, 0x0F	; 15
+     f96:	9b 83       	std	Y+3, r25	; 0x03
+  ind.dstEndpoint = header->nwkDstEndpoint;
+     f98:	8c 83       	std	Y+4, r24	; 0x04
+  ind.data = frame->data.payload;
+     f9a:	c7 01       	movw	r24, r14
+     f9c:	42 96       	adiw	r24, 0x12	; 18
+     f9e:	9f 83       	std	Y+7, r25	; 0x07
+     fa0:	8e 83       	std	Y+6, r24	; 0x06
+  ind.size = frame->size - sizeof(NwkFrameHeader_t);
+     fa2:	11 96       	adiw	r26, 0x01	; 1
+     fa4:	8c 91       	ld	r24, X
+     fa6:	11 97       	sbiw	r26, 0x01	; 1
+     fa8:	80 51       	subi	r24, 0x10	; 16
+     faa:	88 87       	std	Y+8, r24	; 0x08
+  ind.lqi = frame->rx.lqi;
+     fac:	f7 01       	movw	r30, r14
+     fae:	e1 58       	subi	r30, 0x81	; 129
+     fb0:	ff 4f       	sbci	r31, 0xFF	; 255
+     fb2:	80 81       	ld	r24, Z
+     fb4:	89 87       	std	Y+9, r24	; 0x09
+  ind.rssi = frame->rx.rssi;
+     fb6:	f7 01       	movw	r30, r14
+     fb8:	e0 58       	subi	r30, 0x80	; 128
+     fba:	ff 4f       	sbci	r31, 0xFF	; 255
+     fbc:	80 81       	ld	r24, Z
+     fbe:	8a 87       	std	Y+10, r24	; 0x0a
+// Setup the options bits
+  ind.options  = (header->nwkFcf.ackRequest) ? NWK_IND_OPT_ACK_REQUESTED : 0;
+     fc0:	f7 01       	movw	r30, r14
+     fc2:	73 85       	ldd	r23, Z+11	; 0x0b
+  ind.options |= (header->nwkFcf.securityEnabled) ? NWK_IND_OPT_SECURED : 0;
+     fc4:	67 2f       	mov	r22, r23
+     fc6:	63 70       	andi	r22, 0x03	; 3
+  ind.options |= (header->nwkFcf.linkLocal) ? NWK_IND_OPT_LINK_LOCAL : 0;
+     fc8:	72 ff       	sbrs	r23, 2
+     fca:	02 c0       	rjmp	.+4      	; 0xfd0 <nwkRxTaskHandler+0x28a>
+     fcc:	80 e2       	ldi	r24, 0x20	; 32
+     fce:	01 c0       	rjmp	.+2      	; 0xfd2 <nwkRxTaskHandler+0x28c>
+     fd0:	80 e0       	ldi	r24, 0x00	; 0
+     fd2:	76 2f       	mov	r23, r22
+     fd4:	78 2b       	or	r23, r24
+  ind.options |= (0xffff == header->nwkDstAddr) ? NWK_IND_OPT_BROADCAST : 0;
+     fd6:	d7 01       	movw	r26, r14
+     fd8:	1f 96       	adiw	r26, 0x0f	; 15
+     fda:	8d 91       	ld	r24, X+
+     fdc:	9c 91       	ld	r25, X
+     fde:	50 97       	sbiw	r26, 0x10	; 16
+     fe0:	bf ef       	ldi	r27, 0xFF	; 255
+     fe2:	8f 3f       	cpi	r24, 0xFF	; 255
+     fe4:	9b 07       	cpc	r25, r27
+     fe6:	11 f4       	brne	.+4      	; 0xfec <nwkRxTaskHandler+0x2a6>
+     fe8:	64 e0       	ldi	r22, 0x04	; 4
+     fea:	01 c0       	rjmp	.+2      	; 0xfee <nwkRxTaskHandler+0x2a8>
+     fec:	60 e0       	ldi	r22, 0x00	; 0
+     fee:	67 2b       	or	r22, r23
+  ind.options |= (header->nwkSrcAddr == header->macSrcAddr) ? NWK_IND_OPT_LOCAL : 0;
+     ff0:	f7 01       	movw	r30, r14
+     ff2:	81 85       	ldd	r24, Z+9	; 0x09
+     ff4:	92 85       	ldd	r25, Z+10	; 0x0a
+     ff6:	28 17       	cp	r18, r24
+     ff8:	39 07       	cpc	r19, r25
+     ffa:	11 f4       	brne	.+4      	; 0x1000 <nwkRxTaskHandler+0x2ba>
+     ffc:	98 e0       	ldi	r25, 0x08	; 8
+     ffe:	01 c0       	rjmp	.+2      	; 0x1002 <nwkRxTaskHandler+0x2bc>
+    1000:	90 e0       	ldi	r25, 0x00	; 0
+    1002:	69 2b       	or	r22, r25
+  ind.options |= (0xffff == header->macDstPanId) ? NWK_IND_OPT_BROADCAST_PAN_ID : 0;
+    1004:	d7 01       	movw	r26, r14
+    1006:	15 96       	adiw	r26, 0x05	; 5
+    1008:	8d 91       	ld	r24, X+
+    100a:	9c 91       	ld	r25, X
+    100c:	16 97       	sbiw	r26, 0x06	; 6
+    100e:	bf ef       	ldi	r27, 0xFF	; 255
+    1010:	8f 3f       	cpi	r24, 0xFF	; 255
+    1012:	9b 07       	cpc	r25, r27
+    1014:	11 f4       	brne	.+4      	; 0x101a <nwkRxTaskHandler+0x2d4>
+    1016:	80 e1       	ldi	r24, 0x10	; 16
+    1018:	01 c0       	rjmp	.+2      	; 0x101c <nwkRxTaskHandler+0x2d6>
+    101a:	80 e0       	ldi	r24, 0x00	; 0
+    101c:	86 2b       	or	r24, r22
+    101e:	8d 83       	std	Y+5, r24	; 0x05
+// Invokes the callback function and returns its return value to the caller of this function
+// i.e., whether or not to acknowledge the message
+  return nwkIb.endpoint[header->nwkDstEndpoint](&ind);
+    1020:	ce 01       	movw	r24, r28
+    1022:	01 96       	adiw	r24, 0x01	; 1
+    1024:	fa 01       	movw	r30, r20
+    1026:	09 95       	icall
+    1028:	01 c0       	rjmp	.+2      	; 0x102c <nwkRxTaskHandler+0x2e6>
+  NwkFrameHeader_t *header = &frame->data.header;
+  NWK_DataInd_t ind;
+
+  if (header->nwkDstEndpoint > NWK_MAX_ENDPOINTS_AMOUNT || 
+      NULL == nwkIb.endpoint[header->nwkDstEndpoint])
+    return false;
+    102a:	80 e0       	ldi	r24, 0x00	; 0
+        NwkFrameHeader_t *header = &frame->data.header;
+        bool ack, forceAck;
+
+        nwkRxAckControl = NWK_ACK_CONTROL_NONE;
+        ack = nwkRxIndicateFrame(frame);
+        forceAck = (0xffff == header->macDstAddr && nwkIb.addr == header->nwkDstAddr);
+    102c:	f7 01       	movw	r30, r14
+    102e:	27 81       	ldd	r18, Z+7	; 0x07
+    1030:	30 85       	ldd	r19, Z+8	; 0x08
+    1032:	ff ef       	ldi	r31, 0xFF	; 255
+    1034:	2f 3f       	cpi	r18, 0xFF	; 255
+    1036:	3f 07       	cpc	r19, r31
+    1038:	71 f4       	brne	.+28     	; 0x1056 <nwkRxTaskHandler+0x310>
+#endif
+}
+
+/*****************************************************************************
+*****************************************************************************/
+void nwkRxTaskHandler(void)
+    103a:	61 e0       	ldi	r22, 0x01	; 1
+    103c:	70 e0       	ldi	r23, 0x00	; 0
+    103e:	20 91 ac 0a 	lds	r18, 0x0AAC
+    1042:	30 91 ad 0a 	lds	r19, 0x0AAD
+    1046:	d7 01       	movw	r26, r14
+    1048:	1f 96       	adiw	r26, 0x0f	; 15
+    104a:	4d 91       	ld	r20, X+
+    104c:	5c 91       	ld	r21, X
+    104e:	50 97       	sbiw	r26, 0x10	; 16
+    1050:	24 17       	cp	r18, r20
+    1052:	35 07       	cpc	r19, r21
+    1054:	11 f0       	breq	.+4      	; 0x105a <nwkRxTaskHandler+0x314>
+        NwkFrameHeader_t *header = &frame->data.header;
+        bool ack, forceAck;
+
+        nwkRxAckControl = NWK_ACK_CONTROL_NONE;
+        ack = nwkRxIndicateFrame(frame);
+        forceAck = (0xffff == header->macDstAddr && nwkIb.addr == header->nwkDstAddr);
+    1056:	60 e0       	ldi	r22, 0x00	; 0
+    1058:	70 e0       	ldi	r23, 0x00	; 0
+
+        if ((header->nwkFcf.ackRequest && ack) || forceAck)
+    105a:	f7 01       	movw	r30, r14
+    105c:	93 85       	ldd	r25, Z+11	; 0x0b
+    105e:	90 ff       	sbrs	r25, 0
+    1060:	02 c0       	rjmp	.+4      	; 0x1066 <nwkRxTaskHandler+0x320>
+    1062:	88 23       	and	r24, r24
+    1064:	19 f4       	brne	.+6      	; 0x106c <nwkRxTaskHandler+0x326>
+    1066:	61 15       	cp	r22, r1
+    1068:	71 05       	cpc	r23, r1
+    106a:	f9 f0       	breq	.+62     	; 0x10aa <nwkRxTaskHandler+0x364>
+static void nwkRxSendAck(NwkFrame_t *frame)
+{
+  NwkFrame_t *ack;
+  NwkAckCommand_t *command;
+
+  if (NULL == (ack = nwkFrameAlloc(sizeof(NwkAckCommand_t))))
+    106c:	83 e0       	ldi	r24, 0x03	; 3
+    106e:	0e 94 79 04 	call	0x8f2	; 0x8f2 <nwkFrameAlloc>
+    1072:	8c 01       	movw	r16, r24
+    1074:	00 97       	sbiw	r24, 0x00	; 0
+    1076:	c9 f0       	breq	.+50     	; 0x10aa <nwkRxTaskHandler+0x364>
+    return;
+
+  nwkFrameCommandInit(ack);
+    1078:	0e 94 aa 04 	call	0x954	; 0x954 <nwkFrameCommandInit>
+
+  ack->tx.confirm = nwkRxSendAckConf;
+    107c:	f8 01       	movw	r30, r16
+    107e:	ed 57       	subi	r30, 0x7D	; 125
+    1080:	ff 4f       	sbci	r31, 0xFF	; 255
+    1082:	91 82       	std	Z+1, r9	; 0x01
+    1084:	80 82       	st	Z, r8
+
+  ack->data.header.nwkDstAddr = frame->data.header.nwkSrcAddr;
+    1086:	d7 01       	movw	r26, r14
+    1088:	1d 96       	adiw	r26, 0x0d	; 13
+    108a:	8d 91       	ld	r24, X+
+    108c:	9c 91       	ld	r25, X
+    108e:	1e 97       	sbiw	r26, 0x0e	; 14
+    1090:	f8 01       	movw	r30, r16
+    1092:	90 8b       	std	Z+16, r25	; 0x10
+    1094:	87 87       	std	Z+15, r24	; 0x0f
+
+  command = (NwkAckCommand_t *)ack->data.payload;
+
+  command->id = NWK_COMMAND_ACK;
+    1096:	12 8a       	std	Z+18, r1	; 0x12
+  command->control = nwkRxAckControl;
+    1098:	80 91 1d 09 	lds	r24, 0x091D
+    109c:	84 8b       	std	Z+20, r24	; 0x14
+  command->seq = frame->data.header.nwkSeq;
+    109e:	1c 96       	adiw	r26, 0x0c	; 12
+    10a0:	8c 91       	ld	r24, X
+    10a2:	83 8b       	std	Z+19, r24	; 0x13
+
+  nwkTxFrame(ack);
+    10a4:	c8 01       	movw	r24, r16
+    10a6:	0e 94 ca 08 	call	0x1194	; 0x1194 <nwkTxFrame>
+        forceAck = (0xffff == header->macDstAddr && nwkIb.addr == header->nwkDstAddr);
+
+        if ((header->nwkFcf.ackRequest && ack) || forceAck)
+          nwkRxSendAck(frame);
+
+        frame->state = NWK_RX_STATE_FINISH;
+    10aa:	d7 01       	movw	r26, r14
+    10ac:	cc 92       	st	X, r12
+      } break;
+    10ae:	0c c0       	rjmp	.+24     	; 0x10c8 <nwkRxTaskHandler+0x382>
+
+#ifdef NWK_ENABLE_ROUTING
+      case NWK_RX_STATE_ROUTE:
+      {
+        nwkRouteFrame(frame);
+    10b0:	c7 01       	movw	r24, r14
+    10b2:	0e 94 cb 05 	call	0xb96	; 0xb96 <nwkRouteFrame>
+    10b6:	03 c0       	rjmp	.+6      	; 0x10be <nwkRxTaskHandler+0x378>
+      } break;
+#endif
+
+      case NWK_RX_STATE_FINISH:
+      {
+        nwkFrameFree(frame);
+    10b8:	c7 01       	movw	r24, r14
+    10ba:	0e 94 99 04 	call	0x932	; 0x932 <nwkFrameFree>
+        --nwkRxActiveFrames;
+    10be:	80 91 50 09 	lds	r24, 0x0950
+    10c2:	81 50       	subi	r24, 0x01	; 1
+    10c4:	80 93 50 09 	sts	0x0950, r24
+      } break;
+    10c8:	d3 94       	inc	r13
+void nwkRxTaskHandler(void)
+{
+  if (0 == nwkRxActiveFrames)
+    return;
+
+  for (int i = 0; i < NWK_BUFFERS_AMOUNT; i++)
+    10ca:	b8 e0       	ldi	r27, 0x08	; 8
+    10cc:	db 16       	cp	r13, r27
+    10ce:	09 f0       	breq	.+2      	; 0x10d2 <nwkRxTaskHandler+0x38c>
+    10d0:	5e ce       	rjmp	.-836    	; 0xd8e <nwkRxTaskHandler+0x48>
+        nwkFrameFree(frame);
+        --nwkRxActiveFrames;
+      } break;
+    }
+  }
+}
+    10d2:	2a 96       	adiw	r28, 0x0a	; 10
+    10d4:	0f b6       	in	r0, 0x3f	; 63
+    10d6:	f8 94       	cli
+    10d8:	de bf       	out	0x3e, r29	; 62
+    10da:	0f be       	out	0x3f, r0	; 63
+    10dc:	cd bf       	out	0x3d, r28	; 61
+    10de:	df 91       	pop	r29
+    10e0:	cf 91       	pop	r28
+    10e2:	1f 91       	pop	r17
+    10e4:	0f 91       	pop	r16
+    10e6:	ff 90       	pop	r15
+    10e8:	ef 90       	pop	r14
+    10ea:	df 90       	pop	r13
+    10ec:	cf 90       	pop	r12
+    10ee:	bf 90       	pop	r11
+    10f0:	af 90       	pop	r10
+    10f2:	9f 90       	pop	r9
+    10f4:	8f 90       	pop	r8
+    10f6:	08 95       	ret
+
+000010f8 <nwkTxBroadcastConf>:
+
+/*****************************************************************************
+*****************************************************************************/
+static void nwkTxBroadcastConf(NwkFrame_t *frame)
+{
+  nwkFrameFree(frame);
+    10f8:	0e 94 99 04 	call	0x932	; 0x932 <nwkFrameFree>
+}
+    10fc:	08 95       	ret
+
+000010fe <nwkTxAckWaitTimerHandler>:
+}
+
+/*****************************************************************************
+*****************************************************************************/
+static void nwkTxAckWaitTimerHandler(SYS_Timer_t *timer)
+{
+    10fe:	ef 92       	push	r14
+    1100:	ff 92       	push	r15
+    1102:	1f 93       	push	r17
+    1104:	cf 93       	push	r28
+    1106:	df 93       	push	r29
+    1108:	7c 01       	movw	r14, r24
+  if (0 == nwkTxActiveFrames)
+    110a:	80 91 60 09 	lds	r24, 0x0960
+    110e:	88 23       	and	r24, r24
+    1110:	01 f1       	breq	.+64     	; 0x1152 <nwkTxAckWaitTimerHandler+0x54>
+    1112:	c0 e0       	ldi	r28, 0x00	; 0
+  {
+    NwkFrame_t *frame = nwkFrameByIndex(i);
+
+    if (NWK_TX_STATE_WAIT_ACK == frame->state && 0 == --frame->tx.timeout)
+    {
+      frame->state = NWK_TX_STATE_CONFIRM;
+    1114:	d5 e1       	ldi	r29, 0x15	; 21
+      frame->tx.status = NWK_NO_ACK_STATUS;
+    1116:	10 e1       	ldi	r17, 0x10	; 16
+  if (0 == nwkTxActiveFrames)
+    return;
+
+  for (int i = 0; i < NWK_BUFFERS_AMOUNT; i++)
+  {
+    NwkFrame_t *frame = nwkFrameByIndex(i);
+    1118:	8c 2f       	mov	r24, r28
+    111a:	0e 94 9c 04 	call	0x938	; 0x938 <nwkFrameByIndex>
+    111e:	dc 01       	movw	r26, r24
+
+    if (NWK_TX_STATE_WAIT_ACK == frame->state && 0 == --frame->tx.timeout)
+    1120:	8c 91       	ld	r24, X
+    1122:	84 31       	cpi	r24, 0x14	; 20
+    1124:	81 f4       	brne	.+32     	; 0x1146 <nwkTxAckWaitTimerHandler+0x48>
+    1126:	fd 01       	movw	r30, r26
+    1128:	e0 58       	subi	r30, 0x80	; 128
+    112a:	ff 4f       	sbci	r31, 0xFF	; 255
+    112c:	20 81       	ld	r18, Z
+    112e:	31 81       	ldd	r19, Z+1	; 0x01
+    1130:	21 50       	subi	r18, 0x01	; 1
+    1132:	30 40       	sbci	r19, 0x00	; 0
+    1134:	31 83       	std	Z+1, r19	; 0x01
+    1136:	20 83       	st	Z, r18
+    1138:	21 15       	cp	r18, r1
+    113a:	31 05       	cpc	r19, r1
+    113c:	21 f4       	brne	.+8      	; 0x1146 <nwkTxAckWaitTimerHandler+0x48>
+    {
+      frame->state = NWK_TX_STATE_CONFIRM;
+    113e:	dc 93       	st	X, r29
+      frame->tx.status = NWK_NO_ACK_STATUS;
+    1140:	a1 58       	subi	r26, 0x81	; 129
+    1142:	bf 4f       	sbci	r27, 0xFF	; 255
+    1144:	1c 93       	st	X, r17
+    1146:	cf 5f       	subi	r28, 0xFF	; 255
+static void nwkTxAckWaitTimerHandler(SYS_Timer_t *timer)
+{
+  if (0 == nwkTxActiveFrames)
+    return;
+
+  for (int i = 0; i < NWK_BUFFERS_AMOUNT; i++)
+    1148:	c8 30       	cpi	r28, 0x08	; 8
+    114a:	31 f7       	brne	.-52     	; 0x1118 <nwkTxAckWaitTimerHandler+0x1a>
+      frame->state = NWK_TX_STATE_CONFIRM;
+      frame->tx.status = NWK_NO_ACK_STATUS;
+    }
+  }
+
+  SYS_TimerStart(timer);
+    114c:	c7 01       	movw	r24, r14
+    114e:	0e 94 77 0a 	call	0x14ee	; 0x14ee <SYS_TimerStart>
+}
+    1152:	df 91       	pop	r29
+    1154:	cf 91       	pop	r28
+    1156:	1f 91       	pop	r17
+    1158:	ff 90       	pop	r15
+    115a:	ef 90       	pop	r14
+    115c:	08 95       	ret
+
+0000115e <nwkTxInit>:
+
+/*****************************************************************************
+*****************************************************************************/
+void nwkTxInit(void)
+{
+  nwkTxPhyActiveFrame = NULL;
+    115e:	10 92 5f 09 	sts	0x095F, r1
+    1162:	10 92 5e 09 	sts	0x095E, r1
+  nwkTxActiveFrames = 0;
+    1166:	10 92 60 09 	sts	0x0960, r1
+
+  nwkTxAckWaitTimer.interval = NWK_TX_ACK_WAIT_TIMER_INTERVAL;
+    116a:	82 e3       	ldi	r24, 0x32	; 50
+    116c:	90 e0       	ldi	r25, 0x00	; 0
+    116e:	a0 e0       	ldi	r26, 0x00	; 0
+    1170:	b0 e0       	ldi	r27, 0x00	; 0
+    1172:	80 93 67 09 	sts	0x0967, r24
+    1176:	90 93 68 09 	sts	0x0968, r25
+    117a:	a0 93 69 09 	sts	0x0969, r26
+    117e:	b0 93 6a 09 	sts	0x096A, r27
+  nwkTxAckWaitTimer.mode = SYS_TIMER_INTERVAL_MODE;
+    1182:	10 92 6b 09 	sts	0x096B, r1
+  nwkTxAckWaitTimer.handler = nwkTxAckWaitTimerHandler;
+    1186:	8f e7       	ldi	r24, 0x7F	; 127
+    1188:	98 e0       	ldi	r25, 0x08	; 8
+    118a:	90 93 6d 09 	sts	0x096D, r25
+    118e:	80 93 6c 09 	sts	0x096C, r24
+}
+    1192:	08 95       	ret
+
+00001194 <nwkTxFrame>:
+
+/*****************************************************************************
+*****************************************************************************/
+void nwkTxFrame(NwkFrame_t *frame)
+{
+    1194:	cf 93       	push	r28
+    1196:	df 93       	push	r29
+    1198:	ec 01       	movw	r28, r24
+  NwkFrameHeader_t *header = &frame->data.header;
+
+  if (frame->tx.control & NWK_TX_CONTROL_ROUTING)
+    119a:	fc 01       	movw	r30, r24
+    119c:	ee 57       	subi	r30, 0x7E	; 126
+    119e:	ff 4f       	sbci	r31, 0xFF	; 255
+    11a0:	80 81       	ld	r24, Z
+  {
+    frame->state = NWK_TX_STATE_SEND;
+    11a2:	91 e1       	ldi	r25, 0x11	; 17
+    11a4:	98 83       	st	Y, r25
+    else
+#endif
+      frame->state = NWK_TX_STATE_SEND;
+  }
+
+  frame->tx.status = NWK_SUCCESS_STATUS;
+    11a6:	fe 01       	movw	r30, r28
+    11a8:	e1 58       	subi	r30, 0x81	; 129
+    11aa:	ff 4f       	sbci	r31, 0xFF	; 255
+    11ac:	10 82       	st	Z, r1
+
+  if (frame->tx.control & NWK_TX_CONTROL_BROADCAST_PAN_ID)
+    11ae:	80 ff       	sbrs	r24, 0
+    11b0:	03 c0       	rjmp	.+6      	; 0x11b8 <nwkTxFrame+0x24>
+    frame->data.header.macDstPanId = 0xffff;
+    11b2:	8f ef       	ldi	r24, 0xFF	; 255
+    11b4:	9f ef       	ldi	r25, 0xFF	; 255
+    11b6:	04 c0       	rjmp	.+8      	; 0x11c0 <nwkTxFrame+0x2c>
+  else
+    frame->data.header.macDstPanId = nwkIb.panId;
+    11b8:	80 91 ae 0a 	lds	r24, 0x0AAE
+    11bc:	90 91 af 0a 	lds	r25, 0x0AAF
+    11c0:	9e 83       	std	Y+6, r25	; 0x06
+    11c2:	8d 83       	std	Y+5, r24	; 0x05
+
+#ifdef NWK_ENABLE_ROUTING
+  header->macDstAddr = nwkRouteNextHop(header->nwkDstAddr);
+    11c4:	8f 85       	ldd	r24, Y+15	; 0x0f
+    11c6:	98 89       	ldd	r25, Y+16	; 0x10
+    11c8:	0e 94 a6 05 	call	0xb4c	; 0xb4c <nwkRouteNextHop>
+    11cc:	98 87       	std	Y+8, r25	; 0x08
+    11ce:	8f 83       	std	Y+7, r24	; 0x07
+#else
+  header->macDstAddr = header->nwkDstAddr;
+#endif
+  header->macSrcAddr = nwkIb.addr;
+    11d0:	20 91 ac 0a 	lds	r18, 0x0AAC
+    11d4:	30 91 ad 0a 	lds	r19, 0x0AAD
+    11d8:	3a 87       	std	Y+10, r19	; 0x0a
+    11da:	29 87       	std	Y+9, r18	; 0x09
+  header->macSeq = ++nwkIb.macSeqNum;
+    11dc:	20 91 b1 0a 	lds	r18, 0x0AB1
+    11e0:	2f 5f       	subi	r18, 0xFF	; 255
+    11e2:	20 93 b1 0a 	sts	0x0AB1, r18
+    11e6:	2c 83       	std	Y+4, r18	; 0x04
+
+  if (0xffff == header->macDstAddr)
+    11e8:	2f ef       	ldi	r18, 0xFF	; 255
+    11ea:	8f 3f       	cpi	r24, 0xFF	; 255
+    11ec:	92 07       	cpc	r25, r18
+    11ee:	19 f4       	brne	.+6      	; 0x11f6 <nwkTxFrame+0x62>
+    header->macFcf = 0x8841;
+    11f0:	81 e4       	ldi	r24, 0x41	; 65
+    11f2:	98 e8       	ldi	r25, 0x88	; 136
+    11f4:	02 c0       	rjmp	.+4      	; 0x11fa <nwkTxFrame+0x66>
+  else
+    header->macFcf = 0x8861;
+    11f6:	81 e6       	ldi	r24, 0x61	; 97
+    11f8:	98 e8       	ldi	r25, 0x88	; 136
+    11fa:	9b 83       	std	Y+3, r25	; 0x03
+    11fc:	8a 83       	std	Y+2, r24	; 0x02
+
+  ++nwkTxActiveFrames;
+    11fe:	80 91 60 09 	lds	r24, 0x0960
+    1202:	8f 5f       	subi	r24, 0xFF	; 255
+    1204:	80 93 60 09 	sts	0x0960, r24
+}
+    1208:	df 91       	pop	r29
+    120a:	cf 91       	pop	r28
+    120c:	08 95       	ret
+
+0000120e <nwkTxBroadcastFrame>:
+
+/*****************************************************************************
+*****************************************************************************/
+void nwkTxBroadcastFrame(NwkFrame_t *frame)
+{
+    120e:	0f 93       	push	r16
+    1210:	1f 93       	push	r17
+    1212:	cf 93       	push	r28
+    1214:	df 93       	push	r29
+    1216:	8c 01       	movw	r16, r24
+  NwkFrame_t *newFrame;
+
+  if (NULL == (newFrame = nwkFrameAlloc(frame->size - sizeof(NwkFrameHeader_t))))
+    1218:	fc 01       	movw	r30, r24
+    121a:	81 81       	ldd	r24, Z+1	; 0x01
+    121c:	80 51       	subi	r24, 0x10	; 16
+    121e:	0e 94 79 04 	call	0x8f2	; 0x8f2 <nwkFrameAlloc>
+    1222:	ec 01       	movw	r28, r24
+    1224:	00 97       	sbiw	r24, 0x00	; 0
+    1226:	b1 f1       	breq	.+108    	; 0x1294 <nwkTxBroadcastFrame+0x86>
+    return;
+
+  newFrame->tx.confirm = nwkTxBroadcastConf;
+    1228:	fc 01       	movw	r30, r24
+    122a:	ed 57       	subi	r30, 0x7D	; 125
+    122c:	ff 4f       	sbci	r31, 0xFF	; 255
+    122e:	8c e7       	ldi	r24, 0x7C	; 124
+    1230:	98 e0       	ldi	r25, 0x08	; 8
+    1232:	91 83       	std	Z+1, r25	; 0x01
+    1234:	80 83       	st	Z, r24
+  memcpy((uint8_t *)&newFrame->data, (uint8_t *)&frame->data, frame->size);
+    1236:	ce 01       	movw	r24, r28
+    1238:	02 96       	adiw	r24, 0x02	; 2
+    123a:	f8 01       	movw	r30, r16
+    123c:	41 81       	ldd	r20, Z+1	; 0x01
+    123e:	b8 01       	movw	r22, r16
+    1240:	6e 5f       	subi	r22, 0xFE	; 254
+    1242:	7f 4f       	sbci	r23, 0xFF	; 255
+    1244:	50 e0       	ldi	r21, 0x00	; 0
+    1246:	0e 94 95 0c 	call	0x192a	; 0x192a <memcpy>
+
+  newFrame->state = NWK_TX_STATE_SEND;
+    124a:	81 e1       	ldi	r24, 0x11	; 17
+    124c:	88 83       	st	Y, r24
+  newFrame->tx.status = NWK_SUCCESS_STATUS;
+    124e:	fe 01       	movw	r30, r28
+    1250:	e1 58       	subi	r30, 0x81	; 129
+    1252:	ff 4f       	sbci	r31, 0xFF	; 255
+    1254:	10 82       	st	Z, r1
+
+  newFrame->data.header.macFcf = 0x8841;
+    1256:	81 e4       	ldi	r24, 0x41	; 65
+    1258:	98 e8       	ldi	r25, 0x88	; 136
+    125a:	9b 83       	std	Y+3, r25	; 0x03
+    125c:	8a 83       	std	Y+2, r24	; 0x02
+  newFrame->data.header.macDstAddr = 0xffff;
+    125e:	8f ef       	ldi	r24, 0xFF	; 255
+    1260:	9f ef       	ldi	r25, 0xFF	; 255
+    1262:	98 87       	std	Y+8, r25	; 0x08
+    1264:	8f 83       	std	Y+7, r24	; 0x07
+  newFrame->data.header.macDstPanId = nwkIb.panId;
+    1266:	80 91 ae 0a 	lds	r24, 0x0AAE
+    126a:	90 91 af 0a 	lds	r25, 0x0AAF
+    126e:	9e 83       	std	Y+6, r25	; 0x06
+    1270:	8d 83       	std	Y+5, r24	; 0x05
+  newFrame->data.header.macSrcAddr = nwkIb.addr;
+    1272:	80 91 ac 0a 	lds	r24, 0x0AAC
+    1276:	90 91 ad 0a 	lds	r25, 0x0AAD
+    127a:	9a 87       	std	Y+10, r25	; 0x0a
+    127c:	89 87       	std	Y+9, r24	; 0x09
+  newFrame->data.header.macSeq = ++nwkIb.macSeqNum;
+    127e:	80 91 b1 0a 	lds	r24, 0x0AB1
+    1282:	8f 5f       	subi	r24, 0xFF	; 255
+    1284:	80 93 b1 0a 	sts	0x0AB1, r24
+    1288:	8c 83       	std	Y+4, r24	; 0x04
+
+  ++nwkTxActiveFrames;
+    128a:	80 91 60 09 	lds	r24, 0x0960
+    128e:	8f 5f       	subi	r24, 0xFF	; 255
+    1290:	80 93 60 09 	sts	0x0960, r24
+}
+    1294:	df 91       	pop	r29
+    1296:	cf 91       	pop	r28
+    1298:	1f 91       	pop	r17
+    129a:	0f 91       	pop	r16
+    129c:	08 95       	ret
+
+0000129e <nwkTxAckReceived>:
+}
+
+/*****************************************************************************
+*****************************************************************************/
+void nwkTxAckReceived(NWK_DataInd_t *ind)
+{
+    129e:	1f 93       	push	r17
+    12a0:	cf 93       	push	r28
+    12a2:	df 93       	push	r29
+  NwkAckCommand_t *command = (NwkAckCommand_t *)ind->data;
+    12a4:	fc 01       	movw	r30, r24
+    12a6:	c5 81       	ldd	r28, Z+5	; 0x05
+    12a8:	d6 81       	ldd	r29, Z+6	; 0x06
+
+  if (0 == nwkTxActiveFrames)
+    12aa:	80 91 60 09 	lds	r24, 0x0960
+    12ae:	88 23       	and	r24, r24
+    12b0:	b1 f0       	breq	.+44     	; 0x12de <nwkTxAckReceived+0x40>
+    12b2:	10 e0       	ldi	r17, 0x00	; 0
+    return;
+
+  for (int i = 0; i < NWK_BUFFERS_AMOUNT; i++)
+  {
+    NwkFrame_t *frame = nwkFrameByIndex(i);
+    12b4:	81 2f       	mov	r24, r17
+    12b6:	0e 94 9c 04 	call	0x938	; 0x938 <nwkFrameByIndex>
+    12ba:	fc 01       	movw	r30, r24
+
+    if (NWK_TX_STATE_WAIT_ACK == frame->state && frame->data.header.nwkSeq == command->seq)
+    12bc:	80 81       	ld	r24, Z
+    12be:	84 31       	cpi	r24, 0x14	; 20
+    12c0:	59 f4       	brne	.+22     	; 0x12d8 <nwkTxAckReceived+0x3a>
+    12c2:	94 85       	ldd	r25, Z+12	; 0x0c
+    12c4:	89 81       	ldd	r24, Y+1	; 0x01
+    12c6:	98 17       	cp	r25, r24
+    12c8:	39 f4       	brne	.+14     	; 0x12d8 <nwkTxAckReceived+0x3a>
+    {
+      frame->state = NWK_TX_STATE_CONFIRM;
+    12ca:	85 e1       	ldi	r24, 0x15	; 21
+    12cc:	80 83       	st	Z, r24
+      frame->tx.control = command->control;
+    12ce:	8a 81       	ldd	r24, Y+2	; 0x02
+    12d0:	ee 57       	subi	r30, 0x7E	; 126
+    12d2:	ff 4f       	sbci	r31, 0xFF	; 255
+    12d4:	80 83       	st	Z, r24
+      return;
+    12d6:	03 c0       	rjmp	.+6      	; 0x12de <nwkTxAckReceived+0x40>
+    12d8:	1f 5f       	subi	r17, 0xFF	; 255
+  NwkAckCommand_t *command = (NwkAckCommand_t *)ind->data;
+
+  if (0 == nwkTxActiveFrames)
+    return;
+
+  for (int i = 0; i < NWK_BUFFERS_AMOUNT; i++)
+    12da:	18 30       	cpi	r17, 0x08	; 8
+    12dc:	59 f7       	brne	.-42     	; 0x12b4 <nwkTxAckReceived+0x16>
+      frame->state = NWK_TX_STATE_CONFIRM;
+      frame->tx.control = command->control;
+      return;
+    }
+  }
+}
+    12de:	df 91       	pop	r29
+    12e0:	cf 91       	pop	r28
+    12e2:	1f 91       	pop	r17
+    12e4:	08 95       	ret
+
+000012e6 <PHY_DataConf>:
+
+/*****************************************************************************
+*****************************************************************************/
+void PHY_DataConf(uint8_t status)
+{
+  nwkTxPhyActiveFrame->tx.status = convertPhyStatus(status);
+    12e6:	e0 91 5e 09 	lds	r30, 0x095E
+    12ea:	f0 91 5f 09 	lds	r31, 0x095F
+
+/*****************************************************************************
+*****************************************************************************/
+static uint8_t convertPhyStatus(uint8_t status)
+{
+  if (TRAC_STATUS_SUCCESS == status ||
+    12ee:	83 30       	cpi	r24, 0x03	; 3
+    12f0:	30 f0       	brcs	.+12     	; 0x12fe <PHY_DataConf+0x18>
+      TRAC_STATUS_SUCCESS_DATA_PENDING == status ||
+      TRAC_STATUS_SUCCESS_WAIT_FOR_ACK == status)
+    return NWK_SUCCESS_STATUS;
+
+  else if (TRAC_STATUS_CHANNEL_ACCESS_FAILURE == status)
+    12f2:	83 30       	cpi	r24, 0x03	; 3
+    12f4:	31 f0       	breq	.+12     	; 0x1302 <PHY_DataConf+0x1c>
+    return NWK_PHY_CHANNEL_ACCESS_FAILURE_STATUS;
+
+  else if (TRAC_STATUS_NO_ACK == status)
+    12f6:	85 30       	cpi	r24, 0x05	; 5
+    12f8:	31 f4       	brne	.+12     	; 0x1306 <PHY_DataConf+0x20>
+    return NWK_PHY_NO_ACK_STATUS;
+    12fa:	81 e2       	ldi	r24, 0x21	; 33
+    12fc:	05 c0       	rjmp	.+10     	; 0x1308 <PHY_DataConf+0x22>
+static uint8_t convertPhyStatus(uint8_t status)
+{
+  if (TRAC_STATUS_SUCCESS == status ||
+      TRAC_STATUS_SUCCESS_DATA_PENDING == status ||
+      TRAC_STATUS_SUCCESS_WAIT_FOR_ACK == status)
+    return NWK_SUCCESS_STATUS;
+    12fe:	80 e0       	ldi	r24, 0x00	; 0
+    1300:	03 c0       	rjmp	.+6      	; 0x1308 <PHY_DataConf+0x22>
+
+  else if (TRAC_STATUS_CHANNEL_ACCESS_FAILURE == status)
+    return NWK_PHY_CHANNEL_ACCESS_FAILURE_STATUS;
+    1302:	80 e2       	ldi	r24, 0x20	; 32
+    1304:	01 c0       	rjmp	.+2      	; 0x1308 <PHY_DataConf+0x22>
+
+  else if (TRAC_STATUS_NO_ACK == status)
+    return NWK_PHY_NO_ACK_STATUS;
+
+  else
+    return NWK_ERROR_STATUS;
+    1306:	81 e0       	ldi	r24, 0x01	; 1
+
+/*****************************************************************************
+*****************************************************************************/
+void PHY_DataConf(uint8_t status)
+{
+  nwkTxPhyActiveFrame->tx.status = convertPhyStatus(status);
+    1308:	df 01       	movw	r26, r30
+    130a:	a1 58       	subi	r26, 0x81	; 129
+    130c:	bf 4f       	sbci	r27, 0xFF	; 255
+    130e:	8c 93       	st	X, r24
+  nwkTxPhyActiveFrame->state = NWK_TX_STATE_SENT;
+    1310:	83 e1       	ldi	r24, 0x13	; 19
+    1312:	80 83       	st	Z, r24
+  nwkTxPhyActiveFrame = NULL;
+    1314:	10 92 5f 09 	sts	0x095F, r1
+    1318:	10 92 5e 09 	sts	0x095E, r1
+}
+    131c:	08 95       	ret
+
+0000131e <nwkTxTaskHandler>:
+
+/*****************************************************************************
+*****************************************************************************/
+void nwkTxTaskHandler(void)
+{
+    131e:	cf 92       	push	r12
+    1320:	df 92       	push	r13
+    1322:	ef 92       	push	r14
+    1324:	ff 92       	push	r15
+    1326:	0f 93       	push	r16
+    1328:	1f 93       	push	r17
+    132a:	cf 93       	push	r28
+    132c:	df 93       	push	r29
+  if (0 == nwkTxActiveFrames)
+    132e:	80 91 60 09 	lds	r24, 0x0960
+    1332:	88 23       	and	r24, r24
+    1334:	09 f4       	brne	.+2      	; 0x1338 <nwkTxTaskHandler+0x1a>
+    1336:	55 c0       	rjmp	.+170    	; 0x13e2 <nwkTxTaskHandler+0xc4>
+    1338:	10 e0       	ldi	r17, 0x00	; 0
+            frame->state = NWK_TX_STATE_CONFIRM;
+          }
+        }
+        else
+        {
+          frame->state = NWK_TX_STATE_CONFIRM;
+    133a:	05 e1       	ldi	r16, 0x15	; 21
+        if (NWK_SUCCESS_STATUS == frame->tx.status)
+        {
+          if (frame->data.header.nwkSrcAddr == nwkIb.addr &&
+              frame->data.header.nwkFcf.ackRequest)
+          {
+            frame->state = NWK_TX_STATE_WAIT_ACK;
+    133c:	84 e1       	ldi	r24, 0x14	; 20
+    133e:	f8 2e       	mov	r15, r24
+            frame->tx.timeout = NWK_ACK_WAIT_TIME / NWK_TX_ACK_WAIT_TIMER_INTERVAL + 1;
+    1340:	9b e0       	ldi	r25, 0x0B	; 11
+    1342:	c9 2e       	mov	r12, r25
+    1344:	d1 2c       	mov	r13, r1
+      case NWK_TX_STATE_SEND:
+      {
+        if (!PHY_Busy())
+        {
+          nwkTxPhyActiveFrame = frame;
+          frame->state = NWK_TX_STATE_WAIT_CONF;
+    1346:	22 e1       	ldi	r18, 0x12	; 18
+    1348:	e2 2e       	mov	r14, r18
+  if (0 == nwkTxActiveFrames)
+    return;
+
+  for (int i = 0; i < NWK_BUFFERS_AMOUNT; i++)
+  {
+    NwkFrame_t *frame = nwkFrameByIndex(i);
+    134a:	81 2f       	mov	r24, r17
+    134c:	0e 94 9c 04 	call	0x938	; 0x938 <nwkFrameByIndex>
+    1350:	ec 01       	movw	r28, r24
+
+    switch (frame->state)
+    1352:	88 81       	ld	r24, Y
+    1354:	83 31       	cpi	r24, 0x13	; 19
+    1356:	99 f0       	breq	.+38     	; 0x137e <nwkTxTaskHandler+0x60>
+    1358:	85 31       	cpi	r24, 0x15	; 21
+    135a:	79 f1       	breq	.+94     	; 0x13ba <nwkTxTaskHandler+0x9c>
+    135c:	81 31       	cpi	r24, 0x11	; 17
+    135e:	e9 f5       	brne	.+122    	; 0x13da <nwkTxTaskHandler+0xbc>
+      } break;
+#endif
+
+      case NWK_TX_STATE_SEND:
+      {
+        if (!PHY_Busy())
+    1360:	0e 94 7a 01 	call	0x2f4	; 0x2f4 <PHY_Busy>
+    1364:	88 23       	and	r24, r24
+    1366:	c9 f5       	brne	.+114    	; 0x13da <nwkTxTaskHandler+0xbc>
+        {
+          nwkTxPhyActiveFrame = frame;
+    1368:	d0 93 5f 09 	sts	0x095F, r29
+    136c:	c0 93 5e 09 	sts	0x095E, r28
+          frame->state = NWK_TX_STATE_WAIT_CONF;
+    1370:	e8 82       	st	Y, r14
+          PHY_DataReq((uint8_t *)&frame->data, frame->size);
+    1372:	ce 01       	movw	r24, r28
+    1374:	02 96       	adiw	r24, 0x02	; 2
+    1376:	69 81       	ldd	r22, Y+1	; 0x01
+    1378:	0e 94 8a 01 	call	0x314	; 0x314 <PHY_DataReq>
+    137c:	2e c0       	rjmp	.+92     	; 0x13da <nwkTxTaskHandler+0xbc>
+      case NWK_TX_STATE_WAIT_CONF:
+        break;
+
+      case NWK_TX_STATE_SENT:
+      {
+        if (NWK_SUCCESS_STATUS == frame->tx.status)
+    137e:	fe 01       	movw	r30, r28
+    1380:	e1 58       	subi	r30, 0x81	; 129
+    1382:	ff 4f       	sbci	r31, 0xFF	; 255
+    1384:	80 81       	ld	r24, Z
+    1386:	88 23       	and	r24, r24
+    1388:	b1 f4       	brne	.+44     	; 0x13b6 <nwkTxTaskHandler+0x98>
+        {
+          if (frame->data.header.nwkSrcAddr == nwkIb.addr &&
+    138a:	2d 85       	ldd	r18, Y+13	; 0x0d
+    138c:	3e 85       	ldd	r19, Y+14	; 0x0e
+    138e:	80 91 ac 0a 	lds	r24, 0x0AAC
+    1392:	90 91 ad 0a 	lds	r25, 0x0AAD
+    1396:	28 17       	cp	r18, r24
+    1398:	39 07       	cpc	r19, r25
+    139a:	69 f4       	brne	.+26     	; 0x13b6 <nwkTxTaskHandler+0x98>
+    139c:	8b 85       	ldd	r24, Y+11	; 0x0b
+    139e:	80 ff       	sbrs	r24, 0
+    13a0:	0a c0       	rjmp	.+20     	; 0x13b6 <nwkTxTaskHandler+0x98>
+              frame->data.header.nwkFcf.ackRequest)
+          {
+            frame->state = NWK_TX_STATE_WAIT_ACK;
+    13a2:	f8 82       	st	Y, r15
+            frame->tx.timeout = NWK_ACK_WAIT_TIME / NWK_TX_ACK_WAIT_TIMER_INTERVAL + 1;
+    13a4:	c0 58       	subi	r28, 0x80	; 128
+    13a6:	df 4f       	sbci	r29, 0xFF	; 255
+    13a8:	d9 82       	std	Y+1, r13	; 0x01
+    13aa:	c8 82       	st	Y, r12
+            SYS_TimerStart(&nwkTxAckWaitTimer);
+    13ac:	81 e6       	ldi	r24, 0x61	; 97
+    13ae:	99 e0       	ldi	r25, 0x09	; 9
+    13b0:	0e 94 77 0a 	call	0x14ee	; 0x14ee <SYS_TimerStart>
+    13b4:	12 c0       	rjmp	.+36     	; 0x13da <nwkTxTaskHandler+0xbc>
+            frame->state = NWK_TX_STATE_CONFIRM;
+          }
+        }
+        else
+        {
+          frame->state = NWK_TX_STATE_CONFIRM;
+    13b6:	08 83       	st	Y, r16
+    13b8:	10 c0       	rjmp	.+32     	; 0x13da <nwkTxTaskHandler+0xbc>
+        break;
+
+      case NWK_TX_STATE_CONFIRM:
+      {
+#ifdef NWK_ENABLE_ROUTING
+        nwkRouteFrameSent(frame);
+    13ba:	ce 01       	movw	r24, r28
+    13bc:	0e 94 4d 05 	call	0xa9a	; 0xa9a <nwkRouteFrameSent>
+#endif
+        frame->tx.confirm(frame);
+    13c0:	fe 01       	movw	r30, r28
+    13c2:	ed 57       	subi	r30, 0x7D	; 125
+    13c4:	ff 4f       	sbci	r31, 0xFF	; 255
+    13c6:	01 90       	ld	r0, Z+
+    13c8:	f0 81       	ld	r31, Z
+    13ca:	e0 2d       	mov	r30, r0
+    13cc:	ce 01       	movw	r24, r28
+    13ce:	09 95       	icall
+        --nwkTxActiveFrames;
+    13d0:	80 91 60 09 	lds	r24, 0x0960
+    13d4:	81 50       	subi	r24, 0x01	; 1
+    13d6:	80 93 60 09 	sts	0x0960, r24
+      } break;
+    13da:	1f 5f       	subi	r17, 0xFF	; 255
+void nwkTxTaskHandler(void)
+{
+  if (0 == nwkTxActiveFrames)
+    return;
+
+  for (int i = 0; i < NWK_BUFFERS_AMOUNT; i++)
+    13dc:	18 30       	cpi	r17, 0x08	; 8
+    13de:	09 f0       	breq	.+2      	; 0x13e2 <nwkTxTaskHandler+0xc4>
+    13e0:	b4 cf       	rjmp	.-152    	; 0x134a <nwkTxTaskHandler+0x2c>
+
+      default:
+        break;
+    };
+  }
+}
+    13e2:	df 91       	pop	r29
+    13e4:	cf 91       	pop	r28
+    13e6:	1f 91       	pop	r17
+    13e8:	0f 91       	pop	r16
+    13ea:	ff 90       	pop	r15
+    13ec:	ef 90       	pop	r14
+    13ee:	df 90       	pop	r13
+    13f0:	cf 90       	pop	r12
+    13f2:	08 95       	ret
+
+000013f4 <SYS_Init>:
+
+/*****************************************************************************
+*****************************************************************************/
+void SYS_Init(void)
+{
+  HAL_Init();
+    13f4:	0e 94 d4 00 	call	0x1a8	; 0x1a8 <HAL_Init>
+  SYS_TimerInit();
+    13f8:	0e 94 61 0a 	call	0x14c2	; 0x14c2 <SYS_TimerInit>
+  PHY_Init();
+    13fc:	0e 94 2b 01 	call	0x256	; 0x256 <PHY_Init>
+  NWK_Init();
+    1400:	0e 94 69 03 	call	0x6d2	; 0x6d2 <NWK_Init>
+}
+    1404:	08 95       	ret
+
+00001406 <SYS_TaskHandler>:
+
+/*****************************************************************************
+*****************************************************************************/
+void SYS_TaskHandler(void)
+{
+  PHY_TaskHandler();
+    1406:	0e 94 1e 02 	call	0x43c	; 0x43c <PHY_TaskHandler>
+  NWK_TaskHandler();
+    140a:	0e 94 9b 03 	call	0x736	; 0x736 <NWK_TaskHandler>
+  SYS_TimerTaskHandler();
+    140e:	0e 94 84 0a 	call	0x1508	; 0x1508 <SYS_TimerTaskHandler>
+}
+    1412:	08 95       	ret
+
+00001414 <placeTimer>:
+}
+
+/*****************************************************************************
+*****************************************************************************/
+static void placeTimer(SYS_Timer_t *timer)
+{
+    1414:	0f 93       	push	r16
+    1416:	1f 93       	push	r17
+    1418:	cf 93       	push	r28
+    141a:	df 93       	push	r29
+    141c:	fc 01       	movw	r30, r24
+  if (timers)
+    141e:	00 91 6e 09 	lds	r16, 0x096E
+    1422:	10 91 6f 09 	lds	r17, 0x096F
+    1426:	36 81       	ldd	r19, Z+6	; 0x06
+    1428:	27 81       	ldd	r18, Z+7	; 0x07
+    142a:	90 85       	ldd	r25, Z+8	; 0x08
+    142c:	81 85       	ldd	r24, Z+9	; 0x09
+    142e:	01 15       	cp	r16, r1
+    1430:	11 05       	cpc	r17, r1
+    1432:	c1 f1       	breq	.+112    	; 0x14a4 <placeTimer+0x90>
+  {
+    SYS_Timer_t *prev = NULL;
+    uint32_t timeout = timer->interval;
+    1434:	43 2f       	mov	r20, r19
+    1436:	52 2f       	mov	r21, r18
+    1438:	69 2f       	mov	r22, r25
+    143a:	78 2f       	mov	r23, r24
+    143c:	e8 01       	movw	r28, r16
+*****************************************************************************/
+static void placeTimer(SYS_Timer_t *timer)
+{
+  if (timers)
+  {
+    SYS_Timer_t *prev = NULL;
+    143e:	20 e0       	ldi	r18, 0x00	; 0
+    1440:	30 e0       	ldi	r19, 0x00	; 0
+    1442:	01 c0       	rjmp	.+2      	; 0x1446 <placeTimer+0x32>
+    uint32_t timeout = timer->interval;
+
+    for (SYS_Timer_t *t = timers; t; t = t->next)
+    1444:	ec 01       	movw	r28, r24
+    {
+      if (timeout < t->timeout)
+    1446:	8a 81       	ldd	r24, Y+2	; 0x02
+    1448:	9b 81       	ldd	r25, Y+3	; 0x03
+    144a:	ac 81       	ldd	r26, Y+4	; 0x04
+    144c:	bd 81       	ldd	r27, Y+5	; 0x05
+    144e:	48 17       	cp	r20, r24
+    1450:	59 07       	cpc	r21, r25
+    1452:	6a 07       	cpc	r22, r26
+    1454:	7b 07       	cpc	r23, r27
+    1456:	48 f4       	brcc	.+18     	; 0x146a <placeTimer+0x56>
+      {
+         t->timeout -= timeout;
+    1458:	84 1b       	sub	r24, r20
+    145a:	95 0b       	sbc	r25, r21
+    145c:	a6 0b       	sbc	r26, r22
+    145e:	b7 0b       	sbc	r27, r23
+    1460:	8a 83       	std	Y+2, r24	; 0x02
+    1462:	9b 83       	std	Y+3, r25	; 0x03
+    1464:	ac 83       	std	Y+4, r26	; 0x04
+    1466:	bd 83       	std	Y+5, r27	; 0x05
+         break;
+    1468:	09 c0       	rjmp	.+18     	; 0x147c <placeTimer+0x68>
+      }
+      else
+        timeout -= t->timeout;
+    146a:	48 1b       	sub	r20, r24
+    146c:	59 0b       	sbc	r21, r25
+    146e:	6a 0b       	sbc	r22, r26
+    1470:	7b 0b       	sbc	r23, r27
+  if (timers)
+  {
+    SYS_Timer_t *prev = NULL;
+    uint32_t timeout = timer->interval;
+
+    for (SYS_Timer_t *t = timers; t; t = t->next)
+    1472:	88 81       	ld	r24, Y
+    1474:	99 81       	ldd	r25, Y+1	; 0x01
+    1476:	9e 01       	movw	r18, r28
+    1478:	00 97       	sbiw	r24, 0x00	; 0
+    147a:	21 f7       	brne	.-56     	; 0x1444 <placeTimer+0x30>
+        timeout -= t->timeout;
+
+      prev = t;
+    }
+
+    timer->timeout = timeout;
+    147c:	42 83       	std	Z+2, r20	; 0x02
+    147e:	53 83       	std	Z+3, r21	; 0x03
+    1480:	64 83       	std	Z+4, r22	; 0x04
+    1482:	75 83       	std	Z+5, r23	; 0x05
+
+    if (prev)
+    1484:	21 15       	cp	r18, r1
+    1486:	31 05       	cpc	r19, r1
+    1488:	51 f0       	breq	.+20     	; 0x149e <placeTimer+0x8a>
+    {
+      timer->next = prev->next;
+    148a:	d9 01       	movw	r26, r18
+    148c:	8d 91       	ld	r24, X+
+    148e:	9c 91       	ld	r25, X
+    1490:	11 97       	sbiw	r26, 0x01	; 1
+    1492:	91 83       	std	Z+1, r25	; 0x01
+    1494:	80 83       	st	Z, r24
+      prev->next = timer;
+    1496:	11 96       	adiw	r26, 0x01	; 1
+    1498:	fc 93       	st	X, r31
+    149a:	ee 93       	st	-X, r30
+    149c:	0d c0       	rjmp	.+26     	; 0x14b8 <placeTimer+0xa4>
+    }
+    else
+    {
+      timer->next = timers;
+    149e:	11 83       	std	Z+1, r17	; 0x01
+    14a0:	00 83       	st	Z, r16
+    14a2:	06 c0       	rjmp	.+12     	; 0x14b0 <placeTimer+0x9c>
+      timers = timer;
+    }
+  }
+  else
+  {
+    timer->next = NULL;
+    14a4:	11 82       	std	Z+1, r1	; 0x01
+    14a6:	10 82       	st	Z, r1
+    timer->timeout = timer->interval;
+    14a8:	32 83       	std	Z+2, r19	; 0x02
+    14aa:	23 83       	std	Z+3, r18	; 0x03
+    14ac:	94 83       	std	Z+4, r25	; 0x04
+    14ae:	85 83       	std	Z+5, r24	; 0x05
+    timers = timer;
+    14b0:	f0 93 6f 09 	sts	0x096F, r31
+    14b4:	e0 93 6e 09 	sts	0x096E, r30
+  }
+}
+    14b8:	df 91       	pop	r29
+    14ba:	cf 91       	pop	r28
+    14bc:	1f 91       	pop	r17
+    14be:	0f 91       	pop	r16
+    14c0:	08 95       	ret
+
+000014c2 <SYS_TimerInit>:
+
+/*****************************************************************************
+*****************************************************************************/
+void SYS_TimerInit(void)
+{
+  timers = NULL;
+    14c2:	10 92 6f 09 	sts	0x096F, r1
+    14c6:	10 92 6e 09 	sts	0x096E, r1
+}
+    14ca:	08 95       	ret
+
+000014cc <SYS_TimerStarted>:
+
+/*****************************************************************************
+*****************************************************************************/
+bool SYS_TimerStarted(SYS_Timer_t *timer)
+{
+  for (SYS_Timer_t *t = timers; t; t = t->next)
+    14cc:	e0 91 6e 09 	lds	r30, 0x096E
+    14d0:	f0 91 6f 09 	lds	r31, 0x096F
+    14d4:	06 c0       	rjmp	.+12     	; 0x14e2 <SYS_TimerStarted+0x16>
+    if (t == timer)
+    14d6:	e8 17       	cp	r30, r24
+    14d8:	f9 07       	cpc	r31, r25
+    14da:	39 f0       	breq	.+14     	; 0x14ea <SYS_TimerStarted+0x1e>
+
+/*****************************************************************************
+*****************************************************************************/
+bool SYS_TimerStarted(SYS_Timer_t *timer)
+{
+  for (SYS_Timer_t *t = timers; t; t = t->next)
+    14dc:	01 90       	ld	r0, Z+
+    14de:	f0 81       	ld	r31, Z
+    14e0:	e0 2d       	mov	r30, r0
+    14e2:	30 97       	sbiw	r30, 0x00	; 0
+    14e4:	c1 f7       	brne	.-16     	; 0x14d6 <SYS_TimerStarted+0xa>
+    if (t == timer)
+      return true;
+  return false;
+    14e6:	80 e0       	ldi	r24, 0x00	; 0
+    14e8:	08 95       	ret
+*****************************************************************************/
+bool SYS_TimerStarted(SYS_Timer_t *timer)
+{
+  for (SYS_Timer_t *t = timers; t; t = t->next)
+    if (t == timer)
+      return true;
+    14ea:	81 e0       	ldi	r24, 0x01	; 1
+  return false;
+}
+    14ec:	08 95       	ret
+
+000014ee <SYS_TimerStart>:
+}
+
+/*****************************************************************************
+*****************************************************************************/
+void SYS_TimerStart(SYS_Timer_t *timer)
+{
+    14ee:	cf 93       	push	r28
+    14f0:	df 93       	push	r29
+    14f2:	ec 01       	movw	r28, r24
+  if (!SYS_TimerStarted(timer))
+    14f4:	0e 94 66 0a 	call	0x14cc	; 0x14cc <SYS_TimerStarted>
+    14f8:	88 23       	and	r24, r24
+    14fa:	19 f4       	brne	.+6      	; 0x1502 <SYS_TimerStart+0x14>
+    placeTimer(timer);
+    14fc:	ce 01       	movw	r24, r28
+    14fe:	0e 94 0a 0a 	call	0x1414	; 0x1414 <placeTimer>
+}
+    1502:	df 91       	pop	r29
+    1504:	cf 91       	pop	r28
+    1506:	08 95       	ret
+
+00001508 <SYS_TimerTaskHandler>:
+}
+
+/*****************************************************************************
+*****************************************************************************/
+void SYS_TimerTaskHandler(void)
+{
+    1508:	cf 92       	push	r12
+    150a:	df 92       	push	r13
+    150c:	ef 92       	push	r14
+    150e:	ff 92       	push	r15
+    1510:	cf 93       	push	r28
+    1512:	df 93       	push	r29
+  uint32_t elapsed;
+  uint8_t cnt;
+
+  if (0 == halTimerIrqCount)
+    1514:	80 91 ab 0a 	lds	r24, 0x0AAB
+    1518:	88 23       	and	r24, r24
+    151a:	09 f4       	brne	.+2      	; 0x151e <SYS_TimerTaskHandler+0x16>
+    151c:	3e c0       	rjmp	.+124    	; 0x159a <SYS_TimerTaskHandler+0x92>
+    return;
+
+  ATOMIC_SECTION_ENTER
+    151e:	8f b7       	in	r24, 0x3f	; 63
+    1520:	f8 94       	cli
+    cnt = halTimerIrqCount;
+    1522:	60 91 ab 0a 	lds	r22, 0x0AAB
+    halTimerIrqCount = 0;
+    1526:	10 92 ab 0a 	sts	0x0AAB, r1
+  ATOMIC_SECTION_LEAVE
+    152a:	8f bf       	out	0x3f, r24	; 63
+
+  elapsed = cnt * HAL_TIMER_INTERVAL;
+    152c:	70 e0       	ldi	r23, 0x00	; 0
+    152e:	80 e0       	ldi	r24, 0x00	; 0
+    1530:	90 e0       	ldi	r25, 0x00	; 0
+    1532:	2a e0       	ldi	r18, 0x0A	; 10
+    1534:	30 e0       	ldi	r19, 0x00	; 0
+    1536:	40 e0       	ldi	r20, 0x00	; 0
+    1538:	50 e0       	ldi	r21, 0x00	; 0
+    153a:	0e 94 76 0c 	call	0x18ec	; 0x18ec <__mulsi3>
+    153e:	6b 01       	movw	r12, r22
+    1540:	7c 01       	movw	r14, r24
+
+  while (timers && (timers->timeout <= elapsed))
+    1542:	14 c0       	rjmp	.+40     	; 0x156c <SYS_TimerTaskHandler+0x64>
+  {
+    SYS_Timer_t *timer = timers;
+
+    elapsed -= timers->timeout;
+    1544:	c8 1a       	sub	r12, r24
+    1546:	d9 0a       	sbc	r13, r25
+    1548:	ea 0a       	sbc	r14, r26
+    154a:	fb 0a       	sbc	r15, r27
+    timers = timers->next;
+    154c:	88 81       	ld	r24, Y
+    154e:	99 81       	ldd	r25, Y+1	; 0x01
+    1550:	90 93 6f 09 	sts	0x096F, r25
+    1554:	80 93 6e 09 	sts	0x096E, r24
+    if (SYS_TIMER_PERIODIC_MODE == timer->mode)
+    1558:	8a 85       	ldd	r24, Y+10	; 0x0a
+    155a:	81 30       	cpi	r24, 0x01	; 1
+    155c:	19 f4       	brne	.+6      	; 0x1564 <SYS_TimerTaskHandler+0x5c>
+      placeTimer(timer);
+    155e:	ce 01       	movw	r24, r28
+    1560:	0e 94 0a 0a 	call	0x1414	; 0x1414 <placeTimer>
+    timer->handler(timer);
+    1564:	eb 85       	ldd	r30, Y+11	; 0x0b
+    1566:	fc 85       	ldd	r31, Y+12	; 0x0c
+    1568:	ce 01       	movw	r24, r28
+    156a:	09 95       	icall
+    halTimerIrqCount = 0;
+  ATOMIC_SECTION_LEAVE
+
+  elapsed = cnt * HAL_TIMER_INTERVAL;
+
+  while (timers && (timers->timeout <= elapsed))
+    156c:	c0 91 6e 09 	lds	r28, 0x096E
+    1570:	d0 91 6f 09 	lds	r29, 0x096F
+    1574:	20 97       	sbiw	r28, 0x00	; 0
+    1576:	89 f0       	breq	.+34     	; 0x159a <SYS_TimerTaskHandler+0x92>
+    1578:	8a 81       	ldd	r24, Y+2	; 0x02
+    157a:	9b 81       	ldd	r25, Y+3	; 0x03
+    157c:	ac 81       	ldd	r26, Y+4	; 0x04
+    157e:	bd 81       	ldd	r27, Y+5	; 0x05
+    1580:	c8 16       	cp	r12, r24
+    1582:	d9 06       	cpc	r13, r25
+    1584:	ea 06       	cpc	r14, r26
+    1586:	fb 06       	cpc	r15, r27
+    1588:	e8 f6       	brcc	.-70     	; 0x1544 <SYS_TimerTaskHandler+0x3c>
+      placeTimer(timer);
+    timer->handler(timer);
+  }
+
+  if (timers)
+    timers->timeout -= elapsed;
+    158a:	8c 19       	sub	r24, r12
+    158c:	9d 09       	sbc	r25, r13
+    158e:	ae 09       	sbc	r26, r14
+    1590:	bf 09       	sbc	r27, r15
+    1592:	8a 83       	std	Y+2, r24	; 0x02
+    1594:	9b 83       	std	Y+3, r25	; 0x03
+    1596:	ac 83       	std	Y+4, r26	; 0x04
+    1598:	bd 83       	std	Y+5, r27	; 0x05
+}
+    159a:	df 91       	pop	r29
+    159c:	cf 91       	pop	r28
+    159e:	ff 90       	pop	r15
+    15a0:	ef 90       	pop	r14
+    15a2:	df 90       	pop	r13
+    15a4:	cf 90       	pop	r12
+    15a6:	08 95       	ret
+
+000015a8 <appAddrConf>:
+		Function implementations
+*****************************************************************************/
+
+static void appAddrConf(NWK_DataReq_t *req)
+{
+	appDataReqBusy = false;
+    15a8:	10 92 bd 09 	sts	0x09BD, r1
+    debug2Blink++;
+    15ac:	80 91 aa 09 	lds	r24, 0x09AA
+    15b0:	90 91 ab 09 	lds	r25, 0x09AB
+    15b4:	01 96       	adiw	r24, 0x01	; 1
+    15b6:	90 93 ab 09 	sts	0x09AB, r25
+    15ba:	80 93 aa 09 	sts	0x09AA, r24
+}
+    15be:	08 95       	ret
+
+000015c0 <appTimerHandler>:
+}
+
+/*****************************************************************************
+*****************************************************************************/
+static void appTimerHandler(SYS_Timer_t *timer)
+{
+    15c0:	cf 93       	push	r28
+    15c2:	df 93       	push	r29
+	updateLEDs(LEDarray, NUM_LEDS*3);
+    15c4:	86 e7       	ldi	r24, 0x76	; 118
+    15c6:	99 e0       	ldi	r25, 0x09	; 9
+    15c8:	60 e3       	ldi	r22, 0x30	; 48
+    15ca:	70 e0       	ldi	r23, 0x00	; 0
+    15cc:	0e 94 b2 00 	call	0x164	; 0x164 <updateLEDs>
+    15d0:	e6 e7       	ldi	r30, 0x76	; 118
+    15d2:	f9 e0       	ldi	r31, 0x09	; 9
+    15d4:	ef 01       	movw	r28, r30
+    15d6:	21 96       	adiw	r28, 0x01	; 1
+    15d8:	df 01       	movw	r26, r30
+    15da:	12 96       	adiw	r26, 0x02	; 2
+	for (int LED_ptr=0;LED_ptr<NUM_LEDS*3;LED_ptr+=3)
+	{
+		LEDarray[LED_ptr]+=4; 			// Green
+    15dc:	80 81       	ld	r24, Z
+    15de:	8c 5f       	subi	r24, 0xFC	; 252
+    15e0:	80 83       	st	Z, r24
+		LEDarray[LED_ptr+1]+=4;			// Red
+    15e2:	88 81       	ld	r24, Y
+    15e4:	8c 5f       	subi	r24, 0xFC	; 252
+    15e6:	88 83       	st	Y, r24
+		LEDarray[LED_ptr+2]+=4;			// Blue
+    15e8:	8c 91       	ld	r24, X
+    15ea:	8c 5f       	subi	r24, 0xFC	; 252
+    15ec:	8c 93       	st	X, r24
+    15ee:	33 96       	adiw	r30, 0x03	; 3
+    15f0:	23 96       	adiw	r28, 0x03	; 3
+    15f2:	13 96       	adiw	r26, 0x03	; 3
+/*****************************************************************************
+*****************************************************************************/
+static void appTimerHandler(SYS_Timer_t *timer)
+{
+	updateLEDs(LEDarray, NUM_LEDS*3);
+	for (int LED_ptr=0;LED_ptr<NUM_LEDS*3;LED_ptr+=3)
+    15f4:	89 e0       	ldi	r24, 0x09	; 9
+    15f6:	a8 3a       	cpi	r26, 0xA8	; 168
+    15f8:	b8 07       	cpc	r27, r24
+    15fa:	81 f7       	brne	.-32     	; 0x15dc <appTimerHandler+0x1c>
+		LEDarray[LED_ptr+1]+=4;			// Red
+		LEDarray[LED_ptr+2]+=4;			// Blue
+	}
+//	if (appState == APP_STATE_WAITSEND)	appSendData();
+//	(void)timer;
+}
+    15fc:	df 91       	pop	r29
+    15fe:	cf 91       	pop	r28
+    1600:	08 95       	ret
+
+00001602 <LEDCmdDataInd>:
+
+/*****************************************************************************
+	Callback function from the network stack for app endpoint LED Command
+*****************************************************************************/
+static bool LEDCmdDataInd(NWK_DataInd_t *ind)
+{
+    1602:	0f 93       	push	r16
+    1604:	1f 93       	push	r17
+    1606:	cf 93       	push	r28
+    1608:	df 93       	push	r29
+    160a:	ec 01       	movw	r28, r24
+	memcpy(appWorkingBuffer, ind->data, ind->size);
+    160c:	0f eb       	ldi	r16, 0xBF	; 191
+    160e:	19 e0       	ldi	r17, 0x09	; 9
+    1610:	4f 81       	ldd	r20, Y+7	; 0x07
+    1612:	6d 81       	ldd	r22, Y+5	; 0x05
+    1614:	7e 81       	ldd	r23, Y+6	; 0x06
+    1616:	c8 01       	movw	r24, r16
+    1618:	50 e0       	ldi	r21, 0x00	; 0
+    161a:	0e 94 95 0c 	call	0x192a	; 0x192a <memcpy>
+	cmdBuffer = appWorkingBuffer;
+    161e:	10 93 75 09 	sts	0x0975, r17
+    1622:	00 93 74 09 	sts	0x0974, r16
+	nwkState = NWK_STATE_RECD;
+    1626:	86 e0       	ldi	r24, 0x06	; 6
+    1628:	80 93 00 02 	sts	0x0200, r24
+	appState = APP_STATE_DATARDY;
+    162c:	82 e0       	ldi	r24, 0x02	; 2
+    162e:	80 93 73 09 	sts	0x0973, r24
+	HAL_GPIO_PIN(debug2, E, 5)
+	HAL_GPIO_PIN(debug3, E, 6)
+	HAL_GPIO_PIN(debug4, E, 7)
+#elif BOARD_VERSION == 2
+	HAL_GPIO_PIN(hbLED, G, 0)
+	HAL_GPIO_PIN(statusLED, D, 7)
+    1632:	8b b1       	in	r24, 0x0b	; 11
+    1634:	80 58       	subi	r24, 0x80	; 128
+    1636:	8b b9       	out	0x0b, r24	; 11
+	
+	HAL_GPIO_statusLED_toggle();
+
+	latestRSSI = ind->rssi;
+    1638:	89 85       	ldd	r24, Y+9	; 0x09
+    163a:	80 93 aa 0a 	sts	0x0AAA, r24
+
+	return true;
+}
+    163e:	81 e0       	ldi	r24, 0x01	; 1
+    1640:	df 91       	pop	r29
+    1642:	cf 91       	pop	r28
+    1644:	1f 91       	pop	r17
+    1646:	0f 91       	pop	r16
+    1648:	08 95       	ret
+
+0000164a <PHY_EdConf>:
+	Callback function from the network stack for energy detection measurement
+*****************************************************************************/
+void PHY_EdConf(int8_t energyLevel)
+{
+	currentLEDmode = currentLEDmode;
+}
+    164a:	08 95       	ret
+
+0000164c <main>:
+/*****************************************************************************
+		Main Program
+*****************************************************************************/
+int main(void)
+{
+  SYS_Init();
+    164c:	0e 94 fa 09 	call	0x13f4	; 0x13f4 <SYS_Init>
+	PHY_SetRxState(true);
+	NWK_OpenEndpoint(LEDCmd_ENDPOINT, LEDCmdDataInd);
+
+	appTimer.interval = APP_FLUSH_TIMER_INTERVAL;
+	appTimer.mode = SYS_TIMER_PERIODIC_MODE;
+	appTimer.handler = appTimerHandler;
+    1650:	80 ee       	ldi	r24, 0xE0	; 224
+    1652:	e8 2e       	mov	r14, r24
+    1654:	8a e0       	ldi	r24, 0x0A	; 10
+    1656:	f8 2e       	mov	r15, r24
+	debug4Blink = 0;
+
+	currentLEDmode = LED_MODE_IDLE;
+	for (int LED_ptr=0;LED_ptr<NUM_LEDS*3;LED_ptr+=3)
+	{
+		LEDarray[LED_ptr] = 85;				// Green
+    1658:	c5 e5       	ldi	r28, 0x55	; 85
+		LEDarray[LED_ptr+1] = 170;			// Red
+    165a:	da ea       	ldi	r29, 0xAA	; 170
+		LEDarray[LED_ptr+2] = 255;			// Blue
+    165c:	1f ef       	ldi	r17, 0xFF	; 255
+
+	appDataReqBusy = false;
+	
+// Broadcast this mote's address
+	appWorkingBufferPtr = 2;
+	appWorkingBuffer[0] = myAddr;
+    165e:	9f eb       	ldi	r25, 0xBF	; 191
+    1660:	c9 2e       	mov	r12, r25
+    1662:	99 e0       	ldi	r25, 0x09	; 9
+    1664:	d9 2e       	mov	r13, r25
+	appDataReq.dstEndpoint = Mote_Addr_ENDPOINT;
+	appDataReq.srcEndpoint = Mote_Addr_ENDPOINT;
+	appDataReq.options = 0;
+	appDataReq.data = appWorkingBuffer;
+	appDataReq.size = appWorkingBufferPtr;
+	appDataReq.confirm = appAddrConf;
+    1666:	24 ed       	ldi	r18, 0xD4	; 212
+    1668:	a2 2e       	mov	r10, r18
+    166a:	2a e0       	ldi	r18, 0x0A	; 10
+    166c:	b2 2e       	mov	r11, r18
+
+// Loops indefinitely, alternating between processing system tasks and app tasks
+
+  while (1)
+  {
+    SYS_TaskHandler();
+    166e:	0e 94 03 0a 	call	0x1406	; 0x1406 <SYS_TaskHandler>
+		Task Handler
+*****************************************************************************/
+static void APP_TaskHandler(void)
+{
+  // Put your application code here	
+    switch (appState)
+    1672:	80 91 73 09 	lds	r24, 0x0973
+    1676:	88 23       	and	r24, r24
+    1678:	21 f0       	breq	.+8      	; 0x1682 <main+0x36>
+    167a:	82 30       	cpi	r24, 0x02	; 2
+    167c:	09 f0       	breq	.+2      	; 0x1680 <main+0x34>
+    167e:	17 c1       	rjmp	.+558    	; 0x18ae <main+0x262>
+    1680:	ab c0       	rjmp	.+342    	; 0x17d8 <main+0x18c>
+	Startup configuration
+*****************************************************************************/
+static void appInit(void)
+{
+#ifndef FIXED_ADDR
+	eeprom_busy_wait();
+    1682:	f9 99       	sbic	0x1f, 1	; 31
+    1684:	fe cf       	rjmp	.-4      	; 0x1682 <main+0x36>
+	ATOMIC_BLOCK(ATOMIC_RESTORESTATE) {	
+    1686:	0f b7       	in	r16, 0x3f	; 63
+    return 1;
+}
+
+static __inline__ uint8_t __iCliRetVal(void)
+{
+    cli();
+    1688:	f8 94       	cli
+		eeprom_write_word(&networkAddr, 5);
+    168a:	80 e0       	ldi	r24, 0x00	; 0
+    168c:	90 e0       	ldi	r25, 0x00	; 0
+    168e:	65 e0       	ldi	r22, 0x05	; 5
+    1690:	70 e0       	ldi	r23, 0x00	; 0
+    1692:	0e 94 a4 0c 	call	0x1948	; 0x1948 <__eewr_word_m128rfa1>
+		myAddr = eeprom_read_word(&networkAddr);
+    1696:	80 e0       	ldi	r24, 0x00	; 0
+    1698:	90 e0       	ldi	r25, 0x00	; 0
+    169a:	0e 94 9e 0c 	call	0x193c	; 0x193c <__eerd_word_m128rfa1>
+    169e:	90 93 af 09 	sts	0x09AF, r25
+    16a2:	80 93 ae 09 	sts	0x09AE, r24
+    (void)__s;
+}
+
+static __inline__ void __iRestore(const  uint8_t *__s)
+{
+    SREG = *__s;
+    16a6:	0f bf       	out	0x3f, r16	; 63
+	}
+#else
+	myAddr = APP_ADDR;
+#endif
+	NWK_SetAddr(myAddr);
+    16a8:	80 91 ae 09 	lds	r24, 0x09AE
+    16ac:	90 91 af 09 	lds	r25, 0x09AF
+    16b0:	0e 94 84 03 	call	0x708	; 0x708 <NWK_SetAddr>
+	NWK_SetPanId(APP_PANID);
+    16b4:	86 e4       	ldi	r24, 0x46	; 70
+    16b6:	96 e4       	ldi	r25, 0x46	; 70
+    16b8:	0e 94 8b 03 	call	0x716	; 0x716 <NWK_SetPanId>
+	PHY_SetChannel(APP_CHANNEL);
+    16bc:	8f e0       	ldi	r24, 0x0F	; 15
+    16be:	0e 94 5e 01 	call	0x2bc	; 0x2bc <PHY_SetChannel>
+	PHY_EdReq();
+    16c2:	0e 94 b3 01 	call	0x366	; 0x366 <PHY_EdReq>
+	PHY_SetRxState(true);
+    16c6:	81 e0       	ldi	r24, 0x01	; 1
+    16c8:	0e 94 56 01 	call	0x2ac	; 0x2ac <PHY_SetRxState>
+	NWK_OpenEndpoint(LEDCmd_ENDPOINT, LEDCmdDataInd);
+    16cc:	81 e0       	ldi	r24, 0x01	; 1
+    16ce:	61 e0       	ldi	r22, 0x01	; 1
+    16d0:	7b e0       	ldi	r23, 0x0B	; 11
+    16d2:	0e 94 92 03 	call	0x724	; 0x724 <NWK_OpenEndpoint>
+
+	appTimer.interval = APP_FLUSH_TIMER_INTERVAL;
+    16d6:	8a ef       	ldi	r24, 0xFA	; 250
+    16d8:	90 e0       	ldi	r25, 0x00	; 0
+    16da:	a0 e0       	ldi	r26, 0x00	; 0
+    16dc:	b0 e0       	ldi	r27, 0x00	; 0
+    16de:	80 93 b6 09 	sts	0x09B6, r24
+    16e2:	90 93 b7 09 	sts	0x09B7, r25
+    16e6:	a0 93 b8 09 	sts	0x09B8, r26
+    16ea:	b0 93 b9 09 	sts	0x09B9, r27
+	appTimer.mode = SYS_TIMER_PERIODIC_MODE;
+    16ee:	81 e0       	ldi	r24, 0x01	; 1
+    16f0:	80 93 ba 09 	sts	0x09BA, r24
+	appTimer.handler = appTimerHandler;
+    16f4:	f0 92 bc 09 	sts	0x09BC, r15
+    16f8:	e0 92 bb 09 	sts	0x09BB, r14
+	SYS_TimerStart(&appTimer);
+    16fc:	80 eb       	ldi	r24, 0xB0	; 176
+    16fe:	99 e0       	ldi	r25, 0x09	; 9
+    1700:	0e 94 77 0a 	call	0x14ee	; 0x14ee <SYS_TimerStart>
+	HAL_GPIO_PIN(debug1, E, 4)
+	HAL_GPIO_PIN(debug2, E, 5)
+	HAL_GPIO_PIN(debug3, E, 6)
+	HAL_GPIO_PIN(debug4, E, 7)
+#elif BOARD_VERSION == 2
+	HAL_GPIO_PIN(hbLED, G, 0)
+    1704:	98 9a       	sbi	0x13, 0	; 19
+    1706:	a0 98       	cbi	0x14, 0	; 20
+	HAL_GPIO_PIN(statusLED, D, 7)
+    1708:	57 9a       	sbi	0x0a, 7	; 10
+    170a:	5f 98       	cbi	0x0b, 7	; 11
+	HAL_GPIO_PIN(rcvLED, B, 4)
+    170c:	24 9a       	sbi	0x04, 4	; 4
+    170e:	2c 98       	cbi	0x05, 4	; 5
+	HAL_GPIO_PIN(lightStripData, D, 4)
+    1710:	54 9a       	sbi	0x0a, 4	; 10
+    1712:	5c 98       	cbi	0x0b, 4	; 11
+	HAL_GPIO_PIN(debug1, E, 4)
+    1714:	6c 9a       	sbi	0x0d, 4	; 13
+    1716:	74 98       	cbi	0x0e, 4	; 14
+	HAL_GPIO_PIN(debug2, E, 5)
+    1718:	6d 9a       	sbi	0x0d, 5	; 13
+    171a:	75 98       	cbi	0x0e, 5	; 14
+	HAL_GPIO_PIN(debug3, E, 6)
+    171c:	6e 9a       	sbi	0x0d, 6	; 13
+    171e:	76 98       	cbi	0x0e, 6	; 14
+	HAL_GPIO_PIN(debug4, E, 7)
+    1720:	6f 9a       	sbi	0x0d, 7	; 13
+    1722:	77 98       	cbi	0x0e, 7	; 14
+	HAL_GPIO_debug3_out();
+	HAL_GPIO_debug3_clr();
+	HAL_GPIO_debug4_out();
+	HAL_GPIO_debug4_clr();
+
+	debug1Blink = 0;
+    1724:	10 92 a7 09 	sts	0x09A7, r1
+    1728:	10 92 a6 09 	sts	0x09A6, r1
+	debug2Blink = 0;
+    172c:	10 92 ab 09 	sts	0x09AB, r1
+    1730:	10 92 aa 09 	sts	0x09AA, r1
+	debug3Blink = 0;
+    1734:	10 92 ad 09 	sts	0x09AD, r1
+    1738:	10 92 ac 09 	sts	0x09AC, r1
+	debug4Blink = 0;
+    173c:	10 92 a9 09 	sts	0x09A9, r1
+    1740:	10 92 a8 09 	sts	0x09A8, r1
+
+	currentLEDmode = LED_MODE_IDLE;
+    1744:	10 92 70 09 	sts	0x0970, r1
+    1748:	88 e7       	ldi	r24, 0x78	; 120
+    174a:	99 e0       	ldi	r25, 0x09	; 9
+}
+
+/*****************************************************************************
+		Main Program
+*****************************************************************************/
+int main(void)
+    174c:	fc 01       	movw	r30, r24
+    174e:	32 97       	sbiw	r30, 0x02	; 2
+	debug4Blink = 0;
+
+	currentLEDmode = LED_MODE_IDLE;
+	for (int LED_ptr=0;LED_ptr<NUM_LEDS*3;LED_ptr+=3)
+	{
+		LEDarray[LED_ptr] = 85;				// Green
+    1750:	c0 83       	st	Z, r28
+}
+
+/*****************************************************************************
+		Main Program
+*****************************************************************************/
+int main(void)
+    1752:	fc 01       	movw	r30, r24
+    1754:	31 97       	sbiw	r30, 0x01	; 1
+
+	currentLEDmode = LED_MODE_IDLE;
+	for (int LED_ptr=0;LED_ptr<NUM_LEDS*3;LED_ptr+=3)
+	{
+		LEDarray[LED_ptr] = 85;				// Green
+		LEDarray[LED_ptr+1] = 170;			// Red
+    1756:	d0 83       	st	Z, r29
+		LEDarray[LED_ptr+2] = 255;			// Blue
+    1758:	fc 01       	movw	r30, r24
+    175a:	10 83       	st	Z, r17
+    175c:	03 96       	adiw	r24, 0x03	; 3
+	debug2Blink = 0;
+	debug3Blink = 0;
+	debug4Blink = 0;
+
+	currentLEDmode = LED_MODE_IDLE;
+	for (int LED_ptr=0;LED_ptr<NUM_LEDS*3;LED_ptr+=3)
+    175e:	f9 e0       	ldi	r31, 0x09	; 9
+    1760:	88 3a       	cpi	r24, 0xA8	; 168
+    1762:	9f 07       	cpc	r25, r31
+    1764:	99 f7       	brne	.-26     	; 0x174c <main+0x100>
+		LEDarray[LED_ptr+2] = 255;			// Blue
+//		LEDarray[LED_ptr] = 0xC3;				// Green
+//		LEDarray[LED_ptr+1] = 0x99;				// Red
+//		LEDarray[LED_ptr+2] = 0x0F;				// Blue
+	}
+	updateLEDs(LEDarray, NUM_LEDS*3);
+    1766:	c2 97       	sbiw	r24, 0x32	; 50
+    1768:	60 e3       	ldi	r22, 0x30	; 48
+    176a:	70 e0       	ldi	r23, 0x00	; 0
+    176c:	0e 94 b2 00 	call	0x164	; 0x164 <updateLEDs>
+
+	appDataReqBusy = false;
+    1770:	10 92 bd 09 	sts	0x09BD, r1
+	
+// Broadcast this mote's address
+	appWorkingBufferPtr = 2;
+    1774:	22 e0       	ldi	r18, 0x02	; 2
+    1776:	20 93 be 09 	sts	0x09BE, r18
+	appWorkingBuffer[0] = myAddr;
+    177a:	80 91 ae 09 	lds	r24, 0x09AE
+    177e:	80 93 bf 09 	sts	0x09BF, r24
+	appWorkingBuffer[1] = 0;
+    1782:	10 92 c0 09 	sts	0x09C0, r1
+static void appSendAddr(void)
+{
+	if (appDataReqBusy || 0 == appWorkingBufferPtr)
+		return;
+
+	memcpy(appDataReqBuffer, appWorkingBuffer, appWorkingBufferPtr);
+    1786:	80 91 bf 09 	lds	r24, 0x09BF
+    178a:	90 91 c0 09 	lds	r25, 0x09C0
+    178e:	90 93 2d 0a 	sts	0x0A2D, r25
+    1792:	80 93 2c 0a 	sts	0x0A2C, r24
+
+	appDataReq.dstAddr = BROADCAST_ADDR;
+    1796:	8f ef       	ldi	r24, 0xFF	; 255
+    1798:	9f ef       	ldi	r25, 0xFF	; 255
+    179a:	90 93 9f 0a 	sts	0x0A9F, r25
+    179e:	80 93 9e 0a 	sts	0x0A9E, r24
+	appDataReq.dstEndpoint = Mote_Addr_ENDPOINT;
+    17a2:	80 e1       	ldi	r24, 0x10	; 16
+    17a4:	80 93 a0 0a 	sts	0x0AA0, r24
+	appDataReq.srcEndpoint = Mote_Addr_ENDPOINT;
+    17a8:	80 93 a1 0a 	sts	0x0AA1, r24
+	appDataReq.options = 0;
+    17ac:	10 92 a2 0a 	sts	0x0AA2, r1
+	appDataReq.data = appWorkingBuffer;
+    17b0:	d0 92 a4 0a 	sts	0x0AA4, r13
+    17b4:	c0 92 a3 0a 	sts	0x0AA3, r12
+	appDataReq.size = appWorkingBufferPtr;
+    17b8:	20 93 a5 0a 	sts	0x0AA5, r18
+	appDataReq.confirm = appAddrConf;
+    17bc:	b0 92 a7 0a 	sts	0x0AA7, r11
+    17c0:	a0 92 a6 0a 	sts	0x0AA6, r10
+	NWK_DataReq(&appDataReq);
+    17c4:	89 e9       	ldi	r24, 0x99	; 153
+    17c6:	9a e0       	ldi	r25, 0x0A	; 10
+    17c8:	0e 94 c6 03 	call	0x78c	; 0x78c <NWK_DataReq>
+
+	appWorkingBufferPtr = 0;
+    17cc:	10 92 be 09 	sts	0x09BE, r1
+	appDataReqBusy = true;
+    17d0:	81 e0       	ldi	r24, 0x01	; 1
+    17d2:	80 93 bd 09 	sts	0x09BD, r24
+    17d6:	69 c0       	rjmp	.+210    	; 0x18aa <main+0x25e>
+		case APP_STATE_IDLE:
+		break;
+
+		case APP_STATE_DATARDY:
+		{
+			if (cmdBuffer->mode == MODE_GLOBAL)
+    17d8:	e0 91 74 09 	lds	r30, 0x0974
+    17dc:	f0 91 75 09 	lds	r31, 0x0975
+    17e0:	90 81       	ld	r25, Z
+    17e2:	99 23       	and	r25, r25
+    17e4:	99 f4       	brne	.+38     	; 0x180c <main+0x1c0>
+			{
+				if(cmdBuffer->subMode == STATIC)
+    17e6:	91 81       	ldd	r25, Z+1	; 0x01
+    17e8:	99 23       	and	r25, r25
+    17ea:	21 f4       	brne	.+8      	; 0x17f4 <main+0x1a8>
+				{
+					currentLEDmode = LED_MODE_FIXED;
+    17ec:	81 e0       	ldi	r24, 0x01	; 1
+    17ee:	80 93 70 09 	sts	0x0970, r24
+    17f2:	5a c0       	rjmp	.+180    	; 0x18a8 <main+0x25c>
+						LEDarray[LED_ptr+2] = cmdBuffer->bluIntensity;		// Blue
+					}
+					updateLEDs(LEDarray, NUM_LEDS*3);
+*/
+					appState = APP_STATE_IDLE;
+				} else if(cmdBuffer->subMode == RANDOM)
+    17f4:	93 30       	cpi	r25, 0x03	; 3
+    17f6:	09 f0       	breq	.+2      	; 0x17fa <main+0x1ae>
+    17f8:	57 c0       	rjmp	.+174    	; 0x18a8 <main+0x25c>
+				{
+					currentLEDmode = LED_MODE_RANDOM;
+    17fa:	80 93 70 09 	sts	0x0970, r24
+//					Random color mode where command provides color values
+					updateLEDs(LEDarray, NUM_LEDS*3);
+    17fe:	86 e7       	ldi	r24, 0x76	; 118
+    1800:	99 e0       	ldi	r25, 0x09	; 9
+    1802:	60 e3       	ldi	r22, 0x30	; 48
+    1804:	70 e0       	ldi	r23, 0x00	; 0
+    1806:	0e 94 b2 00 	call	0x164	; 0x164 <updateLEDs>
+    180a:	4e c0       	rjmp	.+156    	; 0x18a8 <main+0x25c>
+					
+				}
+				
+			} else if (cmdBuffer->mode == MODE_PEER_TO_PEER)
+    180c:	91 30       	cpi	r25, 0x01	; 1
+    180e:	09 f4       	brne	.+2      	; 0x1812 <main+0x1c6>
+    1810:	4b c0       	rjmp	.+150    	; 0x18a8 <main+0x25c>
+//					updateLEDs(LEDarray, NUM_LEDS*3);
+
+			} else
+			{
+// Some debugging patches saved here to avoid warning of non-use
+    debug1Blink++;
+    1812:	80 91 a6 09 	lds	r24, 0x09A6
+    1816:	90 91 a7 09 	lds	r25, 0x09A7
+    181a:	01 96       	adiw	r24, 0x01	; 1
+    181c:	90 93 a7 09 	sts	0x09A7, r25
+    1820:	80 93 a6 09 	sts	0x09A6, r24
+    if (debug1Blink > 25000) {
+    1824:	21 e6       	ldi	r18, 0x61	; 97
+    1826:	89 3a       	cpi	r24, 0xA9	; 169
+    1828:	92 07       	cpc	r25, r18
+    182a:	40 f0       	brcs	.+16     	; 0x183c <main+0x1f0>
+	    debug1Blink = 0;
+    182c:	10 92 a7 09 	sts	0x09A7, r1
+    1830:	10 92 a6 09 	sts	0x09A6, r1
+#elif BOARD_VERSION == 2
+	HAL_GPIO_PIN(hbLED, G, 0)
+	HAL_GPIO_PIN(statusLED, D, 7)
+	HAL_GPIO_PIN(rcvLED, B, 4)
+	HAL_GPIO_PIN(lightStripData, D, 4)
+	HAL_GPIO_PIN(debug1, E, 4)
+    1834:	8e b1       	in	r24, 0x0e	; 14
+    1836:	90 e1       	ldi	r25, 0x10	; 16
+    1838:	89 27       	eor	r24, r25
+    183a:	8e b9       	out	0x0e, r24	; 14
+	    HAL_GPIO_debug1_toggle();
+    }
+    debug4Blink++;
+    183c:	80 91 a8 09 	lds	r24, 0x09A8
+    1840:	90 91 a9 09 	lds	r25, 0x09A9
+    1844:	01 96       	adiw	r24, 0x01	; 1
+    1846:	90 93 a9 09 	sts	0x09A9, r25
+    184a:	80 93 a8 09 	sts	0x09A8, r24
+    if (debug4Blink > 1) {
+    184e:	82 30       	cpi	r24, 0x02	; 2
+    1850:	91 05       	cpc	r25, r1
+    1852:	38 f0       	brcs	.+14     	; 0x1862 <main+0x216>
+	    debug4Blink = 0;
+    1854:	10 92 a9 09 	sts	0x09A9, r1
+    1858:	10 92 a8 09 	sts	0x09A8, r1
+	HAL_GPIO_PIN(debug2, E, 5)
+	HAL_GPIO_PIN(debug3, E, 6)
+	HAL_GPIO_PIN(debug4, E, 7)
+    185c:	8e b1       	in	r24, 0x0e	; 14
+    185e:	80 58       	subi	r24, 0x80	; 128
+    1860:	8e b9       	out	0x0e, r24	; 14
+	    HAL_GPIO_debug4_toggle();
+    }
+    if (debug2Blink > 1) {
+    1862:	80 91 aa 09 	lds	r24, 0x09AA
+    1866:	90 91 ab 09 	lds	r25, 0x09AB
+    186a:	82 30       	cpi	r24, 0x02	; 2
+    186c:	91 05       	cpc	r25, r1
+    186e:	40 f0       	brcs	.+16     	; 0x1880 <main+0x234>
+	    debug2Blink = 0;
+    1870:	10 92 ab 09 	sts	0x09AB, r1
+    1874:	10 92 aa 09 	sts	0x09AA, r1
+	HAL_GPIO_PIN(hbLED, G, 0)
+	HAL_GPIO_PIN(statusLED, D, 7)
+	HAL_GPIO_PIN(rcvLED, B, 4)
+	HAL_GPIO_PIN(lightStripData, D, 4)
+	HAL_GPIO_PIN(debug1, E, 4)
+	HAL_GPIO_PIN(debug2, E, 5)
+    1878:	8e b1       	in	r24, 0x0e	; 14
+    187a:	90 e2       	ldi	r25, 0x20	; 32
+    187c:	89 27       	eor	r24, r25
+    187e:	8e b9       	out	0x0e, r24	; 14
+	    HAL_GPIO_debug2_toggle();
+    }
+    debug3Blink++;
+    1880:	80 91 ac 09 	lds	r24, 0x09AC
+    1884:	90 91 ad 09 	lds	r25, 0x09AD
+    1888:	01 96       	adiw	r24, 0x01	; 1
+    188a:	90 93 ad 09 	sts	0x09AD, r25
+    188e:	80 93 ac 09 	sts	0x09AC, r24
+    if (debug3Blink > 1) {
+    1892:	82 30       	cpi	r24, 0x02	; 2
+    1894:	91 05       	cpc	r25, r1
+    1896:	40 f0       	brcs	.+16     	; 0x18a8 <main+0x25c>
+	    debug3Blink = 0;
+    1898:	10 92 ad 09 	sts	0x09AD, r1
+    189c:	10 92 ac 09 	sts	0x09AC, r1
+	HAL_GPIO_PIN(debug3, E, 6)
+    18a0:	8e b1       	in	r24, 0x0e	; 14
+    18a2:	90 e4       	ldi	r25, 0x40	; 64
+    18a4:	89 27       	eor	r24, r25
+    18a6:	8e b9       	out	0x0e, r24	; 14
+	    HAL_GPIO_debug3_toggle();
+    }
+
+
+			}
+			appState = APP_STATE_IDLE;
+    18a8:	81 e0       	ldi	r24, 0x01	; 1
+    18aa:	80 93 73 09 	sts	0x0973, r24
+  while (1)
+  {
+    SYS_TaskHandler();
+//	HAL_GPIO_hbLED_toggle();
+    APP_TaskHandler();
+    mainLoopBlink++;
+    18ae:	80 91 71 09 	lds	r24, 0x0971
+    18b2:	90 91 72 09 	lds	r25, 0x0972
+    18b6:	01 96       	adiw	r24, 0x01	; 1
+    18b8:	90 93 72 09 	sts	0x0972, r25
+    18bc:	80 93 71 09 	sts	0x0971, r24
+    if (mainLoopBlink > 25000) {
+    18c0:	e1 e6       	ldi	r30, 0x61	; 97
+    18c2:	89 3a       	cpi	r24, 0xA9	; 169
+    18c4:	9e 07       	cpc	r25, r30
+    18c6:	58 f0       	brcs	.+22     	; 0x18de <main+0x292>
+	    mainLoopBlink = 0;
+    18c8:	10 92 72 09 	sts	0x0972, r1
+    18cc:	10 92 71 09 	sts	0x0971, r1
+	HAL_GPIO_PIN(debug1, E, 4)
+	HAL_GPIO_PIN(debug2, E, 5)
+	HAL_GPIO_PIN(debug3, E, 6)
+	HAL_GPIO_PIN(debug4, E, 7)
+#elif BOARD_VERSION == 2
+	HAL_GPIO_PIN(hbLED, G, 0)
+    18d0:	84 b3       	in	r24, 0x14	; 20
+    18d2:	91 e0       	ldi	r25, 0x01	; 1
+    18d4:	89 27       	eor	r24, r25
+    18d6:	84 bb       	out	0x14, r24	; 20
+	HAL_GPIO_PIN(statusLED, D, 7)
+    18d8:	8b b1       	in	r24, 0x0b	; 11
+    18da:	80 58       	subi	r24, 0x80	; 128
+    18dc:	8b b9       	out	0x0b, r24	; 11
+	    HAL_GPIO_hbLED_toggle();
+	    HAL_GPIO_statusLED_toggle();
+    }
+	outPortE(0xFF);
+    18de:	8f ef       	ldi	r24, 0xFF	; 255
+    18e0:	0e 94 d0 00 	call	0x1a0	; 0x1a0 <outPortE>
+	outPortE(0x00);
+    18e4:	80 e0       	ldi	r24, 0x00	; 0
+    18e6:	0e 94 d0 00 	call	0x1a0	; 0x1a0 <outPortE>
+  }
+    18ea:	c1 ce       	rjmp	.-638    	; 0x166e <main+0x22>
+
+000018ec <__mulsi3>:
+    18ec:	62 9f       	mul	r22, r18
+    18ee:	d0 01       	movw	r26, r0
+    18f0:	73 9f       	mul	r23, r19
+    18f2:	f0 01       	movw	r30, r0
+    18f4:	82 9f       	mul	r24, r18
+    18f6:	e0 0d       	add	r30, r0
+    18f8:	f1 1d       	adc	r31, r1
+    18fa:	64 9f       	mul	r22, r20
+    18fc:	e0 0d       	add	r30, r0
+    18fe:	f1 1d       	adc	r31, r1
+    1900:	92 9f       	mul	r25, r18
+    1902:	f0 0d       	add	r31, r0
+    1904:	83 9f       	mul	r24, r19
+    1906:	f0 0d       	add	r31, r0
+    1908:	74 9f       	mul	r23, r20
+    190a:	f0 0d       	add	r31, r0
+    190c:	65 9f       	mul	r22, r21
+    190e:	f0 0d       	add	r31, r0
+    1910:	99 27       	eor	r25, r25
+    1912:	72 9f       	mul	r23, r18
+    1914:	b0 0d       	add	r27, r0
+    1916:	e1 1d       	adc	r30, r1
+    1918:	f9 1f       	adc	r31, r25
+    191a:	63 9f       	mul	r22, r19
+    191c:	b0 0d       	add	r27, r0
+    191e:	e1 1d       	adc	r30, r1
+    1920:	f9 1f       	adc	r31, r25
+    1922:	bd 01       	movw	r22, r26
+    1924:	cf 01       	movw	r24, r30
+    1926:	11 24       	eor	r1, r1
+    1928:	08 95       	ret
+
+0000192a <memcpy>:
+    192a:	fb 01       	movw	r30, r22
+    192c:	dc 01       	movw	r26, r24
+    192e:	02 c0       	rjmp	.+4      	; 0x1934 <memcpy+0xa>
+    1930:	01 90       	ld	r0, Z+
+    1932:	0d 92       	st	X+, r0
+    1934:	41 50       	subi	r20, 0x01	; 1
+    1936:	50 40       	sbci	r21, 0x00	; 0
+    1938:	d8 f7       	brcc	.-10     	; 0x1930 <memcpy+0x6>
+    193a:	08 95       	ret
+
+0000193c <__eerd_word_m128rfa1>:
+    193c:	a8 e1       	ldi	r26, 0x18	; 24
+    193e:	b0 e0       	ldi	r27, 0x00	; 0
+    1940:	42 e0       	ldi	r20, 0x02	; 2
+    1942:	50 e0       	ldi	r21, 0x00	; 0
+    1944:	0c 94 ab 0c 	jmp	0x1956	; 0x1956 <__eerd_blraw_m128rfa1>
+
+00001948 <__eewr_word_m128rfa1>:
+    1948:	0e 94 b9 0c 	call	0x1972	; 0x1972 <__eewr_byte_m128rfa1>
+    194c:	27 2f       	mov	r18, r23
+    194e:	0c 94 ba 0c 	jmp	0x1974	; 0x1974 <__eewr_r18_m128rfa1>
+
+00001952 <__eerd_block_m128rfa1>:
+    1952:	dc 01       	movw	r26, r24
+    1954:	cb 01       	movw	r24, r22
+
+00001956 <__eerd_blraw_m128rfa1>:
+    1956:	fc 01       	movw	r30, r24
+    1958:	f9 99       	sbic	0x1f, 1	; 31
+    195a:	fe cf       	rjmp	.-4      	; 0x1958 <__eerd_blraw_m128rfa1+0x2>
+    195c:	06 c0       	rjmp	.+12     	; 0x196a <__eerd_blraw_m128rfa1+0x14>
+    195e:	f2 bd       	out	0x22, r31	; 34
+    1960:	e1 bd       	out	0x21, r30	; 33
+    1962:	f8 9a       	sbi	0x1f, 0	; 31
+    1964:	31 96       	adiw	r30, 0x01	; 1
+    1966:	00 b4       	in	r0, 0x20	; 32
+    1968:	0d 92       	st	X+, r0
+    196a:	41 50       	subi	r20, 0x01	; 1
+    196c:	50 40       	sbci	r21, 0x00	; 0
+    196e:	b8 f7       	brcc	.-18     	; 0x195e <__eerd_blraw_m128rfa1+0x8>
+    1970:	08 95       	ret
+
+00001972 <__eewr_byte_m128rfa1>:
+    1972:	26 2f       	mov	r18, r22
+
+00001974 <__eewr_r18_m128rfa1>:
+    1974:	f9 99       	sbic	0x1f, 1	; 31
+    1976:	fe cf       	rjmp	.-4      	; 0x1974 <__eewr_r18_m128rfa1>
+    1978:	1f ba       	out	0x1f, r1	; 31
+    197a:	92 bd       	out	0x22, r25	; 34
+    197c:	81 bd       	out	0x21, r24	; 33
+    197e:	20 bd       	out	0x20, r18	; 32
+    1980:	0f b6       	in	r0, 0x3f	; 63
+    1982:	f8 94       	cli
+    1984:	fa 9a       	sbi	0x1f, 2	; 31
+    1986:	f9 9a       	sbi	0x1f, 1	; 31
+    1988:	0f be       	out	0x3f, r0	; 63
+    198a:	01 96       	adiw	r24, 0x01	; 1
+    198c:	08 95       	ret
+
+0000198e <_exit>:
+    198e:	f8 94       	cli
+
+00001990 <__stop_program>:
+    1990:	ff cf       	rjmp	.-2      	; 0x1990 <__stop_program>
